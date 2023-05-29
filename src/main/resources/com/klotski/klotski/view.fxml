@@ -1,19 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Menu?>
 <?import javafx.scene.control.MenuBar?>
 <?import javafx.scene.control.MenuItem?>
 <?import javafx.scene.control.SeparatorMenuItem?>
-<?import javafx.scene.effect.Light.Distant?>
-<?import javafx.scene.effect.Lighting?>
-<?import javafx.scene.effect.Shadow?>
+<?import javafx.scene.effect.*?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
 
-<VBox prefHeight="665.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.klotski.klotski.controller.PieceController">
+<VBox prefHeight="665.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.klotski.klotski.controller.PieceController">
     <children>
         <MenuBar VBox.vgrow="NEVER">
             <menus>
@@ -35,7 +33,6 @@
                 </Menu>
                 <Menu mnemonicParsing="false" text="Edit">
                     <items>
-                        <MenuItem mnemonicParsing="false" text="Undo" />
                         <MenuItem mnemonicParsing="false" text="Redo" />
                         <SeparatorMenuItem mnemonicParsing="false" />
                         <MenuItem mnemonicParsing="false" text="Cut" />
@@ -54,135 +51,132 @@
                 </Menu>
             </menus>
         </MenuBar>
-        <AnchorPane prefHeight="651.0" prefWidth="900.0">
+        <AnchorPane fx:id="Counter" prefHeight="650.0" prefWidth="900.0">
             <children>
-                <Pane layoutX="38.0" layoutY="63.0" prefHeight="500.0" prefWidth="400.0" style="-fx-background-color: #CFCFCF;">
+                <Pane layoutX="50.0" layoutY="80.0" prefHeight="500.0" prefWidth="400.0" style="-fx-background-color: #CFCFCF;">
                     <children>
-                        <Button fx:id="rectButton1" minHeight="200.0" mnemonicParsing="false" prefWidth="100.0">
-                            <opaqueInsets>
-                                <Insets />
-                            </opaqueInsets>
+                        <Button fx:id="btn0" layoutX="100.0" mnemonicParsing="false" onAction="#select" prefHeight="200.0" prefWidth="200.0">
                             <effect>
                                 <Lighting>
                                     <bumpInput>
                                         <Shadow />
                                     </bumpInput>
                                     <light>
-                                        <Light.Distant color="AQUA" />
+                                        <Light.Distant color="#da6f51" />
                                     </light>
                                 </Lighting>
-                            </effect>
-                        </Button>
-                        <Button fx:id="squareButton3" layoutX="100.0" layoutY="300.0" mnemonicParsing="false" prefHeight="100.0" prefWidth="100.0">
+                            </effect></Button>
+                        <Button fx:id="btn3" layoutY="200.0" mnemonicParsing="false" onAction="#select" prefHeight="200.0" prefWidth="100.0">
                             <effect>
                                 <Lighting>
                                     <bumpInput>
                                         <Shadow />
                                     </bumpInput>
                                     <light>
-                                        <Light.Distant color="AQUA" />
+                                        <Light.Distant color="#68a4dd" />
                                     </light>
                                 </Lighting>
-                            </effect>
-                        </Button>
-                        <Button fx:id="squareButton2" layoutX="200.0" layoutY="200.0" mnemonicParsing="false" prefHeight="100.0" prefWidth="100.0">
+                            </effect></Button>
+                        <Button fx:id="btn4" layoutX="300.0" layoutY="200.0" mnemonicParsing="false" onAction="#select" prefHeight="200.0" prefWidth="100.0">
                             <effect>
                                 <Lighting>
                                     <bumpInput>
                                         <Shadow />
                                     </bumpInput>
                                     <light>
-                                        <Light.Distant color="AQUA" />
+                                        <Light.Distant color="#68a4dd" />
                                     </light>
                                 </Lighting>
-                            </effect>
-                        </Button>
-                        <Button fx:id="squareButton1" layoutX="100.0" layoutY="200.0" mnemonicParsing="false" prefHeight="100.0" prefWidth="100.0">
+                            </effect></Button>
+                        <Button fx:id="btn2" layoutX="300.0" mnemonicParsing="false" onAction="#select" prefHeight="200.0" prefWidth="100.0">
                             <effect>
                                 <Lighting>
                                     <bumpInput>
                                         <Shadow />
                                     </bumpInput>
                                     <light>
-                                        <Light.Distant color="AQUA" />
+                                        <Light.Distant color="#68a4dd" />
                                     </light>
                                 </Lighting>
-                            </effect>
-                        </Button>
-                        <Button fx:id="rectButton4" layoutX="300.0" layoutY="200.0" mnemonicParsing="false" prefHeight="200.0" prefWidth="100.0">
+                            </effect></Button>
+                        <Button fx:id="btn6" layoutX="100.0" layoutY="200.0" mnemonicParsing="false" onAction="#select" prefHeight="100.0" prefWidth="100.0">
                             <effect>
                                 <Lighting>
                                     <bumpInput>
                                         <Shadow />
                                     </bumpInput>
                                     <light>
-                                        <Light.Distant color="AQUA" />
+                                        <Light.Distant color="#68a4dd" />
                                     </light>
                                 </Lighting>
-                            </effect>
-                        </Button>
-                        <Button fx:id="rectButton2" layoutX="300.0" mnemonicParsing="false" prefHeight="200.0" prefWidth="100.0">
+                            </effect></Button>
+                        <Button fx:id="btn7" layoutX="200.0" layoutY="200.0" mnemonicParsing="false" onAction="#select" prefHeight="100.0" prefWidth="100.0">
                             <effect>
                                 <Lighting>
                                     <bumpInput>
                                         <Shadow />
                                     </bumpInput>
                                     <light>
-                                        <Light.Distant color="AQUA" />
+                                        <Light.Distant color="#68a4dd" />
                                     </light>
                                 </Lighting>
-                            </effect>
-                        </Button>
-                        <Button fx:id="rectButton3" layoutY="200.0" mnemonicParsing="false" prefHeight="200.0" prefWidth="100.0">
+                            </effect></Button>
+                        <Button fx:id="btn8" layoutX="100.0" layoutY="300.0" mnemonicParsing="false" onAction="#select" prefHeight="100.0" prefWidth="100.0">
                             <effect>
                                 <Lighting>
                                     <bumpInput>
                                         <Shadow />
                                     </bumpInput>
                                     <light>
-                                        <Light.Distant color="AQUA" />
+                                        <Light.Distant color="#68a4dd" />
                                     </light>
                                 </Lighting>
-                            </effect>
-                        </Button>
-                        <Button fx:id="squareButton4" layoutX="200.0" layoutY="300.0" mnemonicParsing="false" prefHeight="100.0" prefWidth="100.0">
+                            </effect></Button>
+                        <Button fx:id="btn9" layoutX="200.0" layoutY="300.0" mnemonicParsing="false" onAction="#select" prefHeight="100.0" prefWidth="100.0">
                             <effect>
                                 <Lighting>
                                     <bumpInput>
                                         <Shadow />
                                     </bumpInput>
                                     <light>
-                                        <Light.Distant color="AQUA" />
+                                        <Light.Distant color="#68a4dd" />
                                     </light>
                                 </Lighting>
-                            </effect>
-                        </Button>
-                        <Button fx:id="winButton" layoutX="100.0" mnemonicParsing="false" prefHeight="200.0" prefWidth="200.0">
+                            </effect></Button>
+                        <Button fx:id="btn5" layoutX="100" layoutY="400.0" mnemonicParsing="false" onAction="#select" onSwipeLeft="#MoveLeft" prefHeight="100.0" prefWidth="200.0">
                             <effect>
                                 <Lighting>
                                     <bumpInput>
                                         <Shadow />
                                     </bumpInput>
                                     <light>
-                                        <Light.Distant color="#ee5e5e" />
+                                        <Light.Distant color="#68a4dd" />
                                     </light>
                                 </Lighting>
-                            </effect>
-                        </Button>
-                        <Button fx:id="rectButton5" layoutX="100.0" layoutY="400.0" mnemonicParsing="false" prefHeight="100.0" prefWidth="200.0">
+                            </effect></Button>
+                        <Button fx:id="btn1" mnemonicParsing="false" onAction="#select" prefHeight="200.0" prefWidth="100.0">
                             <effect>
                                 <Lighting>
                                     <bumpInput>
                                         <Shadow />
                                     </bumpInput>
                                     <light>
-                                        <Light.Distant color="AQUA" />
+                                        <Light.Distant color="#68a4dd" />
                                     </light>
                                 </Lighting>
-                            </effect>
-                        </Button>
+                            </effect></Button>
                     </children>
                 </Pane>
+                <Button fx:id="save" layoutX="740.0" layoutY="80.0" mnemonicParsing="false" onAction="#Save" prefHeight="80.0" prefWidth="120.0" text="Save" />
+                <Button fx:id="quit" layoutX="520.0" layoutY="500.0" mnemonicParsing="false" onAction="#Quit" prefHeight="80.0" prefWidth="120.0" text="QUIT" />
+                <Button fx:id="bestMove" layoutX="460.0" layoutY="80.0" mnemonicParsing="false" onAction="#BestMove" prefHeight="80.0" prefWidth="120.0" text="Best Move" />
+                <Button fx:id="loadSave" layoutX="680.0" layoutY="500.0" mnemonicParsing="false" onAction="#LoadSave" prefHeight="80.0" prefWidth="120.0" text="Load Last Save" />
+                <Button fx:id="left" layoutX="560.0" layoutY="310.0" mnemonicParsing="false" onAction="#MoveLeft" prefHeight="40.0" prefWidth="80.0" />
+                <Button fx:id="up" layoutX="640.0" layoutY="230.0" mnemonicParsing="false" onAction="#MoveUp" prefHeight="80.0" prefWidth="40.0" />
+                <Button fx:id="right" layoutX="680.0" layoutY="310.0" mnemonicParsing="false" onAction="#MoveRight" prefHeight="40.0" prefWidth="80.0" />
+                <Button fx:id="down" layoutX="640.0" layoutY="350.0" mnemonicParsing="false" onAction="#MoveDown" prefHeight="80.0" prefWidth="40.0" />
+                <Button fx:id="back" layoutX="600.0" layoutY="80.0" mnemonicParsing="false" onAction="#Back" prefHeight="80.0" prefWidth="120.0" text="Back" />
+                <Text fx:id="Count" layoutX="600.0" layoutY="206.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Counter = 0" wrappingWidth="120" />
             </children>
         </AnchorPane>
     </children>
