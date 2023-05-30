@@ -33,8 +33,9 @@ public class PieceController {
         butt[9] = btn9;
     }
     public void select(ActionEvent e) {
-        if(btn != null)
+        if(btn != null) {
             btn.setStyle(null);
+        }
 
         Button generic = (Button) e.getSource();
         btn = generic;
@@ -42,9 +43,9 @@ public class PieceController {
         if(btn == btn0){
             btn0.setStyle("-fx-background-color: RED");
         }
-        else
+        else {
             btn.setStyle("-fx-background-color: BLUE");
-
+        }
     }
 
     // all the movement are controlled by increasing or decreasing (by 100) of the variable X and Y.The Y axis is inverted
@@ -62,7 +63,7 @@ public class PieceController {
         if(btn.getLayoutX() != (400-btn.getWidth())) {
             btn.setLayoutX(x += 100);
         }
-        else return;
+        else {return;}
         counter +=1;
         Count.setText("Counter: " + counter );
     }
