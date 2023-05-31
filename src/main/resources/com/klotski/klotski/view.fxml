@@ -55,7 +55,7 @@
             <children>
                 <Pane layoutX="50.0" layoutY="80.0" prefHeight="500.0" prefWidth="400.0" style="-fx-background-color: #CFCFCF;">
                     <children>
-                        <Button fx:id="btn0" layoutX="100.0" mnemonicParsing="false" onAction="#select" prefHeight="200.0" prefWidth="200.0">
+                        <Button fx:id="pc0" layoutX="100.0" mnemonicParsing="false" onAction="#select" prefHeight="200.0" prefWidth="200.0">
                             <effect>
                                 <Lighting>
                                     <bumpInput>
@@ -66,7 +66,7 @@
                                     </light>
                                 </Lighting>
                             </effect></Button>
-                        <Button fx:id="btn3" layoutY="200.0" mnemonicParsing="false" onAction="#select" prefHeight="200.0" prefWidth="100.0">
+                        <Button fx:id="pc3" layoutY="200.0" mnemonicParsing="false" onAction="#select" prefHeight="200.0" prefWidth="100.0">
                             <effect>
                                 <Lighting>
                                     <bumpInput>
@@ -77,7 +77,7 @@
                                     </light>
                                 </Lighting>
                             </effect></Button>
-                        <Button fx:id="btn4" layoutX="300.0" layoutY="200.0" mnemonicParsing="false" onAction="#select" prefHeight="200.0" prefWidth="100.0">
+                        <Button fx:id="pc4" layoutX="300.0" layoutY="200.0" mnemonicParsing="false" onAction="#select" prefHeight="200.0" prefWidth="100.0">
                             <effect>
                                 <Lighting>
                                     <bumpInput>
@@ -88,7 +88,7 @@
                                     </light>
                                 </Lighting>
                             </effect></Button>
-                        <Button fx:id="btn2" layoutX="300.0" mnemonicParsing="false" onAction="#select" prefHeight="200.0" prefWidth="100.0">
+                        <Button fx:id="pc2" layoutX="300.0" mnemonicParsing="false" onAction="#select" prefHeight="200.0" prefWidth="100.0">
                             <effect>
                                 <Lighting>
                                     <bumpInput>
@@ -99,7 +99,7 @@
                                     </light>
                                 </Lighting>
                             </effect></Button>
-                        <Button fx:id="btn6" layoutX="100.0" layoutY="200.0" mnemonicParsing="false" onAction="#select" prefHeight="100.0" prefWidth="100.0">
+                        <Button fx:id="pc6" layoutX="100.0" layoutY="200.0" mnemonicParsing="false" onAction="#select" prefHeight="100.0" prefWidth="100.0">
                             <effect>
                                 <Lighting>
                                     <bumpInput>
@@ -110,7 +110,7 @@
                                     </light>
                                 </Lighting>
                             </effect></Button>
-                        <Button fx:id="btn7" layoutX="200.0" layoutY="200.0" mnemonicParsing="false" onAction="#select" prefHeight="100.0" prefWidth="100.0">
+                        <Button fx:id="pc7" layoutX="200.0" layoutY="200.0" mnemonicParsing="false" onAction="#select" prefHeight="100.0" prefWidth="100.0">
                             <effect>
                                 <Lighting>
                                     <bumpInput>
@@ -121,7 +121,7 @@
                                     </light>
                                 </Lighting>
                             </effect></Button>
-                        <Button fx:id="btn8" layoutX="100.0" layoutY="300.0" mnemonicParsing="false" onAction="#select" prefHeight="100.0" prefWidth="100.0">
+                        <Button fx:id="pc8" layoutX="100.0" layoutY="300.0" mnemonicParsing="false" onAction="#select" prefHeight="100.0" prefWidth="100.0">
                             <effect>
                                 <Lighting>
                                     <bumpInput>
@@ -132,7 +132,7 @@
                                     </light>
                                 </Lighting>
                             </effect></Button>
-                        <Button fx:id="btn9" layoutX="200.0" layoutY="300.0" mnemonicParsing="false" onAction="#select" prefHeight="100.0" prefWidth="100.0">
+                        <Button fx:id="pc9" layoutX="200.0" layoutY="300.0" mnemonicParsing="false" onAction="#select" prefHeight="100.0" prefWidth="100.0">
                             <effect>
                                 <Lighting>
                                     <bumpInput>
@@ -143,7 +143,7 @@
                                     </light>
                                 </Lighting>
                             </effect></Button>
-                        <Button fx:id="btn5" layoutX="100" layoutY="400.0" mnemonicParsing="false" onAction="#select" onSwipeLeft="#MoveLeft" prefHeight="100.0" prefWidth="200.0">
+                        <Button fx:id="pc5" layoutX="100" layoutY="400.0" mnemonicParsing="false" onAction="#select" onSwipeLeft="#MoveLeft" prefHeight="100.0" prefWidth="200.0">
                             <effect>
                                 <Lighting>
                                     <bumpInput>
@@ -154,7 +154,7 @@
                                     </light>
                                 </Lighting>
                             </effect></Button>
-                        <Button fx:id="btn1" mnemonicParsing="false" onAction="#select" prefHeight="200.0" prefWidth="100.0">
+                        <Button fx:id="pc1" mnemonicParsing="false" onAction="#select" prefHeight="200.0" prefWidth="100.0">
                             <effect>
                                 <Lighting>
                                     <bumpInput>

@@ -6,7 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="e7014844-ab91-4a58-8400-4d4dcf72d825" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/klotski/klotski/controller/MenuController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/klotski/klotski/controller/MenuController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/klotski/klotski/controller/PieceController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/klotski/klotski/controller/PieceController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/com/klotski/klotski/view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/klotski/klotski/view.fxml" afterDir="false" />
     </list>
@@ -56,7 +55,8 @@
       <option name="presentableId" value="Default" />
       <updated>1685131185465</updated>
       <workItem from="1685131186583" duration="1467000" />
-      <workItem from="1685475579062" duration="2747000" />
+      <workItem from="1685475579062" duration="3081000" />
+      <workItem from="1685519962329" duration="8506000" />
     </task>
     <servers />
   </component>
