@@ -25,8 +25,8 @@ public class PieceController {
             piece.setStyle(null);
         }
 
-        Button generic = (Button) e.getSource();
-        piece = generic;
+        piece = (Button) e.getSource();
+
         refresh();
         if(piece == pc0){
             pc0.setStyle("-fx-background-color: RED");

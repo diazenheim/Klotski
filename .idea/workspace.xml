@@ -4,10 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e7014844-ab91-4a58-8400-4d4dcf72d825" name="Changes" comment="">
+    <list default="true" id="e7014844-ab91-4a58-8400-4d4dcf72d825" name="Changes" comment="changes are:&#10;changes in the variables name to better understanding&#10;writes of the comment&#10;creation of the method for upgrading of the movement methods">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/klotski/klotski/controller/PieceController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/klotski/klotski/controller/PieceController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/klotski/klotski/view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/klotski/klotski/view.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,11 +55,23 @@
       <updated>1685131185465</updated>
       <workItem from="1685131186583" duration="1467000" />
       <workItem from="1685475579062" duration="3081000" />
-      <workItem from="1685519962329" duration="8506000" />
+      <workItem from="1685519962329" duration="9055000" />
     </task>
+    <task id="LOCAL-00001" summary="changes are:&#10;changes in the variables name to better understanding&#10;writes of the comment&#10;creation of the method for upgrading of the movement methods">
+      <created>1685548510093</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1685548510093</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="changes are:&#10;changes in the variables name to better understanding&#10;writes of the comment&#10;creation of the method for upgrading of the movement methods" />
+    <option name="LAST_COMMIT_MESSAGE" value="changes are:&#10;changes in the variables name to better understanding&#10;writes of the comment&#10;creation of the method for upgrading of the movement methods" />
   </component>
 </project>
