@@ -167,7 +167,7 @@
                             </effect></Button>
                     </children>
                 </Pane>
-                <Button fx:id="save" layoutX="740.0" layoutY="80.0" mnemonicParsing="false" onAction="#Save" prefHeight="80.0" prefWidth="120.0" text="Save" />
+                <Button fx:id="save" layoutX="740.0" layoutY="80.0" mnemonicParsing="false" onAction="#saveFile" prefHeight="80.0" prefWidth="120.0" text="Save" />
                 <Button fx:id="quit" layoutX="520.0" layoutY="500.0" mnemonicParsing="false" onAction="#Quit" prefHeight="80.0" prefWidth="120.0" text="QUIT" />
                 <Button fx:id="bestMove" layoutX="460.0" layoutY="80.0" mnemonicParsing="false" onAction="#BestMove" prefHeight="80.0" prefWidth="120.0" text="Best Move" />
                 <Button fx:id="loadSave" layoutX="680.0" layoutY="500.0" mnemonicParsing="false" onAction="#LoadSave" prefHeight="80.0" prefWidth="120.0" text="Load Last Save" />
