@@ -1,9 +1,11 @@
 package com.klotski.klotski.controller;
 
 import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
+import javafx.scene.input.MouseEvent;
 
 class PieceController {
     public static Button[] pieces; //array created to contain the 10 pieces, used in the methode approving to speed up the control of the position of each pieces
@@ -93,5 +95,48 @@ class PieceController {
                 counter +=1;}
         }
     }
+    @FXML
+    public static void Swipe(MouseEvent mouseEvent) {
+        double previousX = x;
+        double x = mouseEvent.getSceneX();
+        double previousY = y;
+        double y = mouseEvent.getSceneY();
 
+
+        if (x < (previousX)) {
+            MoveLeft();
+            System.out.println("left    " + x + "    " + previousX);
+            //return;
+
+        } else if (x > (previousX + 230)) {
+            MoveRight();
+            System.out.println("Right    " + x + "    " + previousX);
+            //return;
+        }
+
+        if (y < (previousY+50)) {
+            MoveUp();
+            System.out.println("Up    " + y + "    " + previousY);
+            //return;
+
+        } else if (y > (previousY + 250)) {
+            MoveDown();
+            System.out.println("Down  " + y + "    " + previousY);
+            //return;
+        }
+    }
+
+    @FXML
+    public static void Keyboard(KeyEvent keyEvent) {
+        KeyCode kc = keyEvent.getCode();
+        if (kc == KeyCode.UP) {
+            MoveUp();
+        } else if (kc == KeyCode.RIGHT) {
+            MoveRight();
+        } else if (kc == KeyCode.DOWN) {
+            MoveDown();
+        } else if (kc == KeyCode.LEFT) {
+            MoveLeft();
+        }
+    }
 }

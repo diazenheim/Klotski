@@ -4,6 +4,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.input.KeyEvent;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.text.Text;
 import static com.klotski.klotski.controller.PieceController.*;
 
@@ -68,8 +69,14 @@ public class MainController {
     public void Back() {
     }
 
+    
+    public void Keyboard(KeyEvent keyEvent) {
+        PieceController.Keyboard(keyEvent);
+        Count.setText("Counter: " + PieceController.counter );
+    }
 
-    public void keyboard(KeyEvent keyEvent) {
-
+    public void Swipe(MouseEvent mouseEvent) {
+        PieceController.Swipe(mouseEvent);
+        Count.setText("Counter: " + PieceController.counter );
     }
 }

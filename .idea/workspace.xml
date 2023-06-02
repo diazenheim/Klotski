@@ -5,10 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e7014844-ab91-4a58-8400-4d4dcf72d825" name="Changes" comment="Added the Quit button functionality. &#10;Added an AlertBox class.&#10;Fixed PieceController class name.">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/klotski/klotski/model/AlertBox.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/klotski/klotski/controller/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/klotski/klotski/controller/MainController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/klotski/klotski/controller/MenuController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/klotski/klotski/controller/MenuController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/klotski/klotski/controller/PieceController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/klotski/klotski/controller/PieceController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/com/klotski/klotski/view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/klotski/klotski/view.fxml" afterDir="false" />
     </list>
@@ -39,7 +37,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "/Users/dianaplosnita/Documents/Git2/Klotski",
+    "last_opened_file_path": "C:/Users/tomma/OneDrive/Desktop/Klotski",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -65,6 +63,7 @@
       <workItem from="1685608417087" duration="18000" />
       <workItem from="1685699470974" duration="1881000" />
       <workItem from="1685708497905" duration="2867000" />
+      <workItem from="1685740408362" duration="2747000" />
     </task>
     <task id="LOCAL-00001" summary="changes are:&#10;changes in the variables name to better understanding&#10;writes of the comment&#10;creation of the method for upgrading of the movement methods">
       <created>1685548510093</created>
