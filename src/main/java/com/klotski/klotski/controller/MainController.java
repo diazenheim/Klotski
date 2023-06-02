@@ -3,8 +3,9 @@ package com.klotski.klotski.controller;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
+import javafx.scene.input.KeyEvent;
 import javafx.scene.text.Text;
-import static com.klotski.klotski.controller.PiecesController.*;
+import static com.klotski.klotski.controller.PieceController.*;
 
 public class MainController {
     //call the pieces through the ids from view.fxml in here
@@ -36,36 +37,39 @@ public class MainController {
     }
     // all the movement are controlled by increasing or decreasing (by 100) of the variable X and Y(The Y axis is inverted) after checking the moves is valid.
     public void MoveRight() {
-        PiecesController.MoveRight();
-        Count.setText("Counter: " + PiecesController.counter );
+        PieceController.MoveRight();
+        Count.setText("Counter: " + PieceController.counter );
     }
     public void MoveLeft() {
-        PiecesController.MoveLeft();
-        Count.setText("Counter: " + PiecesController.counter );
+        PieceController.MoveLeft();
+        Count.setText("Counter: " + PieceController.counter );
     }
     public void MoveUp() {
-        PiecesController.MoveUp();
-        Count.setText("Counter: " + PiecesController.counter );
+        PieceController.MoveUp();
+        Count.setText("Counter: " + PieceController.counter );
     }
     public void MoveDown() {
-        PiecesController.MoveDown();
-        Count.setText("Counter: " + PiecesController.counter );
+        PieceController.MoveDown();
+        Count.setText("Counter: " + PieceController.counter );
     }
     public void Save() {
     }
 
-    public void LoadSave(ActionEvent e) {
+    public void LoadSave() {
     }
 
-    public void BestMove(ActionEvent e) {
+    public void BestMove() {
     }
 
-    public void Quit(ActionEvent e) {
+    public void Quit() {
+        MenuController.Quit();
     }
 
-    public void Back(ActionEvent e) {
+    public void Back() {
     }
 
 
+    public void keyboard(KeyEvent keyEvent) {
 
+    }
 }

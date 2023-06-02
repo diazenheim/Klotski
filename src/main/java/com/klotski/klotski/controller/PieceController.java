@@ -2,8 +2,10 @@ package com.klotski.klotski.controller;
 
 import javafx.event.ActionEvent;
 import javafx.scene.control.Button;
+import javafx.scene.input.KeyCode;
+import javafx.scene.input.KeyEvent;
 
-class PiecesController {
+class PieceController {
     public static Button[] pieces; //array created to contain the 10 pieces, used in the methode approving to speed up the control of the position of each pieces
     public static Button piece;
     //variable for the moving of the pieces
@@ -91,4 +93,5 @@ class PiecesController {
                 counter +=1;}
         }
     }
+
 }
