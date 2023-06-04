@@ -11,7 +11,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Text?>
 
-<VBox prefHeight="665.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.klotski.klotski.controller.MainController">
+<VBox prefHeight="665.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/20" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.klotski.klotski.controller.MainController">
     <children>
         <MenuBar VBox.vgrow="NEVER">
             <menus>
@@ -55,7 +55,7 @@
             <children>
                 <Pane layoutX="50.0" layoutY="80.0" prefHeight="500.0" prefWidth="400.0" style="-fx-background-color: #CFCFCF;">
                     <children>
-                        <Button fx:id="pc0" layoutX="100.0" mnemonicParsing="false" onAction="#select" onKeyPressed="#Keyboard" onMouseDragged="#Swipe" prefHeight="200.0" prefWidth="200.0">
+                        <Button fx:id="pc0" layoutX="100.0" layoutY="0" mnemonicParsing="false" onAction="#select" onKeyPressed="#Keyboard" onMouseDragged="#Swipe" prefHeight="200.0" prefWidth="200.0">
                             <effect>
                                 <Lighting>
                                     <bumpInput>
@@ -65,8 +65,9 @@
                                         <Light.Distant color="#da6f51" />
                                     </light>
                                 </Lighting>
-                            </effect></Button>
-                        <Button fx:id="pc3" layoutY="200.0" mnemonicParsing="false" onAction="#select" onKeyPressed="#Keyboard" onMouseDragged="#Swipe" prefHeight="200.0" prefWidth="100.0">
+                            </effect>
+                        </Button>
+                        <Button fx:id="pc1" layoutX="0" layoutY="0" mnemonicParsing="false" onAction="#select" onKeyPressed="#Keyboard" onMouseDragged="#Swipe" prefHeight="200.0" prefWidth="100.0">
                             <effect>
                                 <Lighting>
                                     <bumpInput>
@@ -76,7 +77,32 @@
                                         <Light.Distant color="#68a4dd" />
                                     </light>
                                 </Lighting>
-                            </effect></Button>
+                            </effect>
+                        </Button>
+                        <Button fx:id="pc2" layoutX="300.0" layoutY="0" mnemonicParsing="false" onAction="#select" onKeyPressed="#Keyboard" onMouseDragged="#Swipe" prefHeight="200.0" prefWidth="100.0">
+                            <effect>
+                                <Lighting>
+                                    <bumpInput>
+                                        <Shadow />
+                                    </bumpInput>
+                                    <light>
+                                        <Light.Distant color="#68a4dd" />
+                                    </light>
+                                </Lighting>
+                            </effect>
+                        </Button>
+                        <Button fx:id="pc3" layoutX="0" layoutY="200.0" mnemonicParsing="false" onAction="#select" onKeyPressed="#Keyboard" onMouseDragged="#Swipe" prefHeight="200.0" prefWidth="100.0">
+                            <effect>
+                                <Lighting>
+                                    <bumpInput>
+                                        <Shadow />
+                                    </bumpInput>
+                                    <light>
+                                        <Light.Distant color="#68a4dd" />
+                                    </light>
+                                </Lighting>
+                            </effect>
+                        </Button>
                         <Button fx:id="pc4" layoutX="300.0" layoutY="200.0" mnemonicParsing="false" onAction="#select" onKeyPressed="#Keyboard" onMouseDragged="#Swipe" prefHeight="200.0" prefWidth="100.0">
                             <effect>
                                 <Lighting>
@@ -87,62 +113,8 @@
                                         <Light.Distant color="#68a4dd" />
                                     </light>
                                 </Lighting>
-                            </effect></Button>
-                        <Button fx:id="pc2" layoutX="300.0" mnemonicParsing="false" onAction="#select" onKeyPressed="#Keyboard" onMouseDragged="#Swipe" prefHeight="200.0" prefWidth="100.0">
-                            <effect>
-                                <Lighting>
-                                    <bumpInput>
-                                        <Shadow />
-                                    </bumpInput>
-                                    <light>
-                                        <Light.Distant color="#68a4dd" />
-                                    </light>
-                                </Lighting>
-                            </effect></Button>
-                        <Button fx:id="pc6" layoutX="100.0" layoutY="200.0" mnemonicParsing="false" onAction="#select" onKeyPressed="#Keyboard" onMouseDragged="#Swipe" prefHeight="100.0" prefWidth="100.0">
-                            <effect>
-                                <Lighting>
-                                    <bumpInput>
-                                        <Shadow />
-                                    </bumpInput>
-                                    <light>
-                                        <Light.Distant color="#68a4dd" />
-                                    </light>
-                                </Lighting>
-                            </effect></Button>
-                        <Button fx:id="pc7" layoutX="200.0" layoutY="200.0" mnemonicParsing="false" onAction="#select" onKeyPressed="#Keyboard" onMouseDragged="#Swipe" prefHeight="100.0" prefWidth="100.0">
-                            <effect>
-                                <Lighting>
-                                    <bumpInput>
-                                        <Shadow />
-                                    </bumpInput>
-                                    <light>
-                                        <Light.Distant color="#68a4dd" />
-                                    </light>
-                                </Lighting>
-                            </effect></Button>
-                        <Button fx:id="pc8" layoutX="100.0" layoutY="300.0" mnemonicParsing="false" onAction="#select" onKeyPressed="#Keyboard" onMouseDragged="#Swipe" prefHeight="100.0" prefWidth="100.0">
-                            <effect>
-                                <Lighting>
-                                    <bumpInput>
-                                        <Shadow />
-                                    </bumpInput>
-                                    <light>
-                                        <Light.Distant color="#68a4dd" />
-                                    </light>
-                                </Lighting>
-                            </effect></Button>
-                        <Button fx:id="pc9" layoutX="200.0" layoutY="300.0" mnemonicParsing="false" onAction="#select" onKeyPressed="#Keyboard" onMouseDragged="#Swipe" prefHeight="100.0" prefWidth="100.0">
-                            <effect>
-                                <Lighting>
-                                    <bumpInput>
-                                        <Shadow />
-                                    </bumpInput>
-                                    <light>
-                                        <Light.Distant color="#68a4dd" />
-                                    </light>
-                                </Lighting>
-                            </effect></Button>
+                            </effect>
+                        </Button>
                         <Button fx:id="pc5" layoutX="100" layoutY="400.0" mnemonicParsing="false" onAction="#select" onKeyPressed="#Keyboard" onMouseDragged="#Swipe" onSwipeLeft="#MoveLeft" prefHeight="100.0" prefWidth="200.0">
                             <effect>
                                 <Lighting>
@@ -153,8 +125,9 @@
                                         <Light.Distant color="#68a4dd" />
                                     </light>
                                 </Lighting>
-                            </effect></Button>
-                        <Button fx:id="pc1" mnemonicParsing="false" onAction="#select" onKeyPressed="#Keyboard" onMouseDragged="#Swipe" prefHeight="200.0" prefWidth="100.0">
+                            </effect>
+                        </Button>
+                        <Button fx:id="pc6" layoutX="100.0" layoutY="200.0" mnemonicParsing="false" onAction="#select" onKeyPressed="#Keyboard" onMouseDragged="#Swipe" prefHeight="100.0" prefWidth="100.0">
                             <effect>
                                 <Lighting>
                                     <bumpInput>
@@ -164,13 +137,50 @@
                                         <Light.Distant color="#68a4dd" />
                                     </light>
                                 </Lighting>
-                            </effect></Button>
+                            </effect>
+                        </Button>
+                        <Button fx:id="pc7" layoutX="200.0" layoutY="200.0" mnemonicParsing="false" onAction="#select" onKeyPressed="#Keyboard" onMouseDragged="#Swipe" prefHeight="100.0" prefWidth="100.0">
+                            <effect>
+                                <Lighting>
+                                    <bumpInput>
+                                        <Shadow />
+                                    </bumpInput>
+                                    <light>
+                                        <Light.Distant color="#68a4dd" />
+                                    </light>
+                                </Lighting>
+                            </effect>
+                        </Button>
+                        <Button fx:id="pc8" layoutX="100.0" layoutY="300.0" mnemonicParsing="false" onAction="#select" onKeyPressed="#Keyboard" onMouseDragged="#Swipe" prefHeight="100.0" prefWidth="100.0">
+                            <effect>
+                                <Lighting>
+                                    <bumpInput>
+                                        <Shadow />
+                                    </bumpInput>
+                                    <light>
+                                        <Light.Distant color="#68a4dd" />
+                                    </light>
+                                </Lighting>
+                            </effect>
+                        </Button>
+                        <Button fx:id="pc9" layoutX="200.0" layoutY="300.0" mnemonicParsing="false" onAction="#select" onKeyPressed="#Keyboard" onMouseDragged="#Swipe" prefHeight="100.0" prefWidth="100.0">
+                            <effect>
+                                <Lighting>
+                                    <bumpInput>
+                                        <Shadow />
+                                    </bumpInput>
+                                    <light>
+                                        <Light.Distant color="#68a4dd" />
+                                    </light>
+                                </Lighting>
+                            </effect>
+                        </Button>
                     </children>
                 </Pane>
-                <Button fx:id="save" layoutX="740.0" layoutY="80.0" mnemonicParsing="false" onAction="#saveFile" prefHeight="80.0" prefWidth="120.0" text="Save" />
+                <Button fx:id="save" layoutX="740.0" layoutY="80.0" mnemonicParsing="false" onAction="#saveMatch" prefHeight="80.0" prefWidth="120.0" text="Save" />
                 <Button fx:id="quit" layoutX="520.0" layoutY="500.0" mnemonicParsing="false" onAction="#Quit" prefHeight="80.0" prefWidth="120.0" text="QUIT" />
                 <Button fx:id="bestMove" layoutX="460.0" layoutY="80.0" mnemonicParsing="false" onAction="#BestMove" prefHeight="80.0" prefWidth="120.0" text="Best Move" />
-                <Button fx:id="loadSave" layoutX="680.0" layoutY="500.0" mnemonicParsing="false" onAction="#LoadSave" prefHeight="80.0" prefWidth="120.0" text="Load Last Save" />
+                <Button fx:id="loadSave" layoutX="680.0" layoutY="500.0" mnemonicParsing="false" onAction="#loadMatch" prefHeight="80.0" prefWidth="120.0" text="Load Last Save" />
                 <Button fx:id="left" layoutX="560.0" layoutY="310.0" mnemonicParsing="false" onAction="#MoveLeft" prefHeight="40.0" prefWidth="80.0" />
                 <Button fx:id="up" layoutX="640.0" layoutY="230.0" mnemonicParsing="false" onAction="#MoveUp" prefHeight="80.0" prefWidth="40.0" />
                 <Button fx:id="right" layoutX="680.0" layoutY="310.0" mnemonicParsing="false" onAction="#MoveRight" prefHeight="40.0" prefWidth="80.0" />

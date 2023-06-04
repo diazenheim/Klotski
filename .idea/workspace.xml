@@ -5,9 +5,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e7014844-ab91-4a58-8400-4d4dcf72d825" name="Changes" comment="Added the Quit button functionality. &#10;Added an AlertBox class.&#10;Fixed PieceController class name.">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/klotski/klotski/controller/MatchController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/klotski/klotski/view/LoadMatchAlert.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/klotski/klotski/view/SaveAlert.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/match/configuration/Config 1 (Default)" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/match/configuration/Config 2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mvnw" beforeDir="false" afterPath="$PROJECT_DIR$/mvnw" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/klotski/klotski/controller/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/klotski/klotski/controller/MainController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/klotski/klotski/controller/MenuController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/klotski/klotski/controller/MenuController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/klotski/klotski/controller/PieceController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/klotski/klotski/controller/PieceController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/klotski/klotski/model/AlertBox.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/klotski/klotski/view/QuitAlert.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/klotski/klotski/model/Match.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/klotski/klotski/model/Match.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/klotski/klotski/model/Move.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/klotski/klotski/model/Move.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/com/klotski/klotski/view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/klotski/klotski/view.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -37,17 +49,26 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/tomma/OneDrive/Desktop/Klotski",
+    "last_opened_file_path": "/Users/silviuandrici/Desktop/Experience/uni/ING Software/Klotski/src/main/resources/match/configuration",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "project.structure.last.edited": "SDKs",
     "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
+    "project.structure.side.proportion": "0.42988506",
+    "settings.editor.selected.configurable": "reference.projectsettings.compiler.javacompiler",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/resources/match/configuration" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.klotski.klotski.view" />
+    </key>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -90,5 +111,9 @@
     <MESSAGE value="changes are:&#10;redundant code" />
     <MESSAGE value="Added the Quit button functionality. &#10;Added an AlertBox class.&#10;Fixed PieceController class name." />
     <option name="LAST_COMMIT_MESSAGE" value="Added the Quit button functionality. &#10;Added an AlertBox class.&#10;Fixed PieceController class name." />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>

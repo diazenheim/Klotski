@@ -55,4 +55,5 @@ public class Move {
     public void setNewY(double newY) {
         this.newY = newY;
     }
+
 }

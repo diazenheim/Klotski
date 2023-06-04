@@ -1,15 +1,26 @@
 package com.klotski.klotski.model;
 
+import java.util.ArrayList;
+
 public class Match {
     private static Match instance;
     private int currentIndex;
     private String matchName;
-    private Move[] moves;
+    private ArrayList<Move> moves;
+    private boolean saved;
 
     public Match() {
         currentIndex = 0;
         matchName = "New Match";
-        moves = new Move[9999];
+        moves = new ArrayList<Move>();
+        saved = false;
+    }
+
+    public static Match getMatch(){
+        if (instance == null){
+            instance = new Match();
+        }
+        return instance;
     }
 
     public int getCurrentIndex() {
@@ -28,11 +39,30 @@ public class Match {
         this.matchName = matchName;
     }
 
-    public Move[] getMoves() {
+    public ArrayList<Move> getMovesList() {
         return moves;
     }
 
-    public void setMoves(Move[] moves) {
+    public void setMovesList(ArrayList<Move> moves) {
         this.moves = moves;
+    }
+
+    public boolean isSaved() {
+        return saved;
+    }
+
+    public void setSaved(boolean saved) {
+        this.saved = saved;
+    }
+
+    public void reset(){
+        this.currentIndex = 0;
+        this.matchName = "New Match";
+        this.moves = new ArrayList<Move>();
+    }
+
+    public void addMove(Move move){
+        this.moves.add(move);
+        ++this.currentIndex;
     }
 }
