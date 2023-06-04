@@ -5,22 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e7014844-ab91-4a58-8400-4d4dcf72d825" name="Changes" comment="Added the Quit button functionality. &#10;Added an AlertBox class.&#10;Fixed PieceController class name.">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/klotski/klotski/controller/MatchController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/klotski/klotski/view/LoadMatchAlert.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/klotski/klotski/view/SaveAlert.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/match/configuration/Config 1 (Default)" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/match/configuration/Config 2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mvnw" beforeDir="false" afterPath="$PROJECT_DIR$/mvnw" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/klotski/klotski/controller/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/klotski/klotski/controller/MainController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/klotski/klotski/controller/MenuController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/klotski/klotski/controller/MenuController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/klotski/klotski/controller/PieceController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/klotski/klotski/controller/PieceController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/klotski/klotski/model/AlertBox.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/klotski/klotski/view/QuitAlert.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/klotski/klotski/model/Match.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/klotski/klotski/model/Match.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/klotski/klotski/model/Move.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/klotski/klotski/model/Move.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/klotski/klotski/view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/klotski/klotski/view.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,6 +30,10 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Downloaded.Files.Path.Enabled": "true",
+    "Repository.Attach.Annotations": "false",
+    "Repository.Attach.JavaDocs": "false",
+    "Repository.Attach.Sources": "false",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
@@ -54,7 +43,7 @@
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
-    "project.structure.last.edited": "SDKs",
+    "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.42988506",
     "settings.editor.selected.configurable": "reference.projectsettings.compiler.javacompiler",
