@@ -56,19 +56,17 @@ class PieceController {
                 toCheck = piece;
             }
             if (axes == 0) {
-                if (toCheck.getLayoutX() == (selected.getLayoutX()) + selected.getWidth()){
-                    if ((selected.getLayoutY() == toCheck.getLayoutY()) ||
-                            ((toCheck.getLayoutY() + toCheck.getHeight()) - 100 == selected.getLayoutY()) ||
-                            selected.getLayoutY() + selected.getHeight() - 100 == toCheck.getLayoutY()) {
+                if (toCheck.getLayoutX() == (selected.getLayoutX()) + selected.getWidth()) {
+
+                    if ((selected.getLayoutY() == toCheck.getLayoutY()) || ((toCheck.getLayoutY() + toCheck.getHeight()) - 100 == selected.getLayoutY()) || selected.getLayoutY() + selected.getHeight() - 100 == toCheck.getLayoutY()) {
                         return false;
                     }
                 }
             }
             else if(axes == 1) {
                 if (selected.getLayoutY() == toCheck.getLayoutY() + toCheck.getHeight()) {
-                    if ((selected.getLayoutX() == toCheck.getLayoutX()) ||
-                            (toCheck.getLayoutX() + toCheck.getWidth() - 100 == selected.getLayoutX()) ||
-                            selected.getLayoutX() + selected.getWidth() - 100 == toCheck.getLayoutX()) {
+                    if ((selected.getLayoutX() == toCheck.getLayoutX()) || (toCheck.getLayoutX() + toCheck.getWidth() - 100 == selected.getLayoutX()) || selected.getLayoutX() + selected.getWidth() - 100 == toCheck.getLayoutX()) {
+                        return false;
                     }
                 }
             }
