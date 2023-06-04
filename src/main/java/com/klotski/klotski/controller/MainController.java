@@ -1,8 +1,5 @@
 package com.klotski.klotski.controller;
 
-import com.fasterxml.jackson.databind.ObjectMapper;
-import com.klotski.klotski.model.Match;
-import com.klotski.klotski.model.Move;
 import com.klotski.klotski.view.LoadMatchAlert;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -11,12 +8,8 @@ import javafx.scene.input.KeyEvent;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.text.Text;
 
-import java.io.*;
-import java.util.ArrayList;
-import java.util.Scanner;
 
 import static com.klotski.klotski.controller.PieceController.*;
-import static com.klotski.klotski.controller.MatchController.*;
 
 public class MainController {
     //call the pieces through the ids from view.fxml in here
