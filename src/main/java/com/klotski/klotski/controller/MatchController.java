@@ -57,9 +57,9 @@ public class MatchController {
                 loadType + System.getProperty("file.separator");
         String savedMatch = getFileContent(resourceLocation + matchName);
         if (savedMatch != null) {
-            Match matchObject = (Match) getJsonObject(savedMatch);
+            Match matchObject = getJsonObject(savedMatch);
             match = matchObject;
-
+            //MainController.setCounter();
             ArrayList<Move> moves = match.getMovesList();
 
             //iterates on all the moves
@@ -92,7 +92,7 @@ public class MatchController {
     }
 
     //utility to convert a String in json format to an object (method found online)
-    private static Object getJsonObject(String stringObject) throws Exception {
+    private static Match getJsonObject(String stringObject) throws Exception {
         ObjectMapper mapper = new ObjectMapper();
 
         Match match = mapper.readValue(stringObject, Match.class);

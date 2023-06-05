@@ -64,5 +64,8 @@ public class Match {
     public void addMove(Move move){
         this.moves.add(move);
         ++this.currentIndex;
+        if (this.saved){
+            this.saved = false;
+        }
     }
 }

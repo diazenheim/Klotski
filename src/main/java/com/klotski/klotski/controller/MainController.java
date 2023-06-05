@@ -1,5 +1,6 @@
 package com.klotski.klotski.controller;
 
+import com.klotski.klotski.model.Match;
 import com.klotski.klotski.view.LoadMatchAlert;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -24,6 +25,8 @@ public class MainController {
     public void initialize() throws Exception {
         initializeButtonArray();
     }
+
+    Match match;
     public void initializeButtonArray() throws Exception {
         pieces = new Button[10];
         pieces[0] = pc0;
@@ -47,19 +50,19 @@ public class MainController {
     // all the movements are controlled by increasing or decreasing (by 100) of the variable X and Y(The Y axis is inverted) after checking the moves is valid.
     public void MoveRight() throws Exception {
         PieceController.MoveRight();
-        Count.setText("Counter: " + PieceController.counter );
+        setCounter(PieceController.counter );
     }
     public void MoveLeft() throws Exception {
         PieceController.MoveLeft();
-        Count.setText("Counter: " + PieceController.counter );
+        setCounter(PieceController.counter );
     }
     public void MoveUp() throws Exception {
         PieceController.MoveUp();
-        Count.setText("Counter: " + PieceController.counter );
+        setCounter(PieceController.counter );
     }
     public void MoveDown() throws Exception {
         PieceController.MoveDown();
-        Count.setText("Counter: " + PieceController.counter );
+        setCounter(PieceController.counter );
     }
     public void saveMatch() throws Exception {
         MenuController.Save();
@@ -89,6 +92,12 @@ public class MainController {
     public void Swipe(MouseEvent mouseEvent) throws Exception {
         PieceController.Swipe(mouseEvent);
         Count.setText("Counter: " + PieceController.counter );
+    }
+
+    public void setCounter(int counter){
+        Count.setText("Counter: " + counter);
+        match = match.getMatch();
+        match.setCurrentIndex(counter);
     }
 
 }

@@ -128,24 +128,16 @@ class PieceController {
 
         if (x < (previousX)) {
             MoveLeft();
-            System.out.println("left    " + x + "    " + previousX);
-            //return;
 
         } else if (x > (previousX + 230)) {
             MoveRight();
-            System.out.println("Right    " + x + "    " + previousX);
-            //return;
         }
 
         if (y < (previousY+50)) {
             MoveUp();
-            System.out.println("Up    " + y + "    " + previousY);
-            //return;
 
         } else if (y > (previousY + 250)) {
             MoveDown();
-            System.out.println("Down  " + y + "    " + previousY);
-            //return;
         }
     }
 
