@@ -59,6 +59,10 @@ public class MatchController {
             //MainController.setCounter();
             ArrayList<Move> moves = match.getMovesList();
             PieceController.counter = match.getCurrentIndex();
+            if (loadType == "configuration") {
+                match.setConfiguration(matchName);
+                klotskiLog("matchname: " + match.getConfiguration());
+            }
             //iterates on all the moves
             for (int i = 0; i < moves.size(); i++) {
                 Move move = moves.get(i);
@@ -131,14 +135,14 @@ public class MatchController {
 
     //utility method to get the content of a File from a given path
     private static String getFileContent(String filePath) throws IOException, Exception {
-        try {
+        /*try {
             klotskiLog(filePath);
             InputStream inputStream = MainController.class.getResourceAsStream(filePath);
             Scanner s = new Scanner(inputStream).useDelimiter("\\A");
         }
         catch (Exception e){
             filePath = filePath.replace("\\", "/"); //let modify the path to work in a windows system
-        }
+        }*/
         klotskiLog(filePath);
         //the following method has been found online to convert a file into string
         InputStream inputStream = MainController.class.getResourceAsStream(filePath);

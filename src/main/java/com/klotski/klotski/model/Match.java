@@ -1,5 +1,7 @@
 package com.klotski.klotski.model;
 
+import com.klotski.klotski.controller.MatchController;
+
 import java.util.ArrayList;
 
 public class Match {
@@ -7,15 +9,15 @@ public class Match {
     private static int currentIndex;
     private static String matchName;
     private static ArrayList<Move> moves;
-    private boolean saved;
-    private int configuration;
+    private static boolean saved;
+    private static String configuration;
 
     public Match() {
         currentIndex = 0;
         matchName = "New Match";
         moves = new ArrayList<Move>();
         saved = false;
-        configuration = 0;
+        configuration = "";
     }
 
     public static Match getMatch(){
@@ -57,27 +59,28 @@ public class Match {
         this.saved = saved;
     }
 
-    public static void reset(){
+    public static void reset() throws Exception {
         currentIndex = 0;
         matchName = "New Match";
         moves = new ArrayList<Move>();
+        MatchController.loadMatch(getConfiguration(), "configuration");
     }
 
     public void addMove(Move move){
         moves.add(move);
-        ++currentIndex;
+        ++this.currentIndex;
         if (this.saved){
             this.saved = false;
         }
     }
     public static void RemoveLastMove(int index){
-        Move scarto = moves.remove(index);
+        moves.remove(index);
         --currentIndex;
     }
-    public int getConfiguration(){
+    public static String getConfiguration(){
         return configuration;
     }
-    public void setConfiguration(int conf){
+    public void setConfiguration(String conf){
         configuration = conf;
     }
 }

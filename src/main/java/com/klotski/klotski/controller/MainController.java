@@ -85,7 +85,7 @@ public class MainController {
         }
         setCounter(counter);
     }
-    public void Reset(){
+    public void Reset() throws Exception {
         MenuController.reset();
         PieceController.counter = 0;
         setCounter(counter);

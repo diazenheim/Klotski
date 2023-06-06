@@ -44,7 +44,7 @@ public class MenuController {
         piecebutton.setLayoutY(newY);
         Match.RemoveLastMove(oldIndex);
     }
-    public static void reset(){
+    public static void reset() throws Exception {
         match = Match.getMatch();
         ArrayList<Move> moves = match.getMovesList();
         for (int i= moves.size()-1;i >= 0; i--) {
