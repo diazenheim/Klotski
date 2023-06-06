@@ -28,24 +28,23 @@ public class MenuController {
     }
     public static void Back() {
         match = Match.getMatch();
-        if(match.getCurrentIndex() == 0){
+        if(match.getCurrentIndex() == 0 ){
             return;
         }
-        int oldIndex = match.getCurrentIndex()-1;
+        ArrayList<Move> moves = match.getMovesList();
 
-        ArrayList<Move> Moves = match.getMovesList();
-
-        Move move = Moves.get(oldIndex);
+        Move move = moves.get(moves.size()-1);
         int pieceIndex = move.getPieceIndex();
         Button piecebutton = PieceController.getPieceButton(pieceIndex);
+        System.out.println(piecebutton);
         double newX = move.getOldX();
         double newY = move.getOldY();
         piecebutton.setLayoutX(newX);
         piecebutton.setLayoutY(newY);
-        Match.RemoveLastMove(oldIndex);
+        match.RemoveLastMove(moves.size()-1);
     }
     public static void reset() throws Exception {
-        match = Match.getMatch();
+        /*match = Match.getMatch();
         ArrayList<Move> moves = match.getMovesList();
         for (int i= moves.size()-1;i >= 0; i--) {
             Move move = moves.get(i);
@@ -56,7 +55,7 @@ public class MenuController {
             double newY = move.getOldY();
             piecebutton.setLayoutX(newX);
             piecebutton.setLayoutY(newY);
-        }
-        Match.reset();
+        }*/
+        match.reset();
     }
 }

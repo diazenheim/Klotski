@@ -68,6 +68,7 @@ public class MainController {
 
     public void loadMatch() throws Exception {
         MenuController.loadMatch();
+        setCounter(counter);
         //MatchController.loadSave();
     }
 
