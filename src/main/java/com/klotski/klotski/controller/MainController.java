@@ -19,7 +19,6 @@ public class MainController {
     //call the text field to later modify for the counter
     @FXML
     public Text Count;
-
     //initialization of the Array used to ease methods of move
     @FXML
     public void initialize() throws Exception {
@@ -41,7 +40,6 @@ public class MainController {
         pieces[9] = pc9;
 
         LoadMatchAlert.display("Load Configuration", "Warm welcome to our application!\n" +
-                "Diana, Stefano, Tommaso and Silviu are hopeful you'll like it.\n" +
                 "Choose the configuration to start with or leave the default one.", "configuration");
     }
     public void select(ActionEvent e) { //selecting the button to move
@@ -81,22 +79,30 @@ public class MainController {
     }
 
     public void Back() {
+        MenuController.Back();
+        if(counter!= 0) {
+            counter--;
+        }
+        setCounter(counter);
     }
-
-    
+    public void Reset(){
+        MenuController.reset();
+        PieceController.counter = 0;
+        setCounter(counter);
+    }
     public void Keyboard(KeyEvent keyEvent) throws Exception {
         PieceController.Keyboard(keyEvent);
-        Count.setText("Counter: " + PieceController.counter );
+        setCounter(PieceController.counter );
     }
 
     public void Swipe(MouseEvent mouseEvent) throws Exception {
         PieceController.Swipe(mouseEvent);
-        Count.setText("Counter: " + PieceController.counter );
+        setCounter(PieceController.counter );
     }
 
     public void setCounter(int counter){
         Count.setText("Counter: " + counter);
-        match = match.getMatch();
+        match = Match.getMatch();
         match.setCurrentIndex(counter);
     }
 

@@ -3,20 +3,17 @@ package com.klotski.klotski.controller;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.klotski.klotski.model.Match;
 import com.klotski.klotski.model.Move;
-import javafx.event.ActionEvent;
+
 import javafx.scene.control.Button;
 
 import java.io.*;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-import static com.klotski.klotski.controller.PieceController.counter;
-import static com.klotski.klotski.controller.PieceController.pieces;
-
 public class MatchController {
 
 
-    private static Match match;
+    public static Match match;
     //files location
     public static final String matchFilesLocation = System.getProperty("user.dir") + System.getProperty("file.separator") +
             "src" + System.getProperty("file.separator") +
@@ -61,7 +58,7 @@ public class MatchController {
             match = matchObject;
             //MainController.setCounter();
             ArrayList<Move> moves = match.getMovesList();
-
+            PieceController.counter = match.getCurrentIndex();
             //iterates on all the moves
             for (int i = 0; i < moves.size(); i++) {
                 Move move = moves.get(i);
@@ -72,6 +69,7 @@ public class MatchController {
                 double newY = move.getNewY();
                 piecebutton.setLayoutX(newX);
                 piecebutton.setLayoutY(newY);
+
             }
             klotskiLog(savedMatch);
 
@@ -133,17 +131,28 @@ public class MatchController {
 
     //utility method to get the content of a File from a given path
     private static String getFileContent(String filePath) throws IOException, Exception {
+        try {
+            klotskiLog(filePath);
+            InputStream inputStream = MainController.class.getResourceAsStream(filePath);
+            Scanner s = new Scanner(inputStream).useDelimiter("\\A");
+        }
+        catch (Exception e){
+            filePath = filePath.replace("\\", "/"); //let modify the path to work in a windows system
+        }
         klotskiLog(filePath);
         //the following method has been found online to convert a file into string
         InputStream inputStream = MainController.class.getResourceAsStream(filePath);
-        Scanner s = new Scanner(inputStream).useDelimiter("\\A");
+        Scanner s = new Scanner(inputStream).useDelimiter(System.getProperty("file.separator") + System.getProperty("file.separator")+"A");
+
         String loadedFile = s.hasNext() ? s.next() : "";
 
         return loadedFile;
     }
 
     private static void setConfiguration(String configuration){
-        return;
+        if(configuration == "1") {
+
+        }
     }
 
     private static void klotskiLog(String string) {

@@ -9,10 +9,10 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Text?>
 
-<?import javafx.scene.shape.Line?>
-<VBox prefHeight="665.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/20" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.klotski.klotski.controller.MainController">
+<VBox prefHeight="665.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.klotski.klotski.controller.MainController">
     <children>
         <MenuBar VBox.vgrow="NEVER">
             <menus>
@@ -180,15 +180,16 @@
                     </children>
                 </Pane>
                 <Button fx:id="save" layoutX="740.0" layoutY="80.0" mnemonicParsing="false" onAction="#saveMatch" prefHeight="80.0" prefWidth="120.0" text="Save" />
-                <Button fx:id="quit" layoutX="520.0" layoutY="500.0" mnemonicParsing="false" onAction="#Quit" prefHeight="80.0" prefWidth="120.0" text="QUIT" />
+                <Button fx:id="quit" layoutX="460.0" layoutY="500.0" mnemonicParsing="false" onAction="#Quit" prefHeight="80.0" prefWidth="120.0" text="QUIT" />
                 <Button fx:id="bestMove" layoutX="460.0" layoutY="80.0" mnemonicParsing="false" onAction="#BestMove" prefHeight="80.0" prefWidth="120.0" text="Best Move" />
-                <Button fx:id="loadSave" layoutX="680.0" layoutY="500.0" mnemonicParsing="false" onAction="#loadMatch" prefHeight="80.0" prefWidth="120.0" text="Load Last Save" />
+                <Button fx:id="loadSave" layoutX="740.0" layoutY="500.0" mnemonicParsing="false" onAction="#loadMatch" prefHeight="80.0" prefWidth="120.0" text="Load Last Save" />
                 <Button fx:id="left" layoutX="560.0" layoutY="310.0" mnemonicParsing="false" onAction="#MoveLeft" prefHeight="40.0" prefWidth="80.0" />
                 <Button fx:id="up" layoutX="640.0" layoutY="230.0" mnemonicParsing="false" onAction="#MoveUp" prefHeight="80.0" prefWidth="40.0" />
                 <Button fx:id="right" layoutX="680.0" layoutY="310.0" mnemonicParsing="false" onAction="#MoveRight" prefHeight="40.0" prefWidth="80.0" />
                 <Button fx:id="down" layoutX="640.0" layoutY="350.0" mnemonicParsing="false" onAction="#MoveDown" prefHeight="80.0" prefWidth="40.0" />
                 <Button fx:id="back" layoutX="600.0" layoutY="80.0" mnemonicParsing="false" onAction="#Back" prefHeight="80.0" prefWidth="120.0" text="Back" />
                 <Text fx:id="Count" layoutX="600.0" layoutY="206.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Counter = 0" wrappingWidth="120" />
+            <Button fx:id="Reset" layoutX="600.0" layoutY="500.0" mnemonicParsing="false" onAction="#Reset" prefHeight="80.0" prefWidth="120.0" text="RESET" />
             </children>
         </AnchorPane>
     </children>
