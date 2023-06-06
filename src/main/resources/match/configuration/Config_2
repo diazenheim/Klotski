@@ -48,8 +48,8 @@
             "moveIndex": 0,
             "oldX": 100.0,
             "oldY": 400.0,
-            "newX": 200.0,
-            "newY": 400.0
+            "newX": 100.0,
+            "newY": 200.0
         },
         {
             "pieceIndex": 6,
@@ -57,7 +57,7 @@
             "oldX": 100.0,
             "oldY": 200.0,
             "newX": 100.0,
-            "newY": 200.0
+            "newY": 300.0
         },
         {
             "pieceIndex": 7,
@@ -65,7 +65,7 @@
             "oldX": 200.0,
             "oldY": 200.0,
             "newX": 200.0,
-            "newY": 200.0
+            "newY": 300.0
         },
         {
             "pieceIndex": 8,
@@ -73,7 +73,7 @@
             "oldX": 100.0,
             "oldY": 300.0,
             "newX": 100.0,
-            "newY": 300.0
+            "newY": 400.0
         },
         {
             "pieceIndex": 9,
@@ -81,7 +81,7 @@
             "oldX": 200.0,
             "oldY": 300.0,
             "newX": 200.0,
-            "newY": 300.0
+            "newY": 400.0
         }
     ]
 }
