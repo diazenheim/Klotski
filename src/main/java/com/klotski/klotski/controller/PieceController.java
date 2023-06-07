@@ -118,6 +118,7 @@ class PieceController {
             }
         }
     }
+    //let use the mouse to move the pieces
     @FXML
     public static void Swipe(MouseEvent mouseEvent) throws Exception {
         double previousX = x;
@@ -140,7 +141,7 @@ class PieceController {
             MoveDown();
         }
     }
-
+    //let use the keyboard to move the pieces
     @FXML
     public static void Keyboard(KeyEvent keyEvent) throws Exception {
         KeyCode kc = keyEvent.getCode();
