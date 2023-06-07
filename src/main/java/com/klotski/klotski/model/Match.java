@@ -17,7 +17,6 @@ public class Match {
         matchName = "New Match";
         moves = new ArrayList<Move>();
         saved = false;
-        configuration = "";
     }
 
     public static Match getMatch(){
