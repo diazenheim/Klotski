@@ -72,7 +72,7 @@
             "moveIndex": 0,
             "oldX": 100.0,
             "oldY": 300.0,
-            "newX": 100.0,
+            "newX": 0.0,
             "newY": 400.0
         },
         {
@@ -80,7 +80,7 @@
             "moveIndex": 0,
             "oldX": 200.0,
             "oldY": 300.0,
-            "newX": 200.0,
+            "newX": 300.0,
             "newY": 400.0
         }
     ]
