@@ -3,6 +3,7 @@ package com.klotski.klotski.controller;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.klotski.klotski.model.Match;
 import com.klotski.klotski.model.Move;
+import com.klotski.klotski.view.WinningAlert;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
@@ -86,6 +87,9 @@ class PieceController {
         }
     }
     public static void MoveDown() throws Exception {
+
+
+
         if(approving(1,1)) {
             double oldX = piece.getLayoutX();
             double oldY = piece.getLayoutY();
@@ -93,6 +97,10 @@ class PieceController {
                 piece.setLayoutY(y += 100);
                 counter +=1;
                 match.getMatch().addMove(createMoveObject(counter - 1, piece, oldX, oldY));
+            }
+            if(piece.getId() == pieces[0].getId() && piece.getLayoutX() == 100 && piece.getLayoutY() == 300){
+
+                WinningAlert.display("YOU WIN","YOU WIN");
             }
         }
     }
