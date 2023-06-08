@@ -35,7 +35,7 @@ public class QuitAlert {
         layout.getChildren().addAll(label, quitButton, cancelButton); //Add buttons to the window
 
 
-        quitButton.setOnAction(e ->  Platform.exit()); //close game
+        quitButton.setOnAction(e ->  System.exit(0)); //close game
         cancelButton.setOnAction(e -> window.close()); //close AlertBox
 
         Scene scene = new Scene(layout); //make scene
