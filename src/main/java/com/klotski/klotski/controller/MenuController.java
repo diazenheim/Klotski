@@ -36,26 +36,18 @@ public class MenuController {
         Move move = moves.get(moves.size()-1);
         int pieceIndex = move.getPieceIndex();
         Button piecebutton = PieceController.getPieceButton(pieceIndex);
-        System.out.println(piecebutton);
         double newX = move.getOldX();
         double newY = move.getOldY();
         piecebutton.setLayoutX(newX);
         piecebutton.setLayoutY(newY);
         match.RemoveLastMove(moves.size()-1);
+        PieceController.refresh();
     }
     public static void reset() throws Exception {
-        /*match = Match.getMatch();
-        ArrayList<Move> moves = match.getMovesList();
-        for (int i= moves.size()-1;i >= 0; i--) {
-            Move move = moves.get(i);
-            int pieceIndex = move.getPieceIndex();
-            Button piecebutton = PieceController.getPieceButton(pieceIndex);
-
-            double newX = move.getOldX();
-            double newY = move.getOldY();
-            piecebutton.setLayoutX(newX);
-            piecebutton.setLayoutY(newY);
-        }*/
         match.reset();
     }
+    private static void klotskiLog(String string) {
+        System.out.println(string);
+    }
+
 }

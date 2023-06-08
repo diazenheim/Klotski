@@ -1,6 +1,7 @@
 package com.klotski.klotski.controller;
 
 import com.klotski.klotski.model.Match;
+import com.klotski.klotski.model.Solution;
 import com.klotski.klotski.view.LoadMatchAlert;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -9,6 +10,8 @@ import javafx.scene.input.KeyEvent;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.text.Text;
 
+
+import java.util.ArrayList;
 
 import static com.klotski.klotski.controller.PieceController.*;
 
@@ -49,18 +52,23 @@ public class MainController {
     public void MoveRight() throws Exception {
         PieceController.MoveRight();
         setCounter(PieceController.counter );
+        match.setBestMoveReset(false);
     }
     public void MoveLeft() throws Exception {
         PieceController.MoveLeft();
         setCounter(PieceController.counter );
+        match.setBestMoveReset(false);
     }
     public void MoveUp() throws Exception {
         PieceController.MoveUp();
         setCounter(PieceController.counter );
+        match.setBestMoveReset(false);
+
     }
     public void MoveDown() throws Exception {
         PieceController.MoveDown();
         setCounter(PieceController.counter );
+        match.setBestMoveReset(false);
     }
     public void saveMatch() throws Exception {
         MenuController.Save();
@@ -72,7 +80,44 @@ public class MainController {
         //MatchController.loadSave();
     }
 
-    public void BestMove() {
+    public void BestMove() throws Exception {
+        match = Match.getMatch();
+        if (!match.isBestMoveReset()) {
+            Back();
+            return;
+        }
+        ArrayList<Solution> solutionList = match.getSolutionList();
+
+        Solution solution = solutionList.get(counter);
+        int pieceIndex = solution.getPieceIndex();
+        Button piecebutton = PieceController.selection(pieceIndex);
+        PieceController.selection(pieceIndex);
+        switch (solution.getDirectionMove()){
+            case "U":{
+                MoveUp();
+                match.setBestMoveReset(true);
+                break;
+            }
+            case "D":{
+                MoveDown();
+                match.setBestMoveReset(true);
+                break;
+            }
+            case "L":{
+                MoveLeft();
+                match.setBestMoveReset(true);
+                break;
+            }
+            case "R":{
+                MoveRight();
+                match.setBestMoveReset(true);
+                break;
+            }
+            default:{
+                match.setBestMoveReset(true);
+                System.out.println("should be true");
+            }
+        }
     }
 
     public void Quit() {

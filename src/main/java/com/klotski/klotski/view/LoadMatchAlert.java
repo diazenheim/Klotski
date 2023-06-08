@@ -20,6 +20,7 @@ import javafx.stage.Stage;
 import java.io.File;
 import java.util.ArrayList;
 
+
 public class LoadMatchAlert {
 
 
@@ -42,7 +43,7 @@ public class LoadMatchAlert {
         if (loadTypeLocal == "configuration"){
             loadLocation = MatchController.configurationLocation;
             emptyListpPlaceholder = "No Configuration available!";
-            cancelButtonText = "Default";
+            cancelButtonText = "Cancel";
             labelPrefHeight = 60;
             loadType = loadTypeLocal;
         } else if (loadTypeLocal == "saved"){
@@ -76,13 +77,17 @@ public class LoadMatchAlert {
 
         cancelButton.setLayoutX(40);
         cancelButton.setLayoutY( list.getLayoutY() + list.getPrefHeight() + 10);
-        System.out.println(list.getPrefHeight());
 
         layout.setPrefSize(440, 130);
         layout.getChildren().addAll(label, list, cancelButton); //Add buttons to the window
 
-        //close alert
-        cancelButton.setOnAction(e -> window.close()); //close AlertBox
+        if (loadTypeLocal == "configuration"){
+            //close alert
+            cancelButton.setOnAction(e -> System.exit(0)); //close AlertBox
+        } else if (loadTypeLocal == "saved"){
+            //close alert
+            cancelButton.setOnAction(e -> window.close()); //close AlertBox
+        }
 
         Scene scene = new Scene(layout); //make scene
         window.setScene(scene); //add scene to the window
@@ -149,7 +154,7 @@ public class LoadMatchAlert {
                 try {
                     //load match
                     MatchController.loadMatch(labelText, loadType);
-                    System.out.println(labelText + " loaded");
+                    klotskiLog(labelText + " loaded");
                 } catch (Exception ex) {
                     throw new RuntimeException(ex);
                 }
@@ -163,9 +168,9 @@ public class LoadMatchAlert {
                         //save match the exit game or close alert
                         File matchToDelete = new File(MatchController.savedLocation + labelText);
                         if (matchToDelete.delete()) {
-                            System.out.println("Deleted the file: " + matchToDelete.getName());
+                            klotskiLog("Deleted the file: " + matchToDelete.getName());
                         } else {
-                            System.out.println("Failed to delete the file.");
+                            klotskiLog("Failed to delete the file.");
                         }
                         refreshList();
                     } catch (Exception ex) {
@@ -183,6 +188,10 @@ public class LoadMatchAlert {
             }
 
         }
+    }
+
+    private static void klotskiLog(String string) {
+        System.out.println(string);
     }
 }
 

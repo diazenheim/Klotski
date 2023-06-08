@@ -1,22 +1,30 @@
 package com.klotski.klotski.model;
 
 import com.klotski.klotski.controller.MatchController;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 import java.util.ArrayList;
+
+//the following annotation is needed to allow the Jackson library to convert the match configuration to a POJO ignoring the missing fields in the Match configuration
+@JsonIgnoreProperties(ignoreUnknown = true)
 
 public class Match {
     private static Match instance;
     private static int currentIndex;
     private static String matchName;
     private static ArrayList<Move> moves;
+    private static ArrayList<Solution> solution;
     private static boolean saved;
     private static String configuration;
+    private static boolean bestMoveReset;
 
     public Match() {
         currentIndex = 0;
         matchName = "New Match";
         moves = new ArrayList<Move>();
+        solution = new ArrayList<Solution>();
         saved = false;
+        bestMoveReset = true;
     }
 
     public static Match getMatch(){
@@ -50,6 +58,14 @@ public class Match {
         this.moves = moves;
     }
 
+    public ArrayList<Solution> getSolutionList() {
+        return solution;
+    }
+
+    public void setSolutionList(ArrayList<Solution> solution) {
+        Match.solution = solution;
+    }
+
     public boolean isSaved() {
         return saved;
     }
@@ -62,6 +78,7 @@ public class Match {
         currentIndex = 0;
         matchName = "New Match";
         moves = new ArrayList<Move>();
+        bestMoveReset = true;
         MatchController.loadMatch(getConfiguration(), "configuration");
     }
 
@@ -75,11 +92,22 @@ public class Match {
     public static void RemoveLastMove(int index){
         moves.remove(index);
         --currentIndex;
+        if (currentIndex == 0){
+            bestMoveReset = true;
+        }
     }
     public static String getConfiguration(){
         return configuration;
     }
     public void setConfiguration(String conf){
         configuration = conf;
+    }
+
+    public static boolean isBestMoveReset() {
+        return bestMoveReset;
+    }
+
+    public static void setBestMoveReset(boolean bestMoveReset) {
+        Match.bestMoveReset = bestMoveReset;
     }
 }

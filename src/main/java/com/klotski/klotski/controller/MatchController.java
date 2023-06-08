@@ -63,21 +63,7 @@ public class MatchController {
                 match.setConfiguration(matchName);
                 klotskiLog("matchname: " + match.getConfiguration());
             }
-            //iterates on all the moves
-            for (int i = 0; i < moves.size(); i++) {
-                Move move = moves.get(i);
-                int pieceIndex = move.getPieceIndex();
-                Button piecebutton = PieceController.getPieceButton(pieceIndex);
-
-                double newX = move.getNewX();
-                double newY = move.getNewY();
-                piecebutton.setLayoutX(newX);
-                piecebutton.setLayoutY(newY);
-
-            }
-            klotskiLog(savedMatch);
-
-            //    setConfiguration(savedMatch);
+            setMatchConfiguration(moves);
 
             klotskiLog("\nMoves loaded successfully from file " + savedLocation);
         }
@@ -87,8 +73,6 @@ public class MatchController {
     private static String getJsonString(Object o) throws Exception{
         ObjectMapper mapper = new ObjectMapper();
         String jsonString = mapper.writeValueAsString(o);
-
-        //klotskiLog(jsonString);
 
         return jsonString;
     }
@@ -153,8 +137,17 @@ public class MatchController {
         return loadedFile;
     }
 
-    private static void setConfiguration(String configuration){
-        if(configuration == "1") {
+    private static void setMatchConfiguration(ArrayList<Move> moves){
+    //iterates on all the moves
+        for (int i = 0; i < moves.size(); i++) {
+            Move move = moves.get(i);
+            int pieceIndex = move.getPieceIndex();
+            Button piecebutton = PieceController.getPieceButton(pieceIndex);
+
+            double newX = move.getNewX();
+            double newY = move.getNewY();
+            piecebutton.setLayoutX(newX);
+            piecebutton.setLayoutY(newY);
 
         }
     }

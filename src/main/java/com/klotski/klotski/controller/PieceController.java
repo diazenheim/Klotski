@@ -38,6 +38,22 @@ class PieceController {
             piece.setStyle("-fx-background-color: BLUE");
         }
     }
+    public static Button selection(int pieceIndex){
+        if(piece != null) {
+            piece.setStyle(null);
+        }
+
+        piece = (Button) getPieceButton(pieceIndex);
+
+        refresh();
+        if(piece == pieces[0]){
+            piece.setStyle("-fx-background-color: RED");
+        }
+        else {
+            piece.setStyle("-fx-background-color: BLUE");
+        }
+        return  piece;
+    }
     //refresh allow uor variable x and y to start with the right starting X and Y of the button
     public static void refresh(){ // refreshing the x and y variables, and inserting the pieces into the array
         x= piece.getLayoutX();
