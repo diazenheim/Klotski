@@ -79,7 +79,7 @@ public class Match {
         matchName = "New Match";
         moves = new ArrayList<Move>();
         bestMoveReset = true;
-        MatchController.loadMatch(getConfiguration(), "configuration");
+        MatchController.loadMatch(configuration, "configuration");
     }
 
     public void addMove(Move move){
@@ -96,18 +96,21 @@ public class Match {
             bestMoveReset = true;
         }
     }
-    public static String getConfiguration(){
+    public String getConfiguration(){
         return configuration;
     }
     public void setConfiguration(String conf){
         configuration = conf;
     }
 
-    public static boolean isBestMoveReset() {
+    public boolean isBestMoveReset() {
         return bestMoveReset;
     }
 
-    public static void setBestMoveReset(boolean bestMoveReset) {
+    public void setBestMoveReset(boolean bestMoveReset) {
+        Match.bestMoveReset = bestMoveReset;
+    }
+    public static void setBestMoveResetfield(boolean bestMoveReset) {
         Match.bestMoveReset = bestMoveReset;
     }
 }

@@ -153,16 +153,20 @@ class PieceController {
 
         if (x < (previousX)) {
             MoveLeft();
+            match.setBestMoveResetfield(false);
 
         } else if (x > (previousX + 230)) {
             MoveRight();
+            match.setBestMoveResetfield(false);
         }
 
         if (y < (previousY+50)) {
             MoveUp();
+            match.setBestMoveResetfield(false);
 
         } else if (y > (previousY + 250)) {
             MoveDown();
+            match.setBestMoveResetfield(false);
         }
     }
     //let use the keyboard to move the pieces
@@ -171,12 +175,16 @@ class PieceController {
         KeyCode kc = keyEvent.getCode();
         if (kc == KeyCode.UP) {
             MoveUp();
+            match.setBestMoveResetfield(false);
         } else if (kc == KeyCode.RIGHT) {
             MoveRight();
+            match.setBestMoveResetfield(false);
         } else if (kc == KeyCode.DOWN) {
             MoveDown();
+            match.setBestMoveResetfield(false);
         } else if (kc == KeyCode.LEFT) {
             MoveLeft();
+            match.setBestMoveResetfield(false);
         }
     }
 

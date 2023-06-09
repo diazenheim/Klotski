@@ -52,23 +52,23 @@ public class MainController {
     public void MoveRight() throws Exception {
         PieceController.MoveRight();
         setCounter(PieceController.counter );
-        match.setBestMoveReset(false);
+        match.setBestMoveResetfield(false);
     }
     public void MoveLeft() throws Exception {
         PieceController.MoveLeft();
         setCounter(PieceController.counter );
-        match.setBestMoveReset(false);
+        match.setBestMoveResetfield(false);
     }
     public void MoveUp() throws Exception {
         PieceController.MoveUp();
         setCounter(PieceController.counter );
-        match.setBestMoveReset(false);
+        match.setBestMoveResetfield(false);
 
     }
     public void MoveDown() throws Exception {
         PieceController.MoveDown();
         setCounter(PieceController.counter );
-        match.setBestMoveReset(false);
+        match.setBestMoveResetfield(false);
     }
     public void saveMatch() throws Exception {
         MenuController.Save();
@@ -95,22 +95,22 @@ public class MainController {
         switch (solution.getDirectionMove()){
             case "U":{
                 MoveUp();
-                match.setBestMoveReset(true);
+                match.setBestMoveResetfield(true);
                 break;
             }
             case "D":{
                 MoveDown();
-                match.setBestMoveReset(true);
+                match.setBestMoveResetfield(true);
                 break;
             }
             case "L":{
                 MoveLeft();
-                match.setBestMoveReset(true);
+                match.setBestMoveResetfield(true);
                 break;
             }
             case "R":{
                 MoveRight();
-                match.setBestMoveReset(true);
+                match.setBestMoveResetfield(true);
                 break;
             }
             default:{
