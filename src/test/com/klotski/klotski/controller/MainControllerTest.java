@@ -54,7 +54,7 @@ public class MainControllerTest {
         mainController.match = match;
 
         int counter = 0;
-        mainController.setCounter(counter);
+        mainController.setCounter(counter,Count);
 
         assertEquals(counter, match.getCurrentIndex());
         assertEquals("Counter: " + counter, Count.getText());
@@ -66,10 +66,11 @@ public class MainControllerTest {
     public void reset() throws Exception {
         Match match = new Match();
         mainController.match = match;
+        match.setConfiguration("Config 1");
 
         int counter = 0;
         match.setCurrentIndex(10);
-        mainController.Reset();
+        MenuController.reset();
 
         assertEquals(counter, match.getCurrentIndex());
     }
