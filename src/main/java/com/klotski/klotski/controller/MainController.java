@@ -25,11 +25,11 @@ public class MainController {
     //initialization of the Array used to ease methods of move
     @FXML
     public void initialize() throws Exception {
-        initializeButtonArray();
+        initializeButtonArray(true);
     }
 
     Match match;
-    public void initializeButtonArray() throws Exception {
+    public void initializeButtonArray(boolean loadAlert) throws Exception {
         pieces = new Button[10];
         pieces[0] = pc0;
         pieces[1] = pc1;
@@ -42,8 +42,10 @@ public class MainController {
         pieces[8] = pc8;
         pieces[9] = pc9;
 
-        LoadMatchAlert.display("Load Configuration", "Warm welcome to our application!\n" +
-                "Choose the configuration to start with or leave the default one.", "configuration");
+        if (loadAlert){
+            LoadMatchAlert.display("Load Configuration", "Warm welcome to our application!\n" +
+                    "Choose the configuration to start with or leave the default one.", "configuration");
+        }
     }
     public void select(ActionEvent e) { //selecting the button to move
         selection(e);
@@ -90,7 +92,6 @@ public class MainController {
 
         Solution solution = solutionList.get(counter);
         int pieceIndex = solution.getPieceIndex();
-        Button piecebutton = PieceController.selection(pieceIndex);
         PieceController.selection(pieceIndex);
         switch (solution.getDirectionMove()){
             case "U":{

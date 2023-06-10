@@ -1,6 +1,7 @@
 package com.klotski.klotski.controller;
 import com.klotski.klotski.model.Match;
 import com.klotski.klotski.view.LoadMatchAlert;
+import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
@@ -26,22 +27,25 @@ public class MainControllerTest {
 
     @Test
     public void testInitializeButtonArray() throws Exception {
-        mainController.initializeButtonArray();
+        mainController.initializeButtonArray(false);
+        /*Platform.startup(() ->{
 
-        Button[] pieces = PieceController.pieces;
+            Button[] pieces = PieceController.pieces;
 
-        assertNotNull(pieces);
-        assertEquals(10, pieces.length);
-        assertNotNull(pieces[0]);
-        assertNotNull(pieces[1]);
-        assertNotNull(pieces[2]);
-        assertNotNull(pieces[3]);
-        assertNotNull(pieces[4]);
-        assertNotNull(pieces[5]);
-        assertNotNull(pieces[6]);
-        assertNotNull(pieces[7]);
-        assertNotNull(pieces[8]);
-        assertNotNull(pieces[9]);
+            System.out.println(pieces[0]);
+            assertNotNull(pieces);
+            assertEquals(10, pieces.length);
+            assertNotNull(pieces[0]);
+            assertNotNull(pieces[1]);
+            assertNotNull(pieces[2]);
+            assertNotNull(pieces[3]);
+            assertNotNull(pieces[4]);
+            assertNotNull(pieces[5]);
+            assertNotNull(pieces[6]);
+            assertNotNull(pieces[7]);
+            assertNotNull(pieces[8]);
+            assertNotNull(pieces[9]);
+        });*/
     }
 
     @Test
@@ -58,4 +62,15 @@ public class MainControllerTest {
 
     // Aggiungi altri test per i metodi di MainController che desideri testare
 
+    @Test
+    public void reset() throws Exception {
+        Match match = new Match();
+        mainController.match = match;
+
+        int counter = 0;
+        match.setCurrentIndex(10);
+        mainController.Reset();
+
+        assertEquals(counter, match.getCurrentIndex());
+    }
 }

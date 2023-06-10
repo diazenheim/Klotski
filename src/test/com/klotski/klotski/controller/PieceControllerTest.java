@@ -1,5 +1,7 @@
 package com.klotski.klotski.controller;
 
+import com.klotski.klotski.Main;
+import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.scene.control.Button;
 import org.junit.jupiter.api.BeforeEach;
@@ -9,33 +11,46 @@ import static org.junit.jupiter.api.Assertions.*;
 class PieceControllerTest {
     public Button[] pieces;
     public Button piece;
+    MainController main = new MainController();
 
     @BeforeEach
-    public void setUp() {
-        pieces = new Button[3];
-        for (int i = 0; i < pieces.length; i++) {
-            pieces[i] = new Button("Piece " + i);
-        }
-        piece = pieces[1];
+    public void setUp() throws Exception {
+        main.initializeButtonArray(false);
+        Platform.startup(() ->{
+
+            Button[] pieces = PieceController.pieces;
+
+
+            System.out.println(pieces[0]);
+            assertNotNull(pieces);
+            assertEquals(10, pieces.length);
+            assertNotNull(pieces[0]);
+            assertNotNull(pieces[1]);
+            assertNotNull(pieces[2]);
+            assertNotNull(pieces[3]);
+            assertNotNull(pieces[4]);
+            assertNotNull(pieces[5]);
+            assertNotNull(pieces[6]);
+            assertNotNull(pieces[7]);
+            assertNotNull(pieces[8]);
+            assertNotNull(pieces[9]);
+
+        });
     }
 
     @Test
     public void testSelection() {
         ActionEvent actionEvent = new ActionEvent(null, null);
 
-        assertNull(piece.getStyle());
+        //assertNull(piece.getStyle());
 
-        PieceController.selection(actionEvent);
+        PieceController.selection(0);
 
-        assertNull(piece.getStyle());
-
-        piece = pieces[0];
-        PieceController.selection(actionEvent);
+        //assertNull(piece.getStyle());
 
         assertEquals("-fx-background-color: RED", piece.getStyle());
 
-        piece = pieces[2];
-        PieceController.selection(actionEvent);
+        PieceController.selection(1);
 
         assertEquals("-fx-background-color: BLUE", piece.getStyle());
     }

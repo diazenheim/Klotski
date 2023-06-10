@@ -20,7 +20,7 @@ public class Match {
 
     public Match() {
         currentIndex = 0;
-        matchName = "New Match";
+        matchName = "New_Match";
         moves = new ArrayList<Move>();
         solution = new ArrayList<Solution>();
         saved = false;
@@ -76,7 +76,7 @@ public class Match {
 
     public static void reset() throws Exception {
         currentIndex = 0;
-        matchName = "New Match";
+        matchName = "New_Match";
         moves = new ArrayList<Move>();
         bestMoveReset = true;
         MatchController.loadMatch(configuration, "configuration");
