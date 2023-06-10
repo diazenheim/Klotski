@@ -1,0 +1,334 @@
+
+
+
+<!DOCTYPE html>
+<html id="htmlId">
+<head>
+  <title>Coverage Report > PieceController</title>
+  <style type="text/css">
+    @import "../../css/coverage.css";
+    @import "../../css/idea.min.css";
+  </style>
+  <script type="text/javascript" src="../../js/highlight.min.js"></script>
+  <script type="text/javascript" src="../../js/highlightjs-line-numbers.min.js"></script>
+</head>
+
+<body>
+<div class="content">
+<div class="breadCrumbs">
+Current scope:     <a href="../../index.html">all classes</a>
+    <span class="separator">|</span>
+    <a href="../index.html">com.klotski.klotski.controller</a>
+</div>
+
+<h1>Coverage Summary for Class: PieceController (com.klotski.klotski.controller)</h1>
+
+<table class="coverageStats">
+<tr>
+  <th class="name">Class</th>
+<th class="coverageStat 
+">
+  Class, %
+</th>
+<th class="coverageStat 
+">
+  Method, %
+</th>
+<th class="coverageStat 
+">
+  Line, %
+</th>
+</tr>
+<tr>
+  <td class="name">PieceController</td>
+<td class="coverageStat">
+  <span class="percent">
+    100%
+  </span>
+  <span class="absValue">
+    (1/1)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    40%
+  </span>
+  <span class="absValue">
+    (6/15)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    19.6%
+  </span>
+  <span class="absValue">
+    (22/112)
+  </span>
+</td>
+</tr>
+
+</table>
+
+<br/>
+<br/>
+
+
+<pre>
+<code class="sourceCode" id="sourceCode">&nbsp;package com.klotski.klotski.controller;
+&nbsp;
+&nbsp;import com.fasterxml.jackson.databind.ObjectMapper;
+&nbsp;import com.klotski.klotski.model.Match;
+&nbsp;import com.klotski.klotski.model.Move;
+&nbsp;import com.klotski.klotski.view.WinningAlert;
+&nbsp;import javafx.event.ActionEvent;
+&nbsp;import javafx.fxml.FXML;
+&nbsp;import javafx.scene.control.Button;
+&nbsp;import javafx.scene.input.KeyCode;
+&nbsp;import javafx.scene.input.KeyEvent;
+&nbsp;import javafx.scene.input.MouseEvent;
+&nbsp;
+&nbsp;
+<b class="nc">&nbsp;class PieceController {</b>
+&nbsp;    public static Button[] pieces; //array created to contain the 10 pieces, used in the methode approving to speed up the control of the position of each pieces
+&nbsp;    public static Button piece;
+&nbsp;    //variable for the moving of the pieces
+&nbsp;    private static double x;
+&nbsp;    private static double y;
+&nbsp;    // counter of the moves
+&nbsp;    public static int counter;
+&nbsp;
+&nbsp;    private static Match match;
+&nbsp;    //methode used for the selection of the pieces you want to use, when the piece is clicked is selected
+&nbsp;    public static void selection(ActionEvent e){
+<b class="nc">&nbsp;        if(piece != null) {</b>
+<b class="nc">&nbsp;            piece.setStyle(null);</b>
+&nbsp;        }
+&nbsp;
+<b class="nc">&nbsp;        piece = (Button) e.getSource();</b>
+&nbsp;
+<b class="nc">&nbsp;        refresh();</b>
+<b class="nc">&nbsp;        if(piece == pieces[0]){</b>
+<b class="nc">&nbsp;            piece.setStyle(&quot;-fx-background-color: RED&quot;);</b>
+&nbsp;        }
+&nbsp;        else {
+<b class="nc">&nbsp;            piece.setStyle(&quot;-fx-background-color: BLUE&quot;);</b>
+&nbsp;        }
+&nbsp;    }
+&nbsp;    public static Button selection(int pieceIndex){
+<b class="nc">&nbsp;        if(piece != null) {</b>
+<b class="nc">&nbsp;            piece.setStyle(null);</b>
+&nbsp;        }
+&nbsp;
+<b class="nc">&nbsp;        piece = (Button) getPieceButton(pieceIndex);</b>
+&nbsp;
+<b class="nc">&nbsp;        refresh();</b>
+<b class="nc">&nbsp;        if(piece == pieces[0]){</b>
+<b class="nc">&nbsp;            piece.setStyle(&quot;-fx-background-color: RED&quot;);</b>
+&nbsp;        }
+&nbsp;        else {
+<b class="nc">&nbsp;            piece.setStyle(&quot;-fx-background-color: BLUE&quot;);</b>
+&nbsp;        }
+<b class="nc">&nbsp;        return  piece;</b>
+&nbsp;    }
+&nbsp;    //refresh allow uor variable x and y to start with the right starting X and Y of the button
+&nbsp;    public static void refresh(){ // refreshing the x and y variables, and inserting the pieces into the array
+<b class="fc">&nbsp;        x= piece.getLayoutX();</b>
+<b class="fc">&nbsp;        y= piece.getLayoutY();</b>
+&nbsp;    }
+&nbsp;    //helping function to check if there the move is ok to be done
+&nbsp;    public static boolean approving(int a,int axes){ // control that there isn&#39;t another pieces in the way with the move axes refer to the x and y and a refers to right/left if is in the x axes and up/down if in the y axes
+<b class="fc">&nbsp;        if(piece == null){</b>
+<b class="nc">&nbsp;            return false;</b>
+&nbsp;        }
+&nbsp;
+<b class="fc">&nbsp;        for (int i =0; i &lt; 10;i++ ) {</b>
+<b class="fc">&nbsp;            Button selected = piece;</b>
+<b class="fc">&nbsp;            Button toCheck = pieces[i];</b>
+<b class="fc">&nbsp;            if (a == 1) {</b>
+<b class="fc">&nbsp;                selected = pieces[i];</b>
+<b class="fc">&nbsp;                toCheck = piece;</b>
+&nbsp;            }
+<b class="fc">&nbsp;            if (axes == 0) {</b>
+<b class="fc">&nbsp;                if (toCheck.getLayoutX() == (selected.getLayoutX()) + selected.getWidth()) {</b>
+&nbsp;
+<b class="fc">&nbsp;                    if ((selected.getLayoutY() == toCheck.getLayoutY()) || ((toCheck.getLayoutY() + toCheck.getHeight()) - 100 == selected.getLayoutY()) || selected.getLayoutY() + selected.getHeight() - 100 == toCheck.getLayoutY()) {</b>
+<b class="fc">&nbsp;                        return false;</b>
+&nbsp;                    }
+&nbsp;                }
+&nbsp;            }
+<b class="fc">&nbsp;            else if(axes == 1) {</b>
+<b class="fc">&nbsp;                if (selected.getLayoutY() == toCheck.getLayoutY() + toCheck.getHeight()) {</b>
+<b class="fc">&nbsp;                    if ((selected.getLayoutX() == toCheck.getLayoutX()) || (toCheck.getLayoutX() + toCheck.getWidth() - 100 == selected.getLayoutX()) || selected.getLayoutX() + selected.getWidth() - 100 == toCheck.getLayoutX()) {</b>
+<b class="fc">&nbsp;                        return false;</b>
+&nbsp;                    }
+&nbsp;                }
+&nbsp;            }
+&nbsp;        }
+<b class="nc">&nbsp;        return true;</b>
+&nbsp;    }
+&nbsp;    // all the movement are controlled by increasing or decreasing (by 100) of the variable X and Y(The Y axis is inverted) after checking the moves is valid.
+&nbsp;    public static void MoveUp() throws Exception {
+<b class="fc">&nbsp;        if(approving(0,1)) {</b>
+<b class="nc">&nbsp;            double oldX = piece.getLayoutX();</b>
+<b class="nc">&nbsp;            double oldY = piece.getLayoutY();</b>
+<b class="nc">&nbsp;            if (piece.getLayoutY() != 0) {</b>
+<b class="nc">&nbsp;                piece.setLayoutY(y -= 100);</b>
+<b class="nc">&nbsp;                counter +=1;</b>
+<b class="nc">&nbsp;                match.getMatch().addMove(createMoveObject(counter - 1, piece, oldX, oldY));</b>
+&nbsp;            }
+&nbsp;        }
+<b class="fc">&nbsp;        System.out.println(&quot;Counter is &quot; + counter);</b>
+&nbsp;    }
+&nbsp;    public static void MoveDown() throws Exception {
+&nbsp;
+&nbsp;
+&nbsp;
+<b class="fc">&nbsp;        if(approving(1,1)) {</b>
+<b class="nc">&nbsp;            double oldX = piece.getLayoutX();</b>
+<b class="nc">&nbsp;            double oldY = piece.getLayoutY();</b>
+<b class="nc">&nbsp;            if(piece.getLayoutY() + piece.getHeight() != 500) {</b>
+<b class="nc">&nbsp;                piece.setLayoutY(y += 100);</b>
+<b class="nc">&nbsp;                counter +=1;</b>
+<b class="nc">&nbsp;                match.getMatch().addMove(createMoveObject(counter - 1, piece, oldX, oldY));</b>
+&nbsp;            }
+<b class="nc">&nbsp;            if(piece.getId() == pieces[0].getId() &amp;&amp; piece.getLayoutX() == 100 &amp;&amp; piece.getLayoutY() == 300){</b>
+&nbsp;
+<b class="nc">&nbsp;                WinningAlert.display(&quot;YOU WIN&quot;,&quot;YOU WIN&quot;);</b>
+&nbsp;            }
+&nbsp;        }
+&nbsp;    }
+&nbsp;    public static void MoveRight() throws Exception { //move
+<b class="fc">&nbsp;        if(approving(0,0)){</b>
+<b class="nc">&nbsp;            double oldX = piece.getLayoutX();</b>
+<b class="nc">&nbsp;            double oldY = piece.getLayoutY();</b>
+<b class="nc">&nbsp;            if(piece.getLayoutX() + piece.getWidth() != 400) {</b>
+<b class="nc">&nbsp;                piece.setLayoutX(x += 100);</b>
+<b class="nc">&nbsp;                counter +=1;</b>
+<b class="nc">&nbsp;                match.getMatch().addMove(createMoveObject(counter - 1, piece, oldX, oldY));</b>
+&nbsp;            }
+&nbsp;        }
+&nbsp;    }
+&nbsp;    public static void MoveLeft() throws Exception {
+<b class="fc">&nbsp;        if(approving(1,0)) {</b>
+<b class="nc">&nbsp;            double oldX = piece.getLayoutX();</b>
+<b class="nc">&nbsp;            double oldY = piece.getLayoutY();</b>
+<b class="nc">&nbsp;            if (piece.getLayoutX() != 0) {</b>
+<b class="nc">&nbsp;                piece.setLayoutX(x -= 100);</b>
+<b class="nc">&nbsp;                counter +=1;</b>
+<b class="nc">&nbsp;                match.getMatch().addMove(createMoveObject(counter - 1, piece, oldX, oldY));</b>
+&nbsp;            }
+&nbsp;        }
+&nbsp;    }
+&nbsp;    //let use the mouse to move the pieces
+&nbsp;    @FXML
+&nbsp;    public static void Swipe(MouseEvent mouseEvent) throws Exception {
+<b class="nc">&nbsp;        double previousX = x;</b>
+<b class="nc">&nbsp;        double x = mouseEvent.getSceneX();</b>
+<b class="nc">&nbsp;        double previousY = y;</b>
+<b class="nc">&nbsp;        double y = mouseEvent.getSceneY();</b>
+&nbsp;
+&nbsp;
+<b class="nc">&nbsp;        if (x &lt; (previousX)) {</b>
+<b class="nc">&nbsp;            MoveLeft();</b>
+<b class="nc">&nbsp;            match.setBestMoveResetfield(false);</b>
+&nbsp;
+<b class="nc">&nbsp;        } else if (x &gt; (previousX + 230)) {</b>
+<b class="nc">&nbsp;            MoveRight();</b>
+<b class="nc">&nbsp;            match.setBestMoveResetfield(false);</b>
+&nbsp;        }
+&nbsp;
+<b class="nc">&nbsp;        if (y &lt; (previousY+50)) {</b>
+<b class="nc">&nbsp;            MoveUp();</b>
+<b class="nc">&nbsp;            match.setBestMoveResetfield(false);</b>
+&nbsp;
+<b class="nc">&nbsp;        } else if (y &gt; (previousY + 250)) {</b>
+<b class="nc">&nbsp;            MoveDown();</b>
+<b class="nc">&nbsp;            match.setBestMoveResetfield(false);</b>
+&nbsp;        }
+&nbsp;    }
+&nbsp;    //let use the keyboard to move the pieces
+&nbsp;    @FXML
+&nbsp;    public static void Keyboard(KeyEvent keyEvent) throws Exception {
+<b class="nc">&nbsp;        KeyCode kc = keyEvent.getCode();</b>
+<b class="nc">&nbsp;        if (kc == KeyCode.UP) {</b>
+<b class="nc">&nbsp;            MoveUp();</b>
+<b class="nc">&nbsp;            match.setBestMoveResetfield(false);</b>
+<b class="nc">&nbsp;        } else if (kc == KeyCode.RIGHT) {</b>
+<b class="nc">&nbsp;            MoveRight();</b>
+<b class="nc">&nbsp;            match.setBestMoveResetfield(false);</b>
+<b class="nc">&nbsp;        } else if (kc == KeyCode.DOWN) {</b>
+<b class="nc">&nbsp;            MoveDown();</b>
+<b class="nc">&nbsp;            match.setBestMoveResetfield(false);</b>
+<b class="nc">&nbsp;        } else if (kc == KeyCode.LEFT) {</b>
+<b class="nc">&nbsp;            MoveLeft();</b>
+<b class="nc">&nbsp;            match.setBestMoveResetfield(false);</b>
+&nbsp;        }
+&nbsp;    }
+&nbsp;
+&nbsp;    //create Move object to add to Match object to keep track of all moves
+&nbsp;    private static Move createMoveObject(int moveIndex, Button button, double oldX, double oldY) throws Exception{
+<b class="nc">&nbsp;        var move = new Move();</b>
+&nbsp;
+<b class="nc">&nbsp;        int pieceIndex = getPieceIndex(button);</b>
+<b class="nc">&nbsp;        if (pieceIndex &gt;= 0){</b>
+&nbsp;
+<b class="nc">&nbsp;            move.setPieceIndex(pieceIndex);</b>
+<b class="nc">&nbsp;            move.setMoveIndex(counter);</b>
+<b class="nc">&nbsp;            move.setNewX(button.getLayoutX());</b>
+<b class="nc">&nbsp;            move.setNewY(button.getLayoutY());</b>
+<b class="nc">&nbsp;            move.setOldX(oldX);</b>
+<b class="nc">&nbsp;            move.setOldY(oldY);</b>
+&nbsp;        } else{
+<b class="nc">&nbsp;            throw new Exception(&quot;Piece not found!&quot;);</b>
+&nbsp;        }
+&nbsp;        //MatchController.getJsonString(move);
+&nbsp;
+<b class="nc">&nbsp;        return move;</b>
+&nbsp;    }
+&nbsp;
+&nbsp;    //utility method to get the piece index in the array of pieces
+&nbsp;    private static int getPieceIndex(Button button){
+<b class="nc">&nbsp;        for (int i = 0; i &lt; pieces.length; i++){</b>
+<b class="nc">&nbsp;            if (pieces[i] == button){</b>
+<b class="nc">&nbsp;                return i;</b>
+&nbsp;            }
+&nbsp;        }
+<b class="nc">&nbsp;        return -1;</b>
+&nbsp;    }
+&nbsp;    //utility method to get the piece index in the array of pieces
+&nbsp;    public static Button getPieceButton(int index){
+<b class="nc">&nbsp;        return pieces[index];</b>
+&nbsp;    }
+&nbsp;
+&nbsp;    private static void klotskiLog(String string) {
+<b class="nc">&nbsp;        System.out.println(string);</b>
+&nbsp;    }
+&nbsp;
+&nbsp;}
+</code>
+</pre>
+</div>
+
+<script type="text/javascript">
+(function() {
+    var msie = false, msie9 = false;
+    /*@cc_on
+      msie = true;
+      @if (@_jscript_version >= 9)
+        msie9 = true;
+      @end
+    @*/
+
+    if (!msie || msie && msie9) {
+      hljs.highlightAll()
+      hljs.initLineNumbersOnLoad();
+    }
+})();
+</script>
+
+<div class="footer">
+    
+    <div style="float:right;">generated on 2023-06-10 23:26</div>
+</div>
+</body>
+</html>

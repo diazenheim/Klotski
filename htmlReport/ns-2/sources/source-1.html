@@ -1,0 +1,259 @@
+
+
+
+<!DOCTYPE html>
+<html id="htmlId">
+<head>
+  <title>Coverage Report > MainController</title>
+  <style type="text/css">
+    @import "../../css/coverage.css";
+    @import "../../css/idea.min.css";
+  </style>
+  <script type="text/javascript" src="../../js/highlight.min.js"></script>
+  <script type="text/javascript" src="../../js/highlightjs-line-numbers.min.js"></script>
+</head>
+
+<body>
+<div class="content">
+<div class="breadCrumbs">
+Current scope:     <a href="../../index.html">all classes</a>
+    <span class="separator">|</span>
+    <a href="../index.html">com.klotski.klotski.controller</a>
+</div>
+
+<h1>Coverage Summary for Class: MainController (com.klotski.klotski.controller)</h1>
+
+<table class="coverageStats">
+<tr>
+  <th class="name">Class</th>
+<th class="coverageStat 
+">
+  Class, %
+</th>
+<th class="coverageStat 
+">
+  Method, %
+</th>
+<th class="coverageStat 
+">
+  Line, %
+</th>
+</tr>
+<tr>
+  <td class="name">MainController</td>
+<td class="coverageStat">
+  <span class="percent">
+    100%
+  </span>
+  <span class="absValue">
+    (1/1)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    17.6%
+  </span>
+  <span class="absValue">
+    (3/17)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    23.5%
+  </span>
+  <span class="absValue">
+    (16/68)
+  </span>
+</td>
+</tr>
+
+</table>
+
+<br/>
+<br/>
+
+
+<pre>
+<code class="sourceCode" id="sourceCode">&nbsp;package com.klotski.klotski.controller;
+&nbsp;
+&nbsp;import com.klotski.klotski.model.Match;
+&nbsp;import com.klotski.klotski.model.Solution;
+&nbsp;import com.klotski.klotski.view.LoadMatchAlert;
+&nbsp;import javafx.event.ActionEvent;
+&nbsp;import javafx.fxml.FXML;
+&nbsp;import javafx.scene.control.Button;
+&nbsp;import javafx.scene.input.KeyEvent;
+&nbsp;import javafx.scene.input.MouseEvent;
+&nbsp;import javafx.scene.text.Text;
+&nbsp;
+&nbsp;
+&nbsp;import java.util.ArrayList;
+&nbsp;
+&nbsp;import static com.klotski.klotski.controller.PieceController.*;
+&nbsp;
+<b class="fc">&nbsp;public class MainController {</b>
+&nbsp;    //call the pieces through the ids from view.fxml in here
+&nbsp;    @FXML
+&nbsp;    public Button pc0,pc1,pc2,pc3,pc4,pc5,pc6,pc7,pc8,pc9;
+&nbsp;    //call the text field to later modify for the counter
+&nbsp;    @FXML
+&nbsp;    public Text Count;
+&nbsp;    //initialization of the Array used to ease methods of move
+&nbsp;    @FXML
+&nbsp;    public void initialize() throws Exception {
+<b class="nc">&nbsp;        initializeButtonArray(true);</b>
+&nbsp;    }
+&nbsp;
+&nbsp;    Match match;
+&nbsp;    public void initializeButtonArray(boolean loadAlert) throws Exception {
+<b class="fc">&nbsp;        pieces = new Button[10];</b>
+<b class="fc">&nbsp;        pieces[0] = pc0;</b>
+<b class="fc">&nbsp;        pieces[1] = pc1;</b>
+<b class="fc">&nbsp;        pieces[2] = pc2;</b>
+<b class="fc">&nbsp;        pieces[3] = pc3;</b>
+<b class="fc">&nbsp;        pieces[4] = pc4;</b>
+<b class="fc">&nbsp;        pieces[5] = pc5;</b>
+<b class="fc">&nbsp;        pieces[6] = pc6;</b>
+<b class="fc">&nbsp;        pieces[7] = pc7;</b>
+<b class="fc">&nbsp;        pieces[8] = pc8;</b>
+<b class="fc">&nbsp;        pieces[9] = pc9;</b>
+&nbsp;
+<b class="fc">&nbsp;        if (loadAlert){</b>
+<b class="nc">&nbsp;            LoadMatchAlert.display(&quot;Load Configuration&quot;, &quot;Warm welcome to our application!\n&quot; +</b>
+&nbsp;                    &quot;Choose the configuration to start with or leave the default one.&quot;, &quot;configuration&quot;);
+&nbsp;        }
+&nbsp;    }
+&nbsp;    public void select(ActionEvent e) { //selecting the button to move
+<b class="nc">&nbsp;        selection(e);</b>
+&nbsp;    }
+&nbsp;    // all the movements are controlled by increasing or decreasing (by 100) of the variable X and Y(The Y axis is inverted) after checking the moves is valid.
+&nbsp;    public void MoveRight() throws Exception {
+<b class="nc">&nbsp;        PieceController.MoveRight();</b>
+<b class="nc">&nbsp;        setCounter(PieceController.counter, Count );</b>
+<b class="nc">&nbsp;        match.setBestMoveResetfield(false);</b>
+&nbsp;    }
+&nbsp;    public void MoveLeft() throws Exception {
+<b class="nc">&nbsp;        PieceController.MoveLeft();</b>
+<b class="nc">&nbsp;        setCounter(PieceController.counter, Count );</b>
+<b class="nc">&nbsp;        match.setBestMoveResetfield(false);</b>
+&nbsp;    }
+&nbsp;    public void MoveUp() throws Exception {
+<b class="nc">&nbsp;        PieceController.MoveUp();</b>
+<b class="nc">&nbsp;        setCounter(PieceController.counter, Count );</b>
+<b class="nc">&nbsp;        match.setBestMoveResetfield(false);</b>
+&nbsp;
+&nbsp;    }
+&nbsp;    public void MoveDown() throws Exception {
+<b class="nc">&nbsp;        PieceController.MoveDown();</b>
+<b class="nc">&nbsp;        setCounter(PieceController.counter, Count );</b>
+<b class="nc">&nbsp;        match.setBestMoveResetfield(false);</b>
+&nbsp;    }
+&nbsp;    public void saveMatch() throws Exception {
+<b class="nc">&nbsp;        MenuController.Save();</b>
+&nbsp;    }
+&nbsp;
+&nbsp;    public void loadMatch() throws Exception {
+<b class="nc">&nbsp;        MenuController.loadMatch();</b>
+<b class="nc">&nbsp;        setCounter(counter, Count);</b>
+&nbsp;        //MatchController.loadSave();
+&nbsp;    }
+&nbsp;
+&nbsp;    public void BestMove() throws Exception {
+<b class="nc">&nbsp;        match = Match.getMatch();</b>
+<b class="nc">&nbsp;        if (!match.isBestMoveReset()) {</b>
+<b class="nc">&nbsp;            Back();</b>
+&nbsp;            return;
+&nbsp;        }
+<b class="nc">&nbsp;        ArrayList&lt;Solution&gt; solutionList = match.getSolutionList();</b>
+&nbsp;
+<b class="nc">&nbsp;        Solution solution = solutionList.get(counter);</b>
+<b class="nc">&nbsp;        int pieceIndex = solution.getPieceIndex();</b>
+<b class="nc">&nbsp;        PieceController.selection(pieceIndex);</b>
+<b class="nc">&nbsp;        switch (solution.getDirectionMove()){</b>
+&nbsp;            case &quot;U&quot;:{
+<b class="nc">&nbsp;                MoveUp();</b>
+<b class="nc">&nbsp;                match.setBestMoveResetfield(true);</b>
+<b class="nc">&nbsp;                break;</b>
+&nbsp;            }
+&nbsp;            case &quot;D&quot;:{
+<b class="nc">&nbsp;                MoveDown();</b>
+<b class="nc">&nbsp;                match.setBestMoveResetfield(true);</b>
+<b class="nc">&nbsp;                break;</b>
+&nbsp;            }
+&nbsp;            case &quot;L&quot;:{
+<b class="nc">&nbsp;                MoveLeft();</b>
+<b class="nc">&nbsp;                match.setBestMoveResetfield(true);</b>
+<b class="nc">&nbsp;                break;</b>
+&nbsp;            }
+&nbsp;            case &quot;R&quot;:{
+<b class="nc">&nbsp;                MoveRight();</b>
+<b class="nc">&nbsp;                match.setBestMoveResetfield(true);</b>
+<b class="nc">&nbsp;                break;</b>
+&nbsp;            }
+&nbsp;            default:{
+<b class="nc">&nbsp;                match.setBestMoveReset(true);</b>
+<b class="nc">&nbsp;                System.out.println(&quot;should be true&quot;);</b>
+&nbsp;            }
+&nbsp;        }
+&nbsp;    }
+&nbsp;
+&nbsp;    public void Quit() {
+<b class="nc">&nbsp;        MenuController.Quit();</b>
+&nbsp;    }
+&nbsp;
+&nbsp;    public void Back() {
+<b class="nc">&nbsp;        MenuController.Back();</b>
+<b class="nc">&nbsp;        if(counter!= 0) {</b>
+<b class="nc">&nbsp;            counter--;</b>
+&nbsp;        }
+<b class="nc">&nbsp;        setCounter(counter, Count);</b>
+&nbsp;    }
+&nbsp;    public void Reset() throws Exception {
+<b class="nc">&nbsp;        MenuController.reset();</b>
+<b class="nc">&nbsp;        PieceController.counter = 0;</b>
+<b class="nc">&nbsp;        setCounter(counter, Count);</b>
+&nbsp;    }
+&nbsp;    public void Keyboard(KeyEvent keyEvent) throws Exception {
+<b class="nc">&nbsp;        PieceController.Keyboard(keyEvent);</b>
+<b class="nc">&nbsp;        setCounter(PieceController.counter,Count );</b>
+&nbsp;    }
+&nbsp;
+&nbsp;    public void Swipe(MouseEvent mouseEvent) throws Exception {
+<b class="nc">&nbsp;        PieceController.Swipe(mouseEvent);</b>
+<b class="nc">&nbsp;        setCounter(PieceController.counter,Count);</b>
+&nbsp;    }
+&nbsp;
+&nbsp;    public void setCounter(int counter,Text count){
+<b class="fc">&nbsp;        count.setText(&quot;Counter: &quot; + counter);</b>
+<b class="fc">&nbsp;        match = Match.getMatch();</b>
+<b class="fc">&nbsp;        match.setCurrentIndex(counter);</b>
+&nbsp;    }
+&nbsp;
+&nbsp;}
+</code>
+</pre>
+</div>
+
+<script type="text/javascript">
+(function() {
+    var msie = false, msie9 = false;
+    /*@cc_on
+      msie = true;
+      @if (@_jscript_version >= 9)
+        msie9 = true;
+      @end
+    @*/
+
+    if (!msie || msie && msie9) {
+      hljs.highlightAll()
+      hljs.initLineNumbersOnLoad();
+    }
+})();
+</script>
+
+<div class="footer">
+    
+    <div style="float:right;">generated on 2023-06-10 23:26</div>
+</div>
+</body>
+</html>

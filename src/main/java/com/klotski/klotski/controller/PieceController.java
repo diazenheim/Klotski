@@ -101,6 +101,7 @@ class PieceController {
                 match.getMatch().addMove(createMoveObject(counter - 1, piece, oldX, oldY));
             }
         }
+        System.out.println("Counter is " + counter);
     }
     public static void MoveDown() throws Exception {
 
