@@ -20,7 +20,7 @@ public class MenuController {
             QuitAlert.display("Quit window", "Are you sure you want to quit?");
         }
     }
-    public static void Save() throws Exception {
+    public static void Save() {
         SaveAlert.display("Save match", "Give a name to your name", false);
     }
     public static void loadMatch() throws Exception {
@@ -40,7 +40,7 @@ public class MenuController {
         double newY = move.getOldY();
         piecebutton.setLayoutX(newX);
         piecebutton.setLayoutY(newY);
-        match.RemoveLastMove(moves.size()-1);
+        match.removeLastMove(moves.size()-1);
         PieceController.refresh();
     }
     public static void reset() throws Exception {

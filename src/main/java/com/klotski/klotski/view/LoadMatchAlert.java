@@ -41,9 +41,6 @@ public class LoadMatchAlert {
         window.setTitle(title);
         //assign different values for the variables according to the load type: 'configuration' or 'saved'
         if (loadTypeLocal == "configuration"){
-            String resourceLocation = System.getProperty("file.separator") +
-                "match" + System.getProperty("file.separator") +
-                loadType + System.getProperty("file.separator");
             loadLocation = MatchController.configurationLocation;
             emptyListpPlaceholder = "No Configuration available!";
             cancelButtonText = "Cancel";
@@ -99,7 +96,7 @@ public class LoadMatchAlert {
 
 
     //utility method to refresh the list when a match is deleted
-    private static void refreshList() throws Exception {
+    private static void refreshList() {
         layout.getChildren().remove(list);
         ListView<HBoxCell> list = getListObject();
         layout.getChildren().add(list);
@@ -172,7 +169,7 @@ public class LoadMatchAlert {
     }
 
     //utility method to get list of Objects to create the list of saved or config files
-    private static ListView<HBoxCell> getListObject() throws Exception {
+    private static ListView<HBoxCell> getListObject() {
         //create list that will contain the HBox that will compose the listView
         ArrayList<HBoxCell> hBoxList = new ArrayList<>();
 

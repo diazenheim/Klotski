@@ -1,6 +1,5 @@
 package com.klotski.klotski.view;
 
-import javafx.application.Platform;
 import javafx.scene.control.Button;
 import javafx.stage.*;
 import javafx.scene.*;

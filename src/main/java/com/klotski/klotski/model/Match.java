@@ -89,7 +89,7 @@ public class Match {
             this.saved = false;
         }
     }
-    public static void RemoveLastMove(int index){
+    public static void removeLastMove(int index){
         moves.remove(index);
         --currentIndex;
         if (currentIndex == 0){

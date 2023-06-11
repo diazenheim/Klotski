@@ -2,9 +2,6 @@ package com.klotski.klotski.controller;
 
 import com.klotski.klotski.model.Match;
 import org.junit.jupiter.api.Test;
-
-import java.io.File;
-
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class MatchControllerTest {

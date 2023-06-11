@@ -1,16 +1,9 @@
 package com.klotski.klotski.model;
 
 import org.junit.jupiter.api.Test;
-
 import static org.junit.jupiter.api.Assertions.*;
 
 class MoveTest {
-    private int pieceIndex;
-    private int moveIndex;
-    private double oldX;
-    private double oldY;
-    private double newX;
-    private double newY;
 
     Move mv = new Move();
 

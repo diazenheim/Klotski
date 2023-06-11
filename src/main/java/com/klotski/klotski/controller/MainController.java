@@ -58,7 +58,7 @@ public class MainController {
      *
      * MoveRight helper
      **/
-    public void MoveRight() throws Exception {
+    public void moveRight() throws Exception {
         PieceController.MoveRight();
         setCounter(PieceController.counter, Count );
         match.setBestMoveResetfield(false);
@@ -67,7 +67,7 @@ public class MainController {
     /*
      * MoveLeft helper
      **/
-    public void MoveLeft() throws Exception {
+    public void moveLeft() throws Exception {
         PieceController.MoveLeft();
         setCounter(PieceController.counter, Count );
         match.setBestMoveResetfield(false);
@@ -76,7 +76,7 @@ public class MainController {
     /*
      * MoveUp helper
      **/
-    public void MoveUp() throws Exception {
+    public void moveUp() throws Exception {
         PieceController.MoveUp();
         setCounter(PieceController.counter, Count );
         match.setBestMoveResetfield(false);
@@ -86,7 +86,7 @@ public class MainController {
     /*
      * MoveDown helper
      **/
-    public void MoveDown() throws Exception {
+    public void moveDown() throws Exception {
         PieceController.MoveDown();
         setCounter(PieceController.counter, Count );
         match.setBestMoveResetfield(false);
@@ -95,7 +95,7 @@ public class MainController {
     /*
     * Save match helper
     **/
-    public void saveMatch() throws Exception {
+    public void saveMatch() {
         MenuController.Save();
     }
 
@@ -113,10 +113,10 @@ public class MainController {
     *to know if proceed forward through solution array inside match o to go back
     **/
 
-    public void BestMove() throws Exception {
+    public void bestMove() throws Exception {
         match = Match.getMatch();
         if (!match.isBestMoveReset()) {
-            Back();
+            back();
             return;
         }
         ArrayList<Solution> solutionList = match.getSolutionList();
@@ -126,54 +126,53 @@ public class MainController {
         PieceController.selection(pieceIndex);
         switch (solution.getDirectionMove()){
             case "U":{
-                MoveUp();
+                moveUp();
                 match.setBestMoveResetfield(true);
                 break;
             }
             case "D":{
-                MoveDown();
+                moveDown();
                 match.setBestMoveResetfield(true);
                 break;
             }
             case "L":{
-                MoveLeft();
+                moveLeft();
                 match.setBestMoveResetfield(true);
                 break;
             }
             case "R":{
-                MoveRight();
+                moveRight();
                 match.setBestMoveResetfield(true);
                 break;
             }
             default:{
                 match.setBestMoveReset(true);
-                System.out.println("should be true");
             }
         }
     }
 
-    public void Quit() {
+    public void quit() {
         MenuController.Quit();
     }
 
-    public void Back() {
+    public void back() {
         MenuController.Back();
         if(counter!= 0) {
             counter--;
         }
         setCounter(counter, Count);
     }
-    public void Reset() throws Exception {
+    public void reset() throws Exception {
         MenuController.reset();
         PieceController.counter = 0;
         setCounter(counter, Count);
     }
-    public void Keyboard(KeyEvent keyEvent) throws Exception {
+    public void keyboard(KeyEvent keyEvent) throws Exception {
         PieceController.Keyboard(keyEvent);
         setCounter(PieceController.counter,Count );
     }
 
-    public void Swipe(MouseEvent mouseEvent) throws Exception {
+    public void swipe(MouseEvent mouseEvent) throws Exception {
         PieceController.Swipe(mouseEvent);
         setCounter(PieceController.counter,Count);
     }

@@ -1,15 +1,11 @@
 package com.klotski.klotski.controller;
 
-import com.klotski.klotski.Main;
 import javafx.application.Platform;
-import javafx.event.ActionEvent;
 import javafx.scene.control.Button;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-
 import static com.klotski.klotski.controller.PieceController.pieces;
-import static com.klotski.klotski.controller.PieceController.refresh;
 import static org.junit.jupiter.api.Assertions.*;
 
 class PieceControllerTest {

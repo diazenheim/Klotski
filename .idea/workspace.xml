@@ -9,72 +9,23 @@
   <component name="ChangeListManager">
     <list default="true" id="e7014844-ab91-4a58-8400-4d4dcf72d825" name="Changes" comment="Documents added&#10;Included specification, design and system test documents, HTML report by IntelliJ.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/documents/htmlReport/img/arrowDown.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/documents/htmlReport/img/arrowUp.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/documents/htmlReport/index_SORT_BY_BLOCK.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/documents/htmlReport/index_SORT_BY_BLOCK_DESC.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/documents/htmlReport/index_SORT_BY_CLASS.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/documents/htmlReport/index_SORT_BY_CLASS_DESC.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/documents/htmlReport/index_SORT_BY_LINE.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/documents/htmlReport/index_SORT_BY_LINE_DESC.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/documents/htmlReport/index_SORT_BY_METHOD.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/documents/htmlReport/index_SORT_BY_METHOD_DESC.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/documents/htmlReport/index_SORT_BY_NAME_DESC.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/documents/htmlReport/js/highlight.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/documents/htmlReport/js/highlightjs-line-numbers.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/documents/htmlReport/ns-1/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/documents/htmlReport/ns-1/index_SORT_BY_BLOCK.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/documents/htmlReport/ns-1/index_SORT_BY_BLOCK_DESC.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/documents/htmlReport/ns-1/index_SORT_BY_CLASS.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/documents/htmlReport/ns-1/index_SORT_BY_CLASS_DESC.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/documents/htmlReport/ns-1/index_SORT_BY_LINE.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/documents/htmlReport/ns-1/index_SORT_BY_LINE_DESC.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/documents/htmlReport/ns-1/index_SORT_BY_METHOD.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/documents/htmlReport/ns-1/index_SORT_BY_METHOD_DESC.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/documents/htmlReport/ns-1/index_SORT_BY_NAME_DESC.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/documents/htmlReport/ns-1/sources/source-1.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/documents/htmlReport/ns-1/sources/source-2.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/documents/htmlReport/ns-2/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/documents/htmlReport/ns-2/index_SORT_BY_BLOCK.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/documents/htmlReport/ns-2/index_SORT_BY_BLOCK_DESC.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/documents/htmlReport/ns-2/index_SORT_BY_CLASS.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/documents/htmlReport/ns-2/index_SORT_BY_CLASS_DESC.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/documents/htmlReport/ns-2/index_SORT_BY_LINE.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/documents/htmlReport/ns-2/index_SORT_BY_LINE_DESC.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/documents/htmlReport/ns-2/index_SORT_BY_METHOD.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/documents/htmlReport/ns-2/index_SORT_BY_METHOD_DESC.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/documents/htmlReport/ns-2/index_SORT_BY_NAME_DESC.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/documents/htmlReport/ns-2/sources/source-1.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/documents/htmlReport/ns-2/sources/source-2.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/documents/htmlReport/ns-2/sources/source-3.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/documents/htmlReport/ns-2/sources/source-4.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/documents/htmlReport/ns-3/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/documents/htmlReport/ns-3/index_SORT_BY_BLOCK.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/documents/htmlReport/ns-3/index_SORT_BY_BLOCK_DESC.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/documents/htmlReport/ns-3/index_SORT_BY_CLASS.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/documents/htmlReport/ns-3/index_SORT_BY_CLASS_DESC.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/documents/htmlReport/ns-3/index_SORT_BY_LINE.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/documents/htmlReport/ns-3/index_SORT_BY_LINE_DESC.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/documents/htmlReport/ns-3/index_SORT_BY_METHOD.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/documents/htmlReport/ns-3/index_SORT_BY_METHOD_DESC.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/documents/htmlReport/ns-3/index_SORT_BY_NAME_DESC.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/documents/htmlReport/ns-3/sources/source-1.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/documents/htmlReport/ns-3/sources/source-2.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/documents/htmlReport/ns-3/sources/source-3.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/documents/htmlReport/ns-4/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/documents/htmlReport/ns-4/index_SORT_BY_BLOCK.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/documents/htmlReport/ns-4/index_SORT_BY_BLOCK_DESC.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/documents/htmlReport/ns-4/index_SORT_BY_CLASS.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/documents/htmlReport/ns-4/index_SORT_BY_CLASS_DESC.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/documents/htmlReport/ns-4/index_SORT_BY_LINE.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/documents/htmlReport/ns-4/index_SORT_BY_LINE_DESC.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/documents/htmlReport/ns-4/index_SORT_BY_METHOD.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/documents/htmlReport/ns-4/index_SORT_BY_METHOD_DESC.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/documents/htmlReport/ns-4/index_SORT_BY_NAME_DESC.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/documents/htmlReport/ns-4/sources/source-1.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/documents/htmlReport/ns-4/sources/source-2.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/documents/htmlReport/ns-4/sources/source-3.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/documents/htmlReport/ns-4/sources/source-4.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/klotski/klotski/controller/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/klotski/klotski/controller/MainController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/klotski/klotski/controller/MatchController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/klotski/klotski/controller/MatchController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/klotski/klotski/controller/MenuController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/klotski/klotski/controller/MenuController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/klotski/klotski/controller/PieceController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/klotski/klotski/controller/PieceController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/klotski/klotski/model/Match.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/klotski/klotski/model/Match.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/klotski/klotski/view/LoadMatchAlert.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/klotski/klotski/view/LoadMatchAlert.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/klotski/klotski/view/QuitAlert.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/klotski/klotski/view/QuitAlert.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/klotski/klotski/view/WinningAlert.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/klotski/klotski/view/WinningAlert.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/klotski/klotski/view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/klotski/klotski/view.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/com/klotski/klotski/controller/MainControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/com/klotski/klotski/controller/MainControllerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/com/klotski/klotski/controller/MatchControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/com/klotski/klotski/controller/MatchControllerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/com/klotski/klotski/controller/PieceControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/com/klotski/klotski/controller/PieceControllerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/com/klotski/klotski/model/MoveTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/com/klotski/klotski/model/MoveTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/com/klotski/klotski/model/SolutionTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/com/klotski/klotski/model/SolutionTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/klotski/klotski/view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/klotski/klotski/view.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/klotski/klotski/controller/MainControllerTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/klotski/klotski/controller/MainControllerTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/klotski/klotski/controller/PieceControllerTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/klotski/klotski/controller/PieceControllerTest.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -149,7 +100,7 @@
       <recent name="com.klotski.klotski.controller" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.test in Klotski">
+  <component name="RunManager" selected="Application.Main">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.klotski.klotski.Main" />
       <module name="Klotski" />
@@ -179,17 +130,18 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MainWrapperTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="MatchControllerTest.testSaveMatch" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Klotski" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.klotski.klotski.*" />
+          <option name="PATTERN" value="com.klotski.klotski.controller.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.klotski.klotski" />
-      <option name="MAIN_CLASS_NAME" value="com.klotski.klotski.MainWrapperTest" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="PACKAGE_NAME" value="com.klotski.klotski.controller" />
+      <option name="MAIN_CLASS_NAME" value="com.klotski.klotski.controller.MatchControllerTest" />
+      <option name="METHOD_NAME" value="testSaveMatch" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -217,13 +169,20 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <list>
+      <item itemvalue="Application.Main" />
+      <item itemvalue="JUnit.MainTest.testMain" />
+      <item itemvalue="JUnit.MatchControllerTest.testSaveMatch" />
+      <item itemvalue="JUnit.PieceControllerTest" />
+      <item itemvalue="JUnit.test in Klotski" />
+    </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Main" />
+        <item itemvalue="JUnit.MatchControllerTest.testSaveMatch" />
         <item itemvalue="JUnit.test in Klotski" />
         <item itemvalue="JUnit.PieceControllerTest" />
         <item itemvalue="JUnit.MainTest.testMain" />
-        <item itemvalue="Application.Main" />
-        <item itemvalue="JUnit.MainWrapperTest" />
       </list>
     </recent_temporary>
   </component>
@@ -294,13 +253,17 @@
     <select />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/Klotski$test_in_Klotski.ic" NAME="test in Klotski Coverage Results" MODIFIED="1686501596371" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
-    <SUITE FILE_PATH="coverage/Klotski$MatchControllerTest_saveMatch.ic" NAME="MatchControllerTest.saveMatch Coverage Results" MODIFIED="1686036419639" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
-      <FILTER>com.klotski.klotski.controller.*</FILTER>
-    </SUITE>
     <SUITE FILE_PATH="coverage/progetto$PieceControllerTest_testSelection.ic" NAME="PieceControllerTest.testSelection Coverage Results" MODIFIED="1686043176860" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>com.klotski.klotski.controller.*</FILTER>
     </SUITE>
+    <SUITE FILE_PATH="coverage/Klotski$test_in_Klotski.ic" NAME="test in Klotski Coverage Results" MODIFIED="1686432350721" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/Klotski$MatchControllerTest_saveMatch.ic" NAME="MatchControllerTest.saveMatch Coverage Results" MODIFIED="1686036419639" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.klotski.klotski.controller.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/progetto$test_in_Klotski.ic" NAME="test in Klotski Coverage Results" MODIFIED="1686497137658" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/Klotski$_default_.ic" NAME="&lt;default&gt; Coverage Results" MODIFIED="1686467473134" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/progetto$Main.ic" NAME="Main Coverage Results" MODIFIED="1686325652746" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.klotski.klotski.*</FILTER>
+    </SUITE>
   </component>
 </project>

@@ -52,7 +52,7 @@ public class MatchController {
             klotskiLog("Match saved: " + matchName + "\n");
 
         } catch (IOException ex) {
-            klotskiLog("Error while saving the match " + matchName + " + " + ex.toString());
+            klotskiLog("Error while saving the match " + matchName + " + " + ex);
         }
     }
 
@@ -63,9 +63,6 @@ public class MatchController {
      * but we preferred to use the same bethod for both.
      **/
     public static void loadMatch(String matchName, String loadType) throws Exception {
-        String resourceLocation = System.getProperty("file.separator") +
-                "match" + System.getProperty("file.separator") +
-                loadType + System.getProperty("file.separator");
 
         String location;
         if (loadType == "configuration"){
@@ -127,7 +124,7 @@ public class MatchController {
             bufferWriter.flush();
             bufferWriter.close();
         } catch (IOException ex){
-            throw new IOException("Error while writing file: " + ex.toString());
+            throw new IOException("Error while writing file: " + ex);
         }
 
         klotskiLog("The file has been saved: " + filename);
@@ -146,9 +143,8 @@ public class MatchController {
     }
 
     //utility method to get the content of a File from a given path
-    private static String getFileContent(String filePath) throws IOException, Exception {
+    private static String getFileContent(String filePath) throws Exception {
         String loadedFile;
-        klotskiLog("filePath: " + filePath);
         //in case of a configuration, this is loaded from resources, this ha
         if (filePath.contains("configuration")){
             try {

@@ -1,12 +1,10 @@
 package com.klotski.klotski.model;
 
 import org.junit.jupiter.api.Test;
-
 import static org.junit.jupiter.api.Assertions.*;
 
 class SolutionTest {
-    private int pieceIndex;
-    private String directionMove;
+
     Solution s = new Solution();
 
     @Test

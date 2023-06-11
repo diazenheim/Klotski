@@ -1,6 +1,5 @@
 package com.klotski.klotski.controller;
 
-import com.fasterxml.jackson.databind.ObjectMapper;
 import com.klotski.klotski.model.Match;
 import com.klotski.klotski.model.Move;
 import com.klotski.klotski.view.WinningAlert;
@@ -43,7 +42,7 @@ class PieceController {
             piece.setStyle(null);
         }
 
-        piece = (Button) getPieceButton(pieceIndex);
+        piece = getPieceButton(pieceIndex);
 
         refresh();
         if(piece == pieces[0]){
