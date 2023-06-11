@@ -26,21 +26,18 @@ the player from whathever situation he steped in to the end of the game.
 ## Launching the program
 
 The simplest way to launch the program is to download the 
-archive folder `Klotski.zip`  (from the git repository 
-[this google drive archive]()
+archive folder `Klotski.zip`[from the git repository](https://github.com/diazenheim/Klotski)
 unzip it and within the Klotski app launch the following dommand 
 using `java -jar target/Klotski-1.0-SNAPSHOT.jar`.  
 You can also download the source code, open the root 
 folder with Intellij Idea and run the app with it using MainWrapper as the main class
 (the project dependencies are downloaded with Maven, right click on the
-project root --> Mave --> Reload Project).
-It requires Java 20
+project root --> MaveN --> Reload Project).
+Make sure you have Java 20 installed.
 
 ---
 
 ## The Start
-
-![App](./pictures/home_screen.png)
 
 After the load the picture above is shown. 
 The user is prompted to choose a configuration to start the game
@@ -49,8 +46,6 @@ by pressing the 'Load' button on the selected configuration.
 ---
 
 ## The Game
-
-![The Game](./pictures/filter_bar.png)
 
 After the configuration selection the a new window will open 
 with the board containing all the pieces and a menù on the right.
@@ -87,7 +82,6 @@ the game yes.
 
 ## Libraries
 
-![TheLibraries](
 The main libraries we used are: 
 1. Jackson: used for JSON management
 2. JAVAFX: used for the interface
