@@ -7,12 +7,74 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e7014844-ab91-4a58-8400-4d4dcf72d825" name="Changes" comment="Removed HTML files">
-      <change afterPath="$PROJECT_DIR$/src/test/com/klotski/klotski/MainTest.java" afterDir="false" />
+    <list default="true" id="e7014844-ab91-4a58-8400-4d4dcf72d825" name="Changes" comment="Documents added&#10;Included specification, design and system test documents, HTML report by IntelliJ.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/com/klotski/klotski/controller/MainControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/com/klotski/klotski/controller/MainControllerTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/com/klotski/klotski/controller/PieceControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/com/klotski/klotski/controller/PieceControllerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/documents/htmlReport/img/arrowDown.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/documents/htmlReport/img/arrowUp.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/documents/htmlReport/index_SORT_BY_BLOCK.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/documents/htmlReport/index_SORT_BY_BLOCK_DESC.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/documents/htmlReport/index_SORT_BY_CLASS.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/documents/htmlReport/index_SORT_BY_CLASS_DESC.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/documents/htmlReport/index_SORT_BY_LINE.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/documents/htmlReport/index_SORT_BY_LINE_DESC.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/documents/htmlReport/index_SORT_BY_METHOD.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/documents/htmlReport/index_SORT_BY_METHOD_DESC.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/documents/htmlReport/index_SORT_BY_NAME_DESC.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/documents/htmlReport/js/highlight.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/documents/htmlReport/js/highlightjs-line-numbers.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/documents/htmlReport/ns-1/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/documents/htmlReport/ns-1/index_SORT_BY_BLOCK.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/documents/htmlReport/ns-1/index_SORT_BY_BLOCK_DESC.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/documents/htmlReport/ns-1/index_SORT_BY_CLASS.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/documents/htmlReport/ns-1/index_SORT_BY_CLASS_DESC.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/documents/htmlReport/ns-1/index_SORT_BY_LINE.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/documents/htmlReport/ns-1/index_SORT_BY_LINE_DESC.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/documents/htmlReport/ns-1/index_SORT_BY_METHOD.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/documents/htmlReport/ns-1/index_SORT_BY_METHOD_DESC.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/documents/htmlReport/ns-1/index_SORT_BY_NAME_DESC.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/documents/htmlReport/ns-1/sources/source-1.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/documents/htmlReport/ns-1/sources/source-2.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/documents/htmlReport/ns-2/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/documents/htmlReport/ns-2/index_SORT_BY_BLOCK.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/documents/htmlReport/ns-2/index_SORT_BY_BLOCK_DESC.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/documents/htmlReport/ns-2/index_SORT_BY_CLASS.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/documents/htmlReport/ns-2/index_SORT_BY_CLASS_DESC.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/documents/htmlReport/ns-2/index_SORT_BY_LINE.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/documents/htmlReport/ns-2/index_SORT_BY_LINE_DESC.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/documents/htmlReport/ns-2/index_SORT_BY_METHOD.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/documents/htmlReport/ns-2/index_SORT_BY_METHOD_DESC.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/documents/htmlReport/ns-2/index_SORT_BY_NAME_DESC.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/documents/htmlReport/ns-2/sources/source-1.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/documents/htmlReport/ns-2/sources/source-2.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/documents/htmlReport/ns-2/sources/source-3.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/documents/htmlReport/ns-2/sources/source-4.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/documents/htmlReport/ns-3/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/documents/htmlReport/ns-3/index_SORT_BY_BLOCK.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/documents/htmlReport/ns-3/index_SORT_BY_BLOCK_DESC.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/documents/htmlReport/ns-3/index_SORT_BY_CLASS.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/documents/htmlReport/ns-3/index_SORT_BY_CLASS_DESC.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/documents/htmlReport/ns-3/index_SORT_BY_LINE.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/documents/htmlReport/ns-3/index_SORT_BY_LINE_DESC.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/documents/htmlReport/ns-3/index_SORT_BY_METHOD.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/documents/htmlReport/ns-3/index_SORT_BY_METHOD_DESC.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/documents/htmlReport/ns-3/index_SORT_BY_NAME_DESC.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/documents/htmlReport/ns-3/sources/source-1.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/documents/htmlReport/ns-3/sources/source-2.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/documents/htmlReport/ns-3/sources/source-3.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/documents/htmlReport/ns-4/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/documents/htmlReport/ns-4/index_SORT_BY_BLOCK.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/documents/htmlReport/ns-4/index_SORT_BY_BLOCK_DESC.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/documents/htmlReport/ns-4/index_SORT_BY_CLASS.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/documents/htmlReport/ns-4/index_SORT_BY_CLASS_DESC.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/documents/htmlReport/ns-4/index_SORT_BY_LINE.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/documents/htmlReport/ns-4/index_SORT_BY_LINE_DESC.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/documents/htmlReport/ns-4/index_SORT_BY_METHOD.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/documents/htmlReport/ns-4/index_SORT_BY_METHOD_DESC.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/documents/htmlReport/ns-4/index_SORT_BY_NAME_DESC.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/documents/htmlReport/ns-4/sources/source-1.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/documents/htmlReport/ns-4/sources/source-2.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/documents/htmlReport/ns-4/sources/source-3.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/documents/htmlReport/ns-4/sources/source-4.html" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -190,7 +252,8 @@
       <workItem from="1686492031033" duration="6909000" />
       <workItem from="1686500024274" duration="490000" />
       <workItem from="1686500686444" duration="388000" />
-      <workItem from="1686501360626" duration="214000" />
+      <workItem from="1686501360626" duration="1087000" />
+      <workItem from="1686503830966" duration="33000" />
     </task>
     <task id="LOCAL-00002" summary="commit">
       <created>1686000737257</created>
@@ -206,7 +269,14 @@
       <option name="project" value="LOCAL" />
       <updated>1686432557322</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Documents added&#10;Included specification, design and system test documents, HTML report by IntelliJ.">
+      <created>1686501863543</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1686501863543</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -216,14 +286,15 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="commit" />
     <MESSAGE value="Added new tests&#10;created test classes for Move, Solution, PieceController" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added new tests&#10;created test classes for Move, Solution, PieceController" />
+    <MESSAGE value="Documents added&#10;Included specification, design and system test documents, HTML report by IntelliJ." />
+    <option name="LAST_COMMIT_MESSAGE" value="Documents added&#10;Included specification, design and system test documents, HTML report by IntelliJ." />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
     <select />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/Klotski$test_in_Klotski.ic" NAME="test in Klotski Coverage Results" MODIFIED="1686501531571" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/Klotski$test_in_Klotski.ic" NAME="test in Klotski Coverage Results" MODIFIED="1686501596371" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/Klotski$MatchControllerTest_saveMatch.ic" NAME="MatchControllerTest.saveMatch Coverage Results" MODIFIED="1686036419639" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>com.klotski.klotski.controller.*</FILTER>
     </SUITE>
