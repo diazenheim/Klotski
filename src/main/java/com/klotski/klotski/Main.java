@@ -5,11 +5,14 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
-import java.io.IOException;
-
 public class Main extends Application {
+
+    /*
+     * Start method
+     **/
     @Override
-    public void start(Stage stage) throws IOException {
+    public void start(Stage stage) throws Exception {
+
         FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("view.fxml"));
         Scene scene = new Scene(fxmlLoader.load());
         stage.setTitle("Klotski");
@@ -20,4 +23,5 @@ public class Main extends Application {
     public static void main(String[] args) {
         launch();
     }
+
 }

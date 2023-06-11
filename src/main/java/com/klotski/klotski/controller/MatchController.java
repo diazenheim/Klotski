@@ -7,6 +7,7 @@ import com.klotski.klotski.model.Move;
 import javafx.scene.control.Button;
 
 import java.io.*;
+import java.nio.file.*;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -23,11 +24,19 @@ public class MatchController {
     //configurations file location
     public static final String configurationLocation = matchFilesLocation +
             "configuration" + System.getProperty("file.separator");
-    //saved matches file location
-    public static final String savedLocation = matchFilesLocation +
+    public static final String configResourceLocation = System.getProperty("file.separator") +
+            "match" + System.getProperty("file.separator") +
+            "configuration" + System.getProperty("file.separator");
+    //saved matches file location, the matches are saved on the user root directory under the folder saved (automatically created)
+    public static final String savedLocation = System.getProperty("user.home") +
+            System.getProperty("file.separator") +
             "saved" + System.getProperty("file.separator");
 
 
+    /*
+     * Save Match implementation. The save match don't need any parameter, but just uses the static variable
+     * 'match' which contains all the meaningfull information for a match to be saved.
+     **/
     public static void saveMatch() throws Exception {
         match = match.getMatch();
         String matchName = match.getMatchName();
@@ -48,20 +57,32 @@ public class MatchController {
     }
 
 
+    /*
+     * Load match implementation. Handles the load of a configuration and the load of a saved file
+     * Considering these 2 different load types have different locations, the process needs to be different
+     * but we preferred to use the same bethod for both.
+     **/
     public static void loadMatch(String matchName, String loadType) throws Exception {
         String resourceLocation = System.getProperty("file.separator") +
                 "match" + System.getProperty("file.separator") +
                 loadType + System.getProperty("file.separator");
-        String savedMatch = getFileContent(resourceLocation + matchName);
+
+        String location;
+        if (loadType == "configuration"){
+            location = configResourceLocation;
+        } else{
+            location = savedLocation;
+
+        }
+        String savedMatch = getFileContent(location + matchName);
         if (savedMatch != null) {
             Match matchObject = getJsonObject(savedMatch);
             match = matchObject;
-            //MainController.setCounter();
             ArrayList<Move> moves = match.getMovesList();
+            match.setMatchName(matchObject.getMatchName());
             PieceController.counter = match.getCurrentIndex();
             if (loadType == "configuration") {
                 match.setConfiguration(matchName);
-                klotskiLog("matchname: " + match.getConfiguration());
             }
             setMatchConfiguration(moves);
 
@@ -88,6 +109,13 @@ public class MatchController {
     //utility method to write content on a file
     private static void writeMatchToFile(String filename, String fileContent) throws IOException {
         try {
+            try{
+                File dir = new File(savedLocation);
+                if (!dir.exists()) dir.mkdirs();
+            }catch(Exception e){
+                klotskiLog("Saved folder already exists");
+            }
+
             File file = getFileObject(savedLocation + filename);
 
             FileWriter writer;
@@ -119,24 +147,32 @@ public class MatchController {
 
     //utility method to get the content of a File from a given path
     private static String getFileContent(String filePath) throws IOException, Exception {
-        try {
-            klotskiLog(filePath);
+        String loadedFile;
+        klotskiLog("filePath: " + filePath);
+        //in case of a configuration, this is loaded from resources, this ha
+        if (filePath.contains("configuration")){
+            try {
+                InputStream inputStream = MainController.class.getResourceAsStream(filePath);
+                Scanner s = new Scanner(inputStream).useDelimiter("\\A");
+            }
+            catch (Exception e){
+                filePath = filePath.replace("\\", "/"); //let modify the path to work in a windows system
+            }
+            //the following method has been found online to convert a file into string
             InputStream inputStream = MainController.class.getResourceAsStream(filePath);
-            Scanner s = new Scanner(inputStream).useDelimiter("\\A");
-        }
-        catch (Exception e){
-            filePath = filePath.replace("\\", "/"); //let modify the path to work in a windows system
-        }
-        klotskiLog(filePath);
-        //the following method has been found online to convert a file into string
-        InputStream inputStream = MainController.class.getResourceAsStream(filePath);
-        Scanner s = new Scanner(inputStream).useDelimiter(System.getProperty("file.separator") + System.getProperty("file.separator")+"A");
+            Scanner s = new Scanner(inputStream).useDelimiter(System.getProperty("file.separator") + System.getProperty("file.separator")+"A");
 
-        String loadedFile = s.hasNext() ? s.next() : "";
+            loadedFile = s.hasNext() ? s.next() : "";
+
+        } else { //in case of a saved match, this is loadded from user home directory, the process to read the file is different
+            File file = new File(filePath);
+            loadedFile = new String(Files.readAllBytes(Paths.get(file.toString())));
+        }
 
         return loadedFile;
     }
 
+    //utility method to set a configuration on the board given an array of moves
     private static void setMatchConfiguration(ArrayList<Move> moves){
     //iterates on all the moves
         for (int i = 0; i < moves.size(); i++) {

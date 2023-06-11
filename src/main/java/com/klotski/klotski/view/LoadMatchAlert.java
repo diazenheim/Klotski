@@ -2,15 +2,12 @@ package com.klotski.klotski.view;
 
 import com.klotski.klotski.controller.MatchController;
 import com.klotski.klotski.model.Match;
-import javafx.application.Platform;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
-import javafx.scene.Node;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.ListView;
-import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.Priority;
@@ -18,7 +15,12 @@ import javafx.stage.Modality;
 import javafx.stage.Stage;
 
 import java.io.File;
+import java.net.URI;
+import java.nio.file.*;
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Iterator;
+import java.util.stream.Stream;
 
 
 public class LoadMatchAlert {
@@ -41,6 +43,9 @@ public class LoadMatchAlert {
         window.setTitle(title);
 
         if (loadTypeLocal == "configuration"){
+            String resourceLocation = System.getProperty("file.separator") +
+                "match" + System.getProperty("file.separator") +
+                loadType + System.getProperty("file.separator");
             loadLocation = MatchController.configurationLocation;
             emptyListpPlaceholder = "No Configuration available!";
             cancelButtonText = "Cancel";
@@ -94,34 +99,9 @@ public class LoadMatchAlert {
         window.showAndWait();
     }
 
-    private static ListView<HBoxCell> getListObject(){
-        //create list that will contain the HBox that will compose the listView
-        ArrayList<HBoxCell> hBoxList = new ArrayList<HBoxCell>();
-
-        //get list of existing files
-        File folder = new File(loadLocation);
-        File[] listOfFiles = folder.listFiles();
-        for (File file : listOfFiles) {
-            if (file.isFile()) {
-                hBoxList.add(new HBoxCell(file.getName()));
-            }
-        }
-        ListView<HBoxCell> list = new ListView<>();
-
-        if (hBoxList.size() == 0){
-            list.setPlaceholder(new Label(emptyListpPlaceholder));
-            list.setPrefHeight(35);
-        } else {
-            list.setPrefHeight(35 * hBoxList.size());
-            ObservableList<HBoxCell> items = FXCollections.observableArrayList(hBoxList);
-            list.setItems(items);
-        }
-
-        return list;
-    }
 
     //utility method to refresh the list when a match is deleted
-    private static void refreshList(){
+    private static void refreshList() throws Exception {
         layout.getChildren().remove(list);
         ListView<HBoxCell> list = getListObject();
         layout.getChildren().add(list);
@@ -166,7 +146,10 @@ public class LoadMatchAlert {
                 deleteButton.setOnAction(e -> {
                     try {
                         //save match the exit game or close alert
-                        File matchToDelete = new File(MatchController.savedLocation + labelText);
+                        String location = System.getProperty("user.home") +
+                                System.getProperty("file.separator") +
+                                "saved" + System.getProperty("file.separator");
+                        File matchToDelete = new File(location + labelText);
                         if (matchToDelete.delete()) {
                             klotskiLog("Deleted the file: " + matchToDelete.getName());
                         } else {
@@ -188,6 +171,52 @@ public class LoadMatchAlert {
             }
 
         }
+    }
+
+    //utility method to get list of Objects to create the list of saved or config files
+    private static ListView<HBoxCell> getListObject() throws Exception {
+        //create list that will contain the HBox that will compose the listView
+        ArrayList<HBoxCell> hBoxList;
+
+
+        //get list of existing files
+        if (loadType == "configuration"){
+            hBoxList = getSavedList();
+        }else{
+            try{
+                File dir = new File(loadLocation);
+                if (!dir.exists()) dir.mkdirs();
+            }catch(Exception e){
+                klotskiLog("Saved folder already exists");
+            }
+            hBoxList = getSavedList();
+        }
+        ListView<HBoxCell> list = new ListView<>();
+
+        if (hBoxList.size() == 0){
+            list.setPlaceholder(new Label(emptyListpPlaceholder));
+            list.setPrefHeight(35);
+        } else {
+            list.setPrefHeight(35 * hBoxList.size());
+            ObservableList<HBoxCell> items = FXCollections.observableArrayList(hBoxList);
+            list.setItems(items);
+        }
+
+        return list;
+    }
+
+    //utility method to get list of saved files
+    private static ArrayList<HBoxCell> getSavedList(){
+
+        ArrayList<HBoxCell> arrayListToReturn= new ArrayList<>();
+        File folder = new File(loadLocation);
+        File[] listOfFiles = folder.listFiles();
+        for (File file : listOfFiles) {
+            if (file.isFile()) {
+                arrayListToReturn.add(new HBoxCell(file.getName()));
+            }
+        }
+        return arrayListToReturn;
     }
 
     private static void klotskiLog(String string) {

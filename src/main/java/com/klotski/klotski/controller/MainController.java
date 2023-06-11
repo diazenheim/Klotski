@@ -28,6 +28,9 @@ public class MainController {
         initializeButtonArray(true);
     }
 
+    /*
+     * Initialization or the array of Buttons which reside in the board and refers to the pieces.
+     **/
     Match match;
     public void initializeButtonArray(boolean loadAlert) throws Exception {
         pieces = new Button[10];
@@ -50,37 +53,65 @@ public class MainController {
     public void select(ActionEvent e) { //selecting the button to move
         selection(e);
     }
-    // all the movements are controlled by increasing or decreasing (by 100) of the variable X and Y(The Y axis is inverted) after checking the moves is valid.
+    /*
+     * all the movements are controlled by increasing or decreasing (by 100) of the variable X and Y(The Y axis is inverted) after checking the moves is valid.
+     *
+     * MoveRight helper
+     **/
     public void MoveRight() throws Exception {
         PieceController.MoveRight();
         setCounter(PieceController.counter, Count );
         match.setBestMoveResetfield(false);
     }
+
+    /*
+     * MoveLeft helper
+     **/
     public void MoveLeft() throws Exception {
         PieceController.MoveLeft();
         setCounter(PieceController.counter, Count );
         match.setBestMoveResetfield(false);
     }
+
+    /*
+     * MoveUp helper
+     **/
     public void MoveUp() throws Exception {
         PieceController.MoveUp();
         setCounter(PieceController.counter, Count );
         match.setBestMoveResetfield(false);
 
     }
+
+    /*
+     * MoveDown helper
+     **/
     public void MoveDown() throws Exception {
         PieceController.MoveDown();
         setCounter(PieceController.counter, Count );
         match.setBestMoveResetfield(false);
     }
+
+    /*
+    * Save match helper
+    **/
     public void saveMatch() throws Exception {
         MenuController.Save();
     }
 
+    /*
+    * Load match helper, calls loadMatch implementation and set the counter.
+    * */
     public void loadMatch() throws Exception {
         MenuController.loadMatch();
         setCounter(counter, Count);
         //MatchController.loadSave();
     }
+
+    /*
+    *best move implementation, the method usess the 'bestMoveReset' attribute inside the match object
+    *to know if proceed forward through solution array inside match o to go back
+    **/
 
     public void BestMove() throws Exception {
         match = Match.getMatch();
