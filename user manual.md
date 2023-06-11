@@ -38,25 +38,23 @@ It requires Java 20
 
 ---
 
-## The Start
+## The Start - Choose configuration
 
-![App](./pictures/home_screen.png)
-
-After the load the picture above is shown. 
-The user is prompted to choose a configuration to start the game
+After the start, the first dialog window is shown where the 
+user is prompted to choose a configuration to start the game
 by pressing the 'Load' button on the selected configuration.
 
 ---
 
 ## The Game
 
-![The Game](./pictures/filter_bar.png)
+![The Game]
 
-After the configuration selection the a new window will open 
+After the configuration selection a new window will open 
 with the board containing all the pieces and a menù on the right.
 
 The goal of the game is to bring the red big Square down to the bottom 
-red line. To do that, the player need to move the other blue pieces
+red line. To do that, the player needs to move the other blue pieces
 to free the red square piece.
 To move the pieces the player need first to select the piece he wants 
 to move and the has 3 choices:
@@ -71,27 +69,27 @@ The <kbd>Back</kbd> button brings back the last piece moved to its
 previous position.
 
 The <kbd>Save Game</kbd> button gives the possibility to save a match in 
-the user root location on the player pc under the folder <kbd>saved<kbd>.
+the user root location on the player PC under the folder <kbd>saved<kbd> 
+which is automatically created by the program.
 
-The <kbd>Load Game</kbd> button gives the possibility to load a previosuly
-saved game.
+The <kbd>Load Game</kbd> button gives the possibility to load a game 
+saved previosuly.
 
-The <kbd>Reset</kbd> button gives the possibility reset the game to the 
+The <kbd>Reset</kbd> button gives the possibility to reset the game to the 
 initial configuration.
 
 The <kbd>Quit</kbd> button simply gives the possibility to quit the game.
-This button has the extra function that asks the user to save if he didn't save
-the game yes.
+This button has the extra funtionality that asks the user to save the game 
+if he didn't do that yet.
 
 ---
 
 ## Libraries
 
-![TheLibraries](
 The main libraries we used are: 
 1. Jackson: used for JSON management. The library helps by managing the convertions
 betweer a simple POJO object and a string in JSON format and vice versa.
-2. JAVAFX: used to generate the interface and button components.
+2. JAVAFX: used to generate the interface button components, and interracts with them.
 
 ---
 
