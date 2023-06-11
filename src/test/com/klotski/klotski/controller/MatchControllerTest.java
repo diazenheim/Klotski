@@ -8,20 +8,29 @@ import java.io.File;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class MatchControllerTest {
-    //testing the loading of a file
+
+    //testing the method saveMatch
     @Test
-    void testLoadMatch() throws Exception {
+    void testSaveMatch() throws Exception {
+        Match match = new Match();
+        MatchController.saveMatch();
+        assertEquals("New_Match", match.getMatchName());
+    }
+
+    //testing the method loadMatch that loads a saved match 
+    @Test
+    void testLoadMatchSaved() throws Exception {
         Match match = new Match();
         MatchController.loadMatch("New_Match", "saved");
         assertEquals(match.getMatchName(), "New_Match");
     }
-
+    //testing the method loadMatch that loads a configuration
     @Test
-    void testSaveMatch() throws Exception {
+    void testLoadMConfiguration() throws Exception {
         Match match = new Match();
-        MatchController.loadMatch("New_Match", "saved");
-        MatchController.saveMatch();
-        assertEquals("New_Match", match.getMatchName());
+        MatchController.loadMatch("Config 1", "configuration");
+        assertEquals(match.getMatchName(), "Config 1");
     }
+
 
 }

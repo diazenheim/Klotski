@@ -14,6 +14,9 @@ import javafx.stage.Stage;
 public class SaveAlert {
 
 
+    /*
+     * main method that created the Alert definition and defines the layout
+     **/
     private static Match match;
     public static void display(String title, String message, boolean quit){
         Stage window = new Stage();
@@ -45,7 +48,7 @@ public class SaveAlert {
         saveButton.setLayoutX(180);
         saveButton.setLayoutY(80);
 
-        //if the Alert has been raised after pressing quit is required the possibility to Not Save adding Don't save button
+        //if the Alert has been raised after pressing quit, is given the possibility to Not Save adding Don't save button
         if (quit){
             layout.setPrefSize(440, 130);
             //create don't save Button
@@ -62,7 +65,7 @@ public class SaveAlert {
             layout.getChildren().addAll(label, matchNameInput, saveButton, cancelButton); //Add buttons to the window
         }
 
-        //close alert
+        //define buttons action
         cancelButton.setOnAction(e -> window.close()); //close AlertBox
         saveButton.setOnAction(e ->
         {

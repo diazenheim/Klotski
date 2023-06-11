@@ -8,6 +8,10 @@ import javafx.scene.layout.*;
 import javafx.scene.control.*;
 
 public class QuitAlert {
+
+    /*
+     * main method that created the Alert definition and defines the layout
+     **/
     public static void display(String title, String message){
         Stage window = new Stage();
         window.initModality(Modality.APPLICATION_MODAL); //so that user interactions with other windows are blocked
@@ -16,6 +20,7 @@ public class QuitAlert {
         Label label = new Label();
         label.setText(message); //add message to the quit window
 
+        //create components to display
         Button quitButton = new Button("Quit");
         Button cancelButton = new Button("Cancel");
 
@@ -32,9 +37,10 @@ public class QuitAlert {
         cancelButton.setLayoutX(40);
         cancelButton.setLayoutY(80);
 
+        //add display components to the main layout
         layout.getChildren().addAll(label, quitButton, cancelButton); //Add buttons to the window
 
-
+        //defines buttons actions
         quitButton.setOnAction(e ->  System.exit(0)); //close game
         cancelButton.setOnAction(e -> window.close()); //close AlertBox
 

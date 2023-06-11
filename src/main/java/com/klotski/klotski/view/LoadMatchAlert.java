@@ -15,12 +15,7 @@ import javafx.stage.Modality;
 import javafx.stage.Stage;
 
 import java.io.File;
-import java.net.URI;
-import java.nio.file.*;
 import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Iterator;
-import java.util.stream.Stream;
 
 
 public class LoadMatchAlert {
@@ -37,11 +32,14 @@ public class LoadMatchAlert {
     private static double labelPrefHeight;
     private static String loadType;
 
+    /*
+    * main method that created the Alert definition and defines the layout
+    **/
     public static void display(String title, String message, String loadTypeLocal) throws Exception {
         window = new Stage();
         window.initModality(Modality.APPLICATION_MODAL); //so that user interactions with other windows are blocked
         window.setTitle(title);
-
+        //assign different values for the variables according to the load type: 'configuration' or 'saved'
         if (loadTypeLocal == "configuration"){
             String resourceLocation = System.getProperty("file.separator") +
                 "match" + System.getProperty("file.separator") +
@@ -70,7 +68,7 @@ public class LoadMatchAlert {
 
         cancelButton = new Button(cancelButtonText);
 
-        layout = new AnchorPane();//we always need a layout
+        layout = new AnchorPane();
 
         label.setLayoutX(40);// Center the label horizontally
         label.setLayoutY(30);// Position the label at the top
@@ -120,7 +118,10 @@ public class LoadMatchAlert {
         Button loadButton = new Button();
         Button deleteButton = new Button();
 
-
+        /*
+        * Dependent class to help the visualization. It creates the single line of the List View.
+        * It contains the file name and the actions to be performed on it.
+        **/
         HBoxCell(String labelText) {
             super();
 
@@ -128,7 +129,7 @@ public class LoadMatchAlert {
             label.setMaxWidth(Double.MAX_VALUE);
             HBox.setHgrow(label, Priority.ALWAYS);
 
-
+            //create load button and defines an action
             loadButton.setText("Load");
             loadButton.setOnAction(e -> {
                 try {
@@ -161,7 +162,7 @@ public class LoadMatchAlert {
 
                 this.getChildren().addAll(label, loadButton, deleteButton);
 
-            } else{
+            } else{ //in case of configuration, only the load button is shown
                 deleteButton = null;
 
                 this.getChildren().addAll(label, loadButton);
@@ -176,7 +177,7 @@ public class LoadMatchAlert {
         ArrayList<HBoxCell> hBoxList = new ArrayList<>();
 
 
-        //get list of existing files
+        //create the 'saved' folder on user root folder
         if (loadType == "saved"){
             try{
                 File dir = new File(loadLocation);
@@ -185,7 +186,7 @@ public class LoadMatchAlert {
                 klotskiLog("Saved folder already exists");
             }
         }
-        //iterate on files under the proper location (configuration or saved location) to build the list view
+        //iterate on the files under the configuration or saved location to build the list view
         File folder = new File(loadLocation);
         File[] listOfFiles = folder.listFiles();
         for (File file : listOfFiles) {
@@ -195,6 +196,7 @@ public class LoadMatchAlert {
         }
         ListView<HBoxCell> list = new ListView<>();
 
+        //if no objects are extracted, show a placeHolder otherwise populates the list
         if (hBoxList.size() == 0){
             list.setPlaceholder(new Label(emptyListpPlaceholder));
             list.setPrefHeight(35);
