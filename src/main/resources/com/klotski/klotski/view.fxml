@@ -182,7 +182,7 @@
                 <Button fx:id="save" layoutX="740.0" layoutY="80.0" mnemonicParsing="false" onAction="#saveMatch" prefHeight="80.0" prefWidth="120.0" text="Save" />
                 <Button fx:id="quit" layoutX="460.0" layoutY="500.0" mnemonicParsing="false" onAction="#Quit" prefHeight="80.0" prefWidth="120.0" text="QUIT" />
                 <Button fx:id="bestMove" layoutX="460.0" layoutY="80.0" mnemonicParsing="false" onAction="#BestMove" prefHeight="80.0" prefWidth="120.0" text="Best Move" />
-                <Button fx:id="loadSave" layoutX="740.0" layoutY="500.0" mnemonicParsing="false" onAction="#loadMatch" prefHeight="80.0" prefWidth="120.0" text="Load Last Save" />
+                <Button fx:id="loadSave" layoutX="740.0" layoutY="500.0" mnemonicParsing="false" onAction="#loadMatch" prefHeight="80.0" prefWidth="120.0" text="LoadGame" />
                 <Button fx:id="left" layoutX="560.0" layoutY="310.0" mnemonicParsing="false" onAction="#MoveLeft" prefHeight="40.0" prefWidth="80.0" />
                 <Button fx:id="up" layoutX="640.0" layoutY="230.0" mnemonicParsing="false" onAction="#MoveUp" prefHeight="80.0" prefWidth="40.0" />
                 <Button fx:id="right" layoutX="680.0" layoutY="310.0" mnemonicParsing="false" onAction="#MoveRight" prefHeight="40.0" prefWidth="80.0" />

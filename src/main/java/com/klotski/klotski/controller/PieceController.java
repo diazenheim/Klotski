@@ -16,8 +16,8 @@ class PieceController {
     public static Button[] pieces; //array created to contain the 10 pieces, used in the methode approving to speed up the control of the position of each pieces
     public static Button piece;
     //variable for the moving of the pieces
-    private static double x;
-    private static double y;
+    public static double x;
+    public static double y;
     // counter of the moves
     public static int counter;
 
@@ -73,16 +73,16 @@ class PieceController {
                 toCheck = piece;
             }
             if (axes == 0) {
-                if (toCheck.getLayoutX() == (selected.getLayoutX()) + selected.getWidth()) {
+                if (toCheck.getLayoutX() == (selected.getLayoutX()) + selected.getPrefWidth()) {
 
-                    if ((selected.getLayoutY() == toCheck.getLayoutY()) || ((toCheck.getLayoutY() + toCheck.getHeight()) - 100 == selected.getLayoutY()) || selected.getLayoutY() + selected.getHeight() - 100 == toCheck.getLayoutY()) {
+                    if ((selected.getLayoutY() == toCheck.getLayoutY()) || ((toCheck.getLayoutY() + toCheck.getPrefHeight()) - 100 == selected.getLayoutY()) || selected.getLayoutY() + selected.getPrefHeight() - 100 == toCheck.getLayoutY()) {
                         return false;
                     }
                 }
             }
             else if(axes == 1) {
-                if (selected.getLayoutY() == toCheck.getLayoutY() + toCheck.getHeight()) {
-                    if ((selected.getLayoutX() == toCheck.getLayoutX()) || (toCheck.getLayoutX() + toCheck.getWidth() - 100 == selected.getLayoutX()) || selected.getLayoutX() + selected.getWidth() - 100 == toCheck.getLayoutX()) {
+                if (selected.getLayoutY() == toCheck.getLayoutY() + toCheck.getPrefHeight()) {
+                    if ((selected.getLayoutX() == toCheck.getLayoutX()) || (toCheck.getLayoutX() + toCheck.getPrefWidth() - 100 == selected.getLayoutX()) || selected.getLayoutX() + selected.getPrefWidth() - 100 == toCheck.getLayoutX()) {
                         return false;
                     }
                 }
@@ -101,7 +101,7 @@ class PieceController {
                 match.getMatch().addMove(createMoveObject(counter - 1, piece, oldX, oldY));
             }
         }
-        System.out.println("Counter is " + counter);
+
     }
     public static void MoveDown() throws Exception {
 
