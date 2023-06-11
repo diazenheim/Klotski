@@ -51,7 +51,7 @@ class PieceControllerTest {
         PieceController.piece = pieces[1];
         PieceController.piece.setPrefHeight(100);
         PieceController.piece.setPrefWidth(100);
-        PieceController.MoveUp();
+        PieceController.moveUp();
         assertEquals(-0, PieceController.piece.getLayoutY());
 
 
@@ -70,7 +70,7 @@ class PieceControllerTest {
         PieceController.piece = pieces[1];
         PieceController.piece.setPrefHeight(100);
         PieceController.piece.setPrefWidth(100);
-        PieceController.MoveDown();
+        PieceController.moveDown();
         assertEquals(100, PieceController.piece.getLayoutY());
     }
     @Test
@@ -87,7 +87,7 @@ class PieceControllerTest {
         PieceController.piece = pieces[1];
         PieceController.piece.setPrefHeight(100);
         PieceController.piece.setPrefWidth(100);
-        PieceController.MoveLeft();
+        PieceController.moveLeft();
         assertEquals(0, PieceController.piece.getLayoutX());
     }
     @Test
@@ -103,7 +103,7 @@ class PieceControllerTest {
         PieceController.piece = pieces[1];
         PieceController.piece.setPrefHeight(100);
         PieceController.piece.setPrefWidth(100);
-        PieceController.MoveRight();
+        PieceController.moveRight();
         assertEquals(100, PieceController.piece.getLayoutX());
     }
 

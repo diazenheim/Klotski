@@ -59,7 +59,7 @@ public class MainController {
      * MoveRight helper
      **/
     public void moveRight() throws Exception {
-        PieceController.MoveRight();
+        PieceController.moveRight();
         setCounter(PieceController.counter, Count );
         match.setBestMoveResetfield(false);
     }
@@ -68,7 +68,7 @@ public class MainController {
      * MoveLeft helper
      **/
     public void moveLeft() throws Exception {
-        PieceController.MoveLeft();
+        PieceController.moveLeft();
         setCounter(PieceController.counter, Count );
         match.setBestMoveResetfield(false);
     }
@@ -77,7 +77,7 @@ public class MainController {
      * MoveUp helper
      **/
     public void moveUp() throws Exception {
-        PieceController.MoveUp();
+        PieceController.moveUp();
         setCounter(PieceController.counter, Count );
         match.setBestMoveResetfield(false);
 
@@ -87,7 +87,7 @@ public class MainController {
      * MoveDown helper
      **/
     public void moveDown() throws Exception {
-        PieceController.MoveDown();
+        PieceController.moveDown();
         setCounter(PieceController.counter, Count );
         match.setBestMoveResetfield(false);
     }
@@ -96,7 +96,7 @@ public class MainController {
     * Save match helper
     **/
     public void saveMatch() {
-        MenuController.Save();
+        MenuController.save();
     }
 
     /*
@@ -152,11 +152,11 @@ public class MainController {
     }
 
     public void quit() {
-        MenuController.Quit();
+        MenuController.quit();
     }
 
     public void back() {
-        MenuController.Back();
+        MenuController.back();
         if(counter!= 0) {
             counter--;
         }
@@ -168,12 +168,12 @@ public class MainController {
         setCounter(counter, Count);
     }
     public void keyboard(KeyEvent keyEvent) throws Exception {
-        PieceController.Keyboard(keyEvent);
+        PieceController.keyboard(keyEvent);
         setCounter(PieceController.counter,Count );
     }
 
     public void swipe(MouseEvent mouseEvent) throws Exception {
-        PieceController.Swipe(mouseEvent);
+        PieceController.swipe(mouseEvent);
         setCounter(PieceController.counter,Count);
     }
 

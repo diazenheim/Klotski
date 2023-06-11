@@ -12,7 +12,7 @@ import java.util.ArrayList;
 
 public class MenuController {
     private static Match match;
-    public static void Quit() {
+    public static void quit() {
         match = Match.getMatch();
         if (!match.isSaved()) {
             SaveAlert.display("Save match", "Do you want to save before?", true);
@@ -20,13 +20,13 @@ public class MenuController {
             QuitAlert.display("Quit window", "Are you sure you want to quit?");
         }
     }
-    public static void Save() {
+    public static void save() {
         SaveAlert.display("Save match", "Give a name to your name", false);
     }
     public static void loadMatch() throws Exception {
         LoadMatchAlert.display("Load match", "Select the match you want to load", "saved");
     }
-    public static void Back() {
+    public static void back() {
         match = Match.getMatch();
         if(match.getCurrentIndex() == 0 ){
             return;

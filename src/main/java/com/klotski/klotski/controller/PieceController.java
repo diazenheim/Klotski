@@ -90,7 +90,7 @@ class PieceController {
         return true;
     }
     // all the movement are controlled by increasing or decreasing (by 100) of the variable X and Y(The Y axis is inverted) after checking the moves is valid.
-    public static void MoveUp() throws Exception {
+    public static void moveUp() throws Exception {
         if(approving(0,1)) {
             double oldX = piece.getLayoutX();
             double oldY = piece.getLayoutY();
@@ -102,10 +102,7 @@ class PieceController {
         }
 
     }
-    public static void MoveDown() throws Exception {
-
-
-
+    public static void moveDown() throws Exception {
         if(approving(1,1)) {
             double oldX = piece.getLayoutX();
             double oldY = piece.getLayoutY();
@@ -120,7 +117,7 @@ class PieceController {
             }
         }
     }
-    public static void MoveRight() throws Exception { //move
+    public static void moveRight() throws Exception { //move
         if(approving(0,0)){
             double oldX = piece.getLayoutX();
             double oldY = piece.getLayoutY();
@@ -131,7 +128,7 @@ class PieceController {
             }
         }
     }
-    public static void MoveLeft() throws Exception {
+    public static void moveLeft() throws Exception {
         if(approving(1,0)) {
             double oldX = piece.getLayoutX();
             double oldY = piece.getLayoutY();
@@ -144,7 +141,7 @@ class PieceController {
     }
     //let use the mouse to move the pieces
     @FXML
-    public static void Swipe(MouseEvent mouseEvent) throws Exception {
+    public static void swipe(MouseEvent mouseEvent) throws Exception {
         double previousX = x;
         double x = mouseEvent.getSceneX();
         double previousY = y;
@@ -152,38 +149,38 @@ class PieceController {
 
 
         if (x < (previousX)) {
-            MoveLeft();
+            moveLeft();
             match.setBestMoveResetfield(false);
 
         } else if (x > (previousX + 230)) {
-            MoveRight();
+            moveRight();
             match.setBestMoveResetfield(false);
         }
 
         if (y < (previousY+50)) {
-            MoveUp();
+            moveUp();
             match.setBestMoveResetfield(false);
 
         } else if (y > (previousY + 250)) {
-            MoveDown();
+            moveDown();
             match.setBestMoveResetfield(false);
         }
     }
     //let use the keyboard to move the pieces
     @FXML
-    public static void Keyboard(KeyEvent keyEvent) throws Exception {
+    public static void keyboard (KeyEvent keyEvent) throws Exception {
         KeyCode kc = keyEvent.getCode();
         if (kc == KeyCode.UP) {
-            MoveUp();
+            moveUp();
             match.setBestMoveResetfield(false);
         } else if (kc == KeyCode.RIGHT) {
-            MoveRight();
+            moveRight();
             match.setBestMoveResetfield(false);
         } else if (kc == KeyCode.DOWN) {
-            MoveDown();
+            moveDown();
             match.setBestMoveResetfield(false);
         } else if (kc == KeyCode.LEFT) {
-            MoveLeft();
+            moveLeft();
             match.setBestMoveResetfield(false);
         }
     }
