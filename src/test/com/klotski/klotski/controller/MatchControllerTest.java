@@ -17,7 +17,7 @@ class MatchControllerTest {
         assertEquals("New_Match", match.getMatchName());
     }
 
-    //testing the method loadMatch that loads a saved match 
+    //testing the method loadMatch that loads a saved match
     @Test
     void testLoadMatchSaved() throws Exception {
         Match match = new Match();
