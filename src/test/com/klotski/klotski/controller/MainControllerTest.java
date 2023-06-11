@@ -11,6 +11,7 @@ import javafx.scene.text.Text;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+import static com.klotski.klotski.controller.PieceController.counter;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 
@@ -28,24 +29,7 @@ public class MainControllerTest {
     @Test
     public void testInitializeButtonArray() throws Exception {
         mainController.initializeButtonArray(false);
-        /*Platform.startup(() ->{
-
-            Button[] pieces = PieceController.pieces;
-
-            System.out.println(pieces[0]);
-            assertNotNull(pieces);
-            assertEquals(10, pieces.length);
-            assertNotNull(pieces[0]);
-            assertNotNull(pieces[1]);
-            assertNotNull(pieces[2]);
-            assertNotNull(pieces[3]);
-            assertNotNull(pieces[4]);
-            assertNotNull(pieces[5]);
-            assertNotNull(pieces[6]);
-            assertNotNull(pieces[7]);
-            assertNotNull(pieces[8]);
-            assertNotNull(pieces[9]);
-        });*/
+        assertNotNull(PieceController.pieces);
     }
 
     @Test
@@ -74,4 +58,25 @@ public class MainControllerTest {
 
         assertEquals(counter, match.getCurrentIndex());
     }
+
+   @Test
+    public void MoveUp() throws Exception {
+        int counter = 0;
+        mainController.Count = new Text();
+        mainController.Count.setText("Counter: " + counter);
+        PieceController.counter = 0;
+        mainController.MoveUp();
+        assertEquals(0, PieceController.counter);
+    }
+
+    @Test
+    public void Back() {
+        int counter = 0;
+        mainController.Count = new Text();
+        mainController.Count.setText("Counter: " + counter);
+        PieceController.counter = 0;
+        mainController.Back();
+        assertEquals(0, PieceController.counter);
+        }
+
 }

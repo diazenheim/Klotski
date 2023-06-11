@@ -21,9 +21,10 @@ class PieceControllerTest {
     public static void setUpClass() {
         // Initialize JavaFX Toolkit
         Platform.startup(() -> {
-            // Any JavaFX initialization or configuration can be done here
+
         });
     }
+
 
     @BeforeEach
     public void setUp() {
