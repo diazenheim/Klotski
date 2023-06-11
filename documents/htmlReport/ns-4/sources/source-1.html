@@ -1,0 +1,345 @@
+
+
+
+<!DOCTYPE html>
+<html id="htmlId">
+<head>
+  <title>Coverage Report > LoadMatchAlert</title>
+  <style type="text/css">
+    @import "../../css/coverage.css";
+    @import "../../css/idea.min.css";
+  </style>
+  <script type="text/javascript" src="../../js/highlight.min.js"></script>
+  <script type="text/javascript" src="../../js/highlightjs-line-numbers.min.js"></script>
+</head>
+
+<body>
+<div class="content">
+<div class="breadCrumbs">
+Current scope:     <a href="../../index.html">all classes</a>
+    <span class="separator">|</span>
+    <a href="../index.html">com.klotski.klotski.view</a>
+</div>
+
+<h1>Coverage Summary for Class: LoadMatchAlert (com.klotski.klotski.view)</h1>
+
+<table class="coverageStats">
+
+<tr>
+  <th class="name">Class</th>
+<th class="coverageStat 
+">
+  Method, %
+</th>
+<th class="coverageStat 
+">
+  Line, %
+</th>
+</tr>
+<tr>
+  <td class="name">LoadMatchAlert</td>
+<td class="coverageStat">
+  <span class="percent">
+    40%
+  </span>
+  <span class="absValue">
+    (2/5)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    65.7%
+  </span>
+  <span class="absValue">
+    (46/70)
+  </span>
+</td>
+</tr>
+  <tr>
+    <td class="name">LoadMatchAlert$HBoxCell</td>
+<td class="coverageStat">
+  <span class="percent">
+    33.3%
+  </span>
+  <span class="absValue">
+    (1/3)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    41.4%
+  </span>
+  <span class="absValue">
+    (12/29)
+  </span>
+</td>
+  </tr>
+<tr>
+  <td class="name"><strong>Total</strong></td>
+<td class="coverageStat">
+  <span class="percent">
+    37.5%
+  </span>
+  <span class="absValue">
+    (3/8)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    58.6%
+  </span>
+  <span class="absValue">
+    (58/99)
+  </span>
+</td>
+</tr>
+</table>
+
+<br/>
+<br/>
+
+
+<pre>
+<code class="sourceCode" id="sourceCode">&nbsp;package com.klotski.klotski.view;
+&nbsp;
+&nbsp;import com.klotski.klotski.controller.MatchController;
+&nbsp;import com.klotski.klotski.model.Match;
+&nbsp;import javafx.collections.FXCollections;
+&nbsp;import javafx.collections.ObservableList;
+&nbsp;import javafx.scene.Scene;
+&nbsp;import javafx.scene.control.Button;
+&nbsp;import javafx.scene.control.Label;
+&nbsp;import javafx.scene.control.ListView;
+&nbsp;import javafx.scene.layout.AnchorPane;
+&nbsp;import javafx.scene.layout.HBox;
+&nbsp;import javafx.scene.layout.Priority;
+&nbsp;import javafx.stage.Modality;
+&nbsp;import javafx.stage.Stage;
+&nbsp;
+&nbsp;import java.io.File;
+&nbsp;import java.util.ArrayList;
+&nbsp;
+&nbsp;
+<b class="nc">&nbsp;public class LoadMatchAlert {</b>
+&nbsp;
+&nbsp;
+&nbsp;    private static Match match;
+&nbsp;    private static Stage window;
+&nbsp;    private static AnchorPane layout;
+&nbsp;    private static ListView&lt;HBoxCell&gt; list;
+&nbsp;    private static Button cancelButton;
+&nbsp;    private static String loadLocation;
+&nbsp;    private static String emptyListpPlaceholder;
+&nbsp;    private static String cancelButtonText;
+&nbsp;    private static double labelPrefHeight;
+&nbsp;    private static String loadType;
+&nbsp;
+&nbsp;    /*
+&nbsp;    * main method that created the Alert definition and defines the layout
+&nbsp;    **/
+&nbsp;    public static void display(String title, String message, String loadTypeLocal) throws Exception {
+<b class="fc">&nbsp;        window = new Stage();</b>
+<b class="fc">&nbsp;        window.initModality(Modality.APPLICATION_MODAL); //so that user interactions with other windows are blocked</b>
+<b class="fc">&nbsp;        window.setTitle(title);</b>
+&nbsp;        //assign different values for the variables according to the load type: &#39;configuration&#39; or &#39;saved&#39;
+<b class="fc">&nbsp;        if (loadTypeLocal == &quot;configuration&quot;){</b>
+<b class="fc">&nbsp;            String resourceLocation = System.getProperty(&quot;file.separator&quot;) +</b>
+<b class="fc">&nbsp;                &quot;match&quot; + System.getProperty(&quot;file.separator&quot;) +</b>
+<b class="fc">&nbsp;                loadType + System.getProperty(&quot;file.separator&quot;);</b>
+<b class="fc">&nbsp;            loadLocation = MatchController.configurationLocation;</b>
+<b class="fc">&nbsp;            emptyListpPlaceholder = &quot;No Configuration available!&quot;;</b>
+<b class="fc">&nbsp;            cancelButtonText = &quot;Cancel&quot;;</b>
+<b class="fc">&nbsp;            labelPrefHeight = 60;</b>
+<b class="fc">&nbsp;            loadType = loadTypeLocal;</b>
+<b class="fc">&nbsp;        } else if (loadTypeLocal == &quot;saved&quot;){</b>
+<b class="nc">&nbsp;            loadLocation = MatchController.savedLocation;</b>
+<b class="nc">&nbsp;            emptyListpPlaceholder = &quot;No saved matches!&quot;;</b>
+<b class="nc">&nbsp;            cancelButtonText = &quot;Cancel&quot;;</b>
+<b class="nc">&nbsp;            labelPrefHeight = 30;</b>
+<b class="nc">&nbsp;            loadType = loadTypeLocal;</b>
+&nbsp;        } else{
+<b class="nc">&nbsp;            throw new Exception(&quot;No other load type supported, choose between &#39;configuration&#39; or &#39;saved&#39;. Given: &quot; + loadTypeLocal);</b>
+&nbsp;        }
+&nbsp;
+<b class="fc">&nbsp;        match = Match.getMatch();</b>
+&nbsp;
+<b class="fc">&nbsp;        list = getListObject();</b>
+&nbsp;
+<b class="fc">&nbsp;        Label label = new Label();</b>
+<b class="fc">&nbsp;        label.setText(message); //add message to the quit window</b>
+&nbsp;
+<b class="fc">&nbsp;        cancelButton = new Button(cancelButtonText);</b>
+&nbsp;
+<b class="fc">&nbsp;        layout = new AnchorPane();</b>
+&nbsp;
+<b class="fc">&nbsp;        label.setLayoutX(40);// Center the label horizontally</b>
+<b class="fc">&nbsp;        label.setLayoutY(30);// Position the label at the top</b>
+<b class="fc">&nbsp;        label.setPrefHeight(labelPrefHeight);</b>
+&nbsp;
+&nbsp;        // Position the items
+<b class="fc">&nbsp;        list.setLayoutX(40);</b>
+<b class="fc">&nbsp;        list.setLayoutY(label.getLayoutY() + label.getPrefHeight() + 10);</b>
+&nbsp;
+<b class="fc">&nbsp;        cancelButton.setLayoutX(40);</b>
+<b class="fc">&nbsp;        cancelButton.setLayoutY( list.getLayoutY() + list.getPrefHeight() + 10);</b>
+&nbsp;
+<b class="fc">&nbsp;        layout.setPrefSize(440, 130);</b>
+<b class="fc">&nbsp;        layout.getChildren().addAll(label, list, cancelButton); //Add buttons to the window</b>
+&nbsp;
+<b class="fc">&nbsp;        if (loadTypeLocal == &quot;configuration&quot;){</b>
+&nbsp;            //close alert
+<b class="fc">&nbsp;            cancelButton.setOnAction(e -&gt; System.exit(0)); //close AlertBox</b>
+<b class="nc">&nbsp;        } else if (loadTypeLocal == &quot;saved&quot;){</b>
+&nbsp;            //close alert
+<b class="nc">&nbsp;            cancelButton.setOnAction(e -&gt; window.close()); //close AlertBox</b>
+&nbsp;        }
+&nbsp;
+<b class="fc">&nbsp;        Scene scene = new Scene(layout); //make scene</b>
+<b class="fc">&nbsp;        window.setScene(scene); //add scene to the window</b>
+<b class="fc">&nbsp;        window.showAndWait();</b>
+&nbsp;    }
+&nbsp;
+&nbsp;
+&nbsp;    //utility method to refresh the list when a match is deleted
+&nbsp;    private static void refreshList() throws Exception {
+<b class="nc">&nbsp;        layout.getChildren().remove(list);</b>
+<b class="nc">&nbsp;        ListView&lt;HBoxCell&gt; list = getListObject();</b>
+<b class="nc">&nbsp;        layout.getChildren().add(list);</b>
+&nbsp;        //reconfigure layout
+<b class="nc">&nbsp;        list.setLayoutX(40);</b>
+<b class="nc">&nbsp;        list.setLayoutY(50);</b>
+<b class="nc">&nbsp;        cancelButton.setLayoutY( list.getLayoutY() + list.getPrefHeight() + 10);</b>
+&nbsp;        //trick found online to refresh the view
+<b class="nc">&nbsp;        window.setHeight(window.getHeight() + 0.001);</b>
+&nbsp;    }
+&nbsp;
+&nbsp;
+&nbsp;    //create item object Component to create the list
+&nbsp;    public static class HBoxCell extends HBox {
+<b class="fc">&nbsp;        Label label = new Label();</b>
+<b class="fc">&nbsp;        Button loadButton = new Button();</b>
+<b class="fc">&nbsp;        Button deleteButton = new Button();</b>
+&nbsp;
+&nbsp;        /*
+&nbsp;        * Dependent class to help the visualization. It creates the single line of the List View.
+&nbsp;        * It contains the file name and the actions to be performed on it.
+&nbsp;        **/
+&nbsp;        HBoxCell(String labelText) {
+<b class="fc">&nbsp;            super();</b>
+&nbsp;
+<b class="fc">&nbsp;            label.setText(labelText);</b>
+<b class="fc">&nbsp;            label.setMaxWidth(Double.MAX_VALUE);</b>
+<b class="fc">&nbsp;            HBox.setHgrow(label, Priority.ALWAYS);</b>
+&nbsp;
+&nbsp;            //create load button and defines an action
+<b class="fc">&nbsp;            loadButton.setText(&quot;Load&quot;);</b>
+<b class="fc">&nbsp;            loadButton.setOnAction(e -&gt; {</b>
+&nbsp;                try {
+&nbsp;                    //load match
+<b class="nc">&nbsp;                    MatchController.loadMatch(labelText, loadType);</b>
+<b class="nc">&nbsp;                    klotskiLog(labelText + &quot; loaded&quot;);</b>
+<b class="nc">&nbsp;                } catch (Exception ex) {</b>
+<b class="nc">&nbsp;                    throw new RuntimeException(ex);</b>
+<b class="nc">&nbsp;                }</b>
+<b class="nc">&nbsp;                window.close();</b>
+&nbsp;            });
+&nbsp;            //create Delete Button only for Saved Matches. Do not allow to delete configurations.
+<b class="fc">&nbsp;            if (loadType == &quot;saved&quot;) {</b>
+<b class="nc">&nbsp;                deleteButton.setText(&quot;Delete&quot;);</b>
+<b class="nc">&nbsp;                deleteButton.setOnAction(e -&gt; {</b>
+&nbsp;                    try {
+&nbsp;                        //save match the exit game or close alert
+<b class="nc">&nbsp;                        File matchToDelete = new File(MatchController.savedLocation + labelText);</b>
+<b class="nc">&nbsp;                        if (matchToDelete.delete()) {</b>
+<b class="nc">&nbsp;                            klotskiLog(&quot;Deleted the file: &quot; + matchToDelete.getName());</b>
+&nbsp;                        } else {
+<b class="nc">&nbsp;                            klotskiLog(&quot;Failed to delete the file.&quot;);</b>
+&nbsp;                        }
+<b class="nc">&nbsp;                        refreshList();</b>
+<b class="nc">&nbsp;                    } catch (Exception ex) {</b>
+<b class="nc">&nbsp;                        throw new RuntimeException(ex);</b>
+<b class="nc">&nbsp;                    }</b>
+&nbsp;                });
+&nbsp;
+&nbsp;
+<b class="nc">&nbsp;                this.getChildren().addAll(label, loadButton, deleteButton);</b>
+&nbsp;
+&nbsp;            } else{ //in case of configuration, only the load button is shown
+<b class="fc">&nbsp;                deleteButton = null;</b>
+&nbsp;
+<b class="fc">&nbsp;                this.getChildren().addAll(label, loadButton);</b>
+&nbsp;            }
+&nbsp;
+&nbsp;        }
+&nbsp;    }
+&nbsp;
+&nbsp;    //utility method to get list of Objects to create the list of saved or config files
+&nbsp;    private static ListView&lt;HBoxCell&gt; getListObject() throws Exception {
+&nbsp;        //create list that will contain the HBox that will compose the listView
+<b class="fc">&nbsp;        ArrayList&lt;HBoxCell&gt; hBoxList = new ArrayList&lt;&gt;();</b>
+&nbsp;
+&nbsp;
+&nbsp;        //create the &#39;saved&#39; folder on user root folder
+<b class="fc">&nbsp;        if (loadType == &quot;saved&quot;){</b>
+&nbsp;            try{
+<b class="nc">&nbsp;                File dir = new File(loadLocation);</b>
+<b class="nc">&nbsp;                if (!dir.exists()) dir.mkdirs();</b>
+<b class="nc">&nbsp;            }catch(Exception e){</b>
+<b class="nc">&nbsp;                klotskiLog(&quot;Saved folder already exists&quot;);</b>
+<b class="nc">&nbsp;            }</b>
+&nbsp;        }
+&nbsp;        //iterate on the files under the configuration or saved location to build the list view
+<b class="fc">&nbsp;        File folder = new File(loadLocation);</b>
+<b class="fc">&nbsp;        File[] listOfFiles = folder.listFiles();</b>
+<b class="fc">&nbsp;        for (File file : listOfFiles) {</b>
+<b class="fc">&nbsp;            if (file.isFile()) {</b>
+<b class="fc">&nbsp;                hBoxList.add(new HBoxCell(file.getName()));</b>
+&nbsp;            }
+&nbsp;        }
+<b class="fc">&nbsp;        ListView&lt;HBoxCell&gt; list = new ListView&lt;&gt;();</b>
+&nbsp;
+&nbsp;        //if no objects are extracted, show a placeHolder otherwise populates the list
+<b class="fc">&nbsp;        if (hBoxList.size() == 0){</b>
+<b class="nc">&nbsp;            list.setPlaceholder(new Label(emptyListpPlaceholder));</b>
+<b class="nc">&nbsp;            list.setPrefHeight(35);</b>
+&nbsp;        } else {
+<b class="fc">&nbsp;            list.setPrefHeight(35 * hBoxList.size());</b>
+<b class="fc">&nbsp;            ObservableList&lt;HBoxCell&gt; items = FXCollections.observableArrayList(hBoxList);</b>
+<b class="fc">&nbsp;            list.setItems(items);</b>
+&nbsp;        }
+&nbsp;
+<b class="fc">&nbsp;        return list;</b>
+&nbsp;    }
+&nbsp;
+&nbsp;    private static void klotskiLog(String string) {
+<b class="nc">&nbsp;        System.out.println(string);</b>
+&nbsp;    }
+&nbsp;}
+&nbsp;
+</code>
+</pre>
+</div>
+
+<script type="text/javascript">
+(function() {
+    var msie = false, msie9 = false;
+    /*@cc_on
+      msie = true;
+      @if (@_jscript_version >= 9)
+        msie9 = true;
+      @end
+    @*/
+
+    if (!msie || msie && msie9) {
+      hljs.highlightAll()
+      hljs.initLineNumbersOnLoad();
+    }
+})();
+</script>
+
+<div class="footer">
+    
+    <div style="float:right;">generated on 2023-06-11 21:30</div>
+</div>
+</body>
+</html>

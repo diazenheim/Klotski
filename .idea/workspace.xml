@@ -7,74 +7,76 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e7014844-ab91-4a58-8400-4d4dcf72d825" name="Changes" comment="Documents added&#10;Included specification, design and system test documents, HTML report by IntelliJ.">
+    <list default="true" id="e7014844-ab91-4a58-8400-4d4dcf72d825" name="Changes" comment="Deleted html files">
+      <change afterPath="$PROJECT_DIR$/documents/htmlReport/img/arrowDown.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/documents/htmlReport/img/arrowUp.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/documents/htmlReport/index_SORT_BY_BLOCK.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/documents/htmlReport/index_SORT_BY_BLOCK_DESC.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/documents/htmlReport/index_SORT_BY_CLASS.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/documents/htmlReport/index_SORT_BY_CLASS_DESC.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/documents/htmlReport/index_SORT_BY_LINE.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/documents/htmlReport/index_SORT_BY_LINE_DESC.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/documents/htmlReport/index_SORT_BY_METHOD.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/documents/htmlReport/index_SORT_BY_METHOD_DESC.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/documents/htmlReport/index_SORT_BY_NAME_DESC.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/documents/htmlReport/js/highlight.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/documents/htmlReport/js/highlightjs-line-numbers.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/documents/htmlReport/ns-1/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/documents/htmlReport/ns-1/index_SORT_BY_BLOCK.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/documents/htmlReport/ns-1/index_SORT_BY_BLOCK_DESC.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/documents/htmlReport/ns-1/index_SORT_BY_CLASS.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/documents/htmlReport/ns-1/index_SORT_BY_CLASS_DESC.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/documents/htmlReport/ns-1/index_SORT_BY_LINE.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/documents/htmlReport/ns-1/index_SORT_BY_LINE_DESC.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/documents/htmlReport/ns-1/index_SORT_BY_METHOD.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/documents/htmlReport/ns-1/index_SORT_BY_METHOD_DESC.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/documents/htmlReport/ns-1/index_SORT_BY_NAME_DESC.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/documents/htmlReport/ns-1/sources/source-1.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/documents/htmlReport/ns-1/sources/source-2.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/documents/htmlReport/ns-2/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/documents/htmlReport/ns-2/index_SORT_BY_BLOCK.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/documents/htmlReport/ns-2/index_SORT_BY_BLOCK_DESC.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/documents/htmlReport/ns-2/index_SORT_BY_CLASS.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/documents/htmlReport/ns-2/index_SORT_BY_CLASS_DESC.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/documents/htmlReport/ns-2/index_SORT_BY_LINE.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/documents/htmlReport/ns-2/index_SORT_BY_LINE_DESC.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/documents/htmlReport/ns-2/index_SORT_BY_METHOD.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/documents/htmlReport/ns-2/index_SORT_BY_METHOD_DESC.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/documents/htmlReport/ns-2/index_SORT_BY_NAME_DESC.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/documents/htmlReport/ns-2/sources/source-1.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/documents/htmlReport/ns-2/sources/source-2.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/documents/htmlReport/ns-2/sources/source-3.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/documents/htmlReport/ns-2/sources/source-4.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/documents/htmlReport/ns-3/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/documents/htmlReport/ns-3/index_SORT_BY_BLOCK.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/documents/htmlReport/ns-3/index_SORT_BY_BLOCK_DESC.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/documents/htmlReport/ns-3/index_SORT_BY_CLASS.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/documents/htmlReport/ns-3/index_SORT_BY_CLASS_DESC.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/documents/htmlReport/ns-3/index_SORT_BY_LINE.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/documents/htmlReport/ns-3/index_SORT_BY_LINE_DESC.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/documents/htmlReport/ns-3/index_SORT_BY_METHOD.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/documents/htmlReport/ns-3/index_SORT_BY_METHOD_DESC.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/documents/htmlReport/ns-3/index_SORT_BY_NAME_DESC.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/documents/htmlReport/ns-3/sources/source-1.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/documents/htmlReport/ns-3/sources/source-2.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/documents/htmlReport/ns-3/sources/source-3.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/documents/htmlReport/ns-4/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/documents/htmlReport/ns-4/index_SORT_BY_BLOCK.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/documents/htmlReport/ns-4/index_SORT_BY_BLOCK_DESC.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/documents/htmlReport/ns-4/index_SORT_BY_CLASS.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/documents/htmlReport/ns-4/index_SORT_BY_CLASS_DESC.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/documents/htmlReport/ns-4/index_SORT_BY_LINE.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/documents/htmlReport/ns-4/index_SORT_BY_LINE_DESC.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/documents/htmlReport/ns-4/index_SORT_BY_METHOD.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/documents/htmlReport/ns-4/index_SORT_BY_METHOD_DESC.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/documents/htmlReport/ns-4/index_SORT_BY_NAME_DESC.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/documents/htmlReport/ns-4/sources/source-1.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/documents/htmlReport/ns-4/sources/source-2.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/documents/htmlReport/ns-4/sources/source-3.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/documents/htmlReport/ns-4/sources/source-4.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/documents/htmlReport/img/arrowDown.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/documents/htmlReport/img/arrowUp.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/documents/htmlReport/index_SORT_BY_BLOCK.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/documents/htmlReport/index_SORT_BY_BLOCK_DESC.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/documents/htmlReport/index_SORT_BY_CLASS.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/documents/htmlReport/index_SORT_BY_CLASS_DESC.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/documents/htmlReport/index_SORT_BY_LINE.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/documents/htmlReport/index_SORT_BY_LINE_DESC.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/documents/htmlReport/index_SORT_BY_METHOD.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/documents/htmlReport/index_SORT_BY_METHOD_DESC.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/documents/htmlReport/index_SORT_BY_NAME_DESC.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/documents/htmlReport/js/highlight.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/documents/htmlReport/js/highlightjs-line-numbers.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/documents/htmlReport/ns-1/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/documents/htmlReport/ns-1/index_SORT_BY_BLOCK.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/documents/htmlReport/ns-1/index_SORT_BY_BLOCK_DESC.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/documents/htmlReport/ns-1/index_SORT_BY_CLASS.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/documents/htmlReport/ns-1/index_SORT_BY_CLASS_DESC.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/documents/htmlReport/ns-1/index_SORT_BY_LINE.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/documents/htmlReport/ns-1/index_SORT_BY_LINE_DESC.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/documents/htmlReport/ns-1/index_SORT_BY_METHOD.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/documents/htmlReport/ns-1/index_SORT_BY_METHOD_DESC.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/documents/htmlReport/ns-1/index_SORT_BY_NAME_DESC.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/documents/htmlReport/ns-1/sources/source-1.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/documents/htmlReport/ns-1/sources/source-2.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/documents/htmlReport/ns-2/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/documents/htmlReport/ns-2/index_SORT_BY_BLOCK.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/documents/htmlReport/ns-2/index_SORT_BY_BLOCK_DESC.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/documents/htmlReport/ns-2/index_SORT_BY_CLASS.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/documents/htmlReport/ns-2/index_SORT_BY_CLASS_DESC.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/documents/htmlReport/ns-2/index_SORT_BY_LINE.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/documents/htmlReport/ns-2/index_SORT_BY_LINE_DESC.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/documents/htmlReport/ns-2/index_SORT_BY_METHOD.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/documents/htmlReport/ns-2/index_SORT_BY_METHOD_DESC.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/documents/htmlReport/ns-2/index_SORT_BY_NAME_DESC.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/documents/htmlReport/ns-2/sources/source-1.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/documents/htmlReport/ns-2/sources/source-2.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/documents/htmlReport/ns-2/sources/source-3.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/documents/htmlReport/ns-2/sources/source-4.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/documents/htmlReport/ns-3/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/documents/htmlReport/ns-3/index_SORT_BY_BLOCK.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/documents/htmlReport/ns-3/index_SORT_BY_BLOCK_DESC.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/documents/htmlReport/ns-3/index_SORT_BY_CLASS.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/documents/htmlReport/ns-3/index_SORT_BY_CLASS_DESC.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/documents/htmlReport/ns-3/index_SORT_BY_LINE.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/documents/htmlReport/ns-3/index_SORT_BY_LINE_DESC.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/documents/htmlReport/ns-3/index_SORT_BY_METHOD.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/documents/htmlReport/ns-3/index_SORT_BY_METHOD_DESC.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/documents/htmlReport/ns-3/index_SORT_BY_NAME_DESC.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/documents/htmlReport/ns-3/sources/source-1.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/documents/htmlReport/ns-3/sources/source-2.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/documents/htmlReport/ns-3/sources/source-3.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/documents/htmlReport/ns-4/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/documents/htmlReport/ns-4/index_SORT_BY_BLOCK.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/documents/htmlReport/ns-4/index_SORT_BY_BLOCK_DESC.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/documents/htmlReport/ns-4/index_SORT_BY_CLASS.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/documents/htmlReport/ns-4/index_SORT_BY_CLASS_DESC.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/documents/htmlReport/ns-4/index_SORT_BY_LINE.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/documents/htmlReport/ns-4/index_SORT_BY_LINE_DESC.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/documents/htmlReport/ns-4/index_SORT_BY_METHOD.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/documents/htmlReport/ns-4/index_SORT_BY_METHOD_DESC.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/documents/htmlReport/ns-4/index_SORT_BY_NAME_DESC.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/documents/htmlReport/ns-4/sources/source-1.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/documents/htmlReport/ns-4/sources/source-2.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/documents/htmlReport/ns-4/sources/source-3.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/documents/htmlReport/ns-4/sources/source-4.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/documents/htmlReport/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/documents/htmlReport/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/com/klotski/klotski/controller/MainControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/com/klotski/klotski/controller/MainControllerTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -150,46 +152,18 @@
     </key>
   </component>
   <component name="RunManager" selected="JUnit.test in Klotski">
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.klotski.klotski.Main" />
+    <configuration name="MainControllerTest.MoveUp" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Klotski" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.klotski.klotski.*" />
+          <option name="PATTERN" value="com.klotski.klotski.controller.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="MainTest.testMain" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Klotski" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.klotski.klotski.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.klotski.klotski" />
-      <option name="MAIN_CLASS_NAME" value="com.klotski.klotski.MainTest" />
-      <option name="METHOD_NAME" value="testMain" />
+      <option name="PACKAGE_NAME" value="com.klotski.klotski.controller" />
+      <option name="MAIN_CLASS_NAME" value="com.klotski.klotski.controller.MainControllerTest" />
+      <option name="METHOD_NAME" value="MoveUp" />
       <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="MainWrapperTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Klotski" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.klotski.klotski.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.klotski.klotski" />
-      <option name="MAIN_CLASS_NAME" value="com.klotski.klotski.MainWrapperTest" />
-      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -209,6 +183,38 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="PieceControllerTest.testMoveDown" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Klotski" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.klotski.klotski.controller.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.klotski.klotski.controller" />
+      <option name="MAIN_CLASS_NAME" value="com.klotski.klotski.controller.PieceControllerTest" />
+      <option name="METHOD_NAME" value="testMoveDown" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PieceControllerTest.testMoveRight" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Klotski" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.klotski.klotski.controller.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.klotski.klotski.controller" />
+      <option name="MAIN_CLASS_NAME" value="com.klotski.klotski.controller.PieceControllerTest" />
+      <option name="METHOD_NAME" value="testMoveRight" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="test in Klotski" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Klotski" />
       <option name="TEST_OBJECT" value="directory" />
@@ -220,10 +226,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.test in Klotski" />
+        <item itemvalue="JUnit.MainControllerTest.MoveUp" />
+        <item itemvalue="JUnit.PieceControllerTest.testMoveDown" />
+        <item itemvalue="JUnit.PieceControllerTest.testMoveRight" />
         <item itemvalue="JUnit.PieceControllerTest" />
-        <item itemvalue="JUnit.MainTest.testMain" />
-        <item itemvalue="Application.Main" />
-        <item itemvalue="JUnit.MainWrapperTest" />
       </list>
     </recent_temporary>
   </component>
@@ -254,6 +260,7 @@
       <workItem from="1686500686444" duration="388000" />
       <workItem from="1686501360626" duration="1087000" />
       <workItem from="1686503830966" duration="33000" />
+      <workItem from="1686504206800" duration="1805000" />
     </task>
     <task id="LOCAL-00002" summary="commit">
       <created>1686000737257</created>
@@ -276,7 +283,14 @@
       <option name="project" value="LOCAL" />
       <updated>1686501863543</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Deleted html files">
+      <created>1686504289091</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1686504289091</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -287,14 +301,15 @@
     <MESSAGE value="commit" />
     <MESSAGE value="Added new tests&#10;created test classes for Move, Solution, PieceController" />
     <MESSAGE value="Documents added&#10;Included specification, design and system test documents, HTML report by IntelliJ." />
-    <option name="LAST_COMMIT_MESSAGE" value="Documents added&#10;Included specification, design and system test documents, HTML report by IntelliJ." />
+    <MESSAGE value="Deleted html files" />
+    <option name="LAST_COMMIT_MESSAGE" value="Deleted html files" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
     <select />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/Klotski$test_in_Klotski.ic" NAME="test in Klotski Coverage Results" MODIFIED="1686501596371" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/Klotski$test_in_Klotski.ic" NAME="test in Klotski Coverage Results" MODIFIED="1686511813714" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/Klotski$MatchControllerTest_saveMatch.ic" NAME="MatchControllerTest.saveMatch Coverage Results" MODIFIED="1686036419639" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>com.klotski.klotski.controller.*</FILTER>
     </SUITE>

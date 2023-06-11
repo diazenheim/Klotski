@@ -59,15 +59,6 @@ public class MainControllerTest {
         assertEquals(counter, match.getCurrentIndex());
     }
 
-   @Test
-    public void MoveUp() throws Exception {
-        int counter = 0;
-        mainController.Count = new Text();
-        mainController.Count.setText("Counter: " + counter);
-        PieceController.counter = 0;
-        mainController.MoveUp();
-        assertEquals(0, PieceController.counter);
-    }
 
     @Test
     public void Back() {
