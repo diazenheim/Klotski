@@ -33,7 +33,7 @@ public class LoadMatchAlert {
     private static String loadType;
 
     /*
-    * main method that created the Alert definition and defines the layout
+    * main method that created the Load match dialog (used by a saved match or an initial configuration)
     **/
     public static void display(String title, String message, String loadTypeLocal) throws Exception {
         window = new Stage();
@@ -206,6 +206,10 @@ public class LoadMatchAlert {
         return list;
     }
 
+
+    /*
+     * utility log method
+     * */
     private static void klotskiLog(String string) {
         System.out.println(string);
     }

@@ -21,7 +21,7 @@ class PieceController {
     public static int counter;
 
     private static Match match;
-    //methode used for the selection of the pieces you want to use, when the piece is clicked is selected
+    //method used for the selection of the pieces you want to use, when the piece is clicked is selected
     public static void selection(ActionEvent e){
         if(piece != null) {
             piece.setStyle(null);
@@ -37,6 +37,11 @@ class PieceController {
             piece.setStyle("-fx-background-color: BLUE");
         }
     }
+
+
+    /*
+     * selection method overload
+     * */
     public static Button selection(int pieceIndex){
         if(piece != null) {
             piece.setStyle(null);
@@ -90,6 +95,10 @@ class PieceController {
         return true;
     }
     // all the movement are controlled by increasing or decreasing (by 100) of the variable X and Y(The Y axis is inverted) after checking the moves is valid.
+
+    /*
+     * moveUp method implementation
+     * */
     public static void moveUp() throws Exception {
         if(approving(0,1)) {
             double oldX = piece.getLayoutX();
@@ -102,6 +111,10 @@ class PieceController {
         }
 
     }
+
+    /*
+     * moveDown method implementation
+     * */
     public static void moveDown() throws Exception {
         if(approving(1,1)) {
             double oldX = piece.getLayoutX();
@@ -117,6 +130,10 @@ class PieceController {
             }
         }
     }
+
+    /*
+     * moveRight method implementation
+     * */
     public static void moveRight() throws Exception { //move
         if(approving(0,0)){
             double oldX = piece.getLayoutX();
@@ -128,6 +145,10 @@ class PieceController {
             }
         }
     }
+
+    /*
+     * moveLeft method implementation
+     * */
     public static void moveLeft() throws Exception {
         if(approving(1,0)) {
             double oldX = piece.getLayoutX();

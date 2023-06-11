@@ -22,7 +22,8 @@ public class MainController {
     //call the text field to later modify for the counter
     @FXML
     public Text Count;
-    //initialization of the Array used to ease methods of move
+
+    //initialization initializer
     @FXML
     public void initialize() throws Exception {
         initializeButtonArray(true);
@@ -56,7 +57,7 @@ public class MainController {
     /*
      * all the movements are controlled by increasing or decreasing (by 100) of the variable X and Y(The Y axis is inverted) after checking the moves is valid.
      *
-     * MoveRight helper
+     * MoveRight initializer
      **/
     public void moveRight() throws Exception {
         PieceController.moveRight();
@@ -65,7 +66,7 @@ public class MainController {
     }
 
     /*
-     * MoveLeft helper
+     * MoveLeft initializer
      **/
     public void moveLeft() throws Exception {
         PieceController.moveLeft();
@@ -74,7 +75,7 @@ public class MainController {
     }
 
     /*
-     * MoveUp helper
+     * MoveUp initializer
      **/
     public void moveUp() throws Exception {
         PieceController.moveUp();
@@ -84,7 +85,7 @@ public class MainController {
     }
 
     /*
-     * MoveDown helper
+     * MoveDown initializer
      **/
     public void moveDown() throws Exception {
         PieceController.moveDown();
@@ -151,10 +152,16 @@ public class MainController {
         }
     }
 
+    /*
+    * Quit method initializer
+    * */
     public void quit() {
         MenuController.quit();
     }
 
+    /*
+     * Back method initializer
+     * */
     public void back() {
         MenuController.back();
         if(counter!= 0) {
@@ -162,21 +169,35 @@ public class MainController {
         }
         setCounter(counter, Count);
     }
+
+    /*
+     * Reset method initializer
+     * */
     public void reset() throws Exception {
         MenuController.reset();
         PieceController.counter = 0;
         setCounter(counter, Count);
     }
+
+    /*
+     * Keyboard method initializer
+     * */
     public void keyboard(KeyEvent keyEvent) throws Exception {
         PieceController.keyboard(keyEvent);
         setCounter(PieceController.counter,Count );
     }
 
+    /*
+     * Swipe method initializer
+     * */
     public void swipe(MouseEvent mouseEvent) throws Exception {
         PieceController.swipe(mouseEvent);
         setCounter(PieceController.counter,Count);
     }
 
+    /*
+     * setCounter method helper to set the counter on the interface and on the match instance
+     * */
     public void setCounter(int counter,Text count){
         count.setText("Counter: " + counter);
         match = Match.getMatch();

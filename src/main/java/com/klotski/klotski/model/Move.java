@@ -1,5 +1,8 @@
 package com.klotski.klotski.model;
 
+/*
+* Move object that contains the meaningful information for a single move
+* */
 public class Move {
     private int pieceIndex;
     private int moveIndex;

@@ -184,6 +184,9 @@ public class MatchController {
         }
     }
 
+    /*
+     * utility log method
+     * */
     private static void klotskiLog(String string) {
         System.out.println(string);
     }

@@ -15,7 +15,7 @@ public class SaveAlert {
 
 
     /*
-     * main method that created the Alert definition and defines the layout
+     * main method that created the Alert dialog and defines its layout
      **/
     private static Match match;
     public static void display(String title, String message, boolean quit){

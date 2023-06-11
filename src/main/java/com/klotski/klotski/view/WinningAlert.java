@@ -10,6 +10,10 @@ import javafx.stage.Stage;
 import static com.klotski.klotski.controller.MenuController.reset;
 
 public class WinningAlert {
+
+    /*
+     * main method that created the Winning dialog and defines its layout
+     **/
     public static void display(String title, String message){
         Stage window = new Stage();
         window.initModality(Modality.APPLICATION_MODAL); //so that user interactions with other windows are blocked

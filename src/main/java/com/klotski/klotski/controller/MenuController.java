@@ -12,6 +12,11 @@ import java.util.ArrayList;
 
 public class MenuController {
     private static Match match;
+
+
+    /*
+     * quit method helper
+     * */
     public static void quit() {
         match = Match.getMatch();
         if (!match.isSaved()) {
@@ -20,12 +25,24 @@ public class MenuController {
             QuitAlert.display("Quit window", "Are you sure you want to quit?");
         }
     }
+
+    /*
+     * save method helper
+     * */
     public static void save() {
         SaveAlert.display("Save match", "Give a name to your name", false);
     }
+
+    /*
+     * loadMatch method helper
+     * */
     public static void loadMatch() throws Exception {
         LoadMatchAlert.display("Load match", "Select the match you want to load", "saved");
     }
+
+    /*
+     * back method implementation. Iterates backward on movesList array from match instance
+     * */
     public static void back() {
         match = Match.getMatch();
         if(match.getCurrentIndex() == 0 ){
@@ -43,9 +60,17 @@ public class MenuController {
         match.removeLastMove(moves.size()-1);
         PieceController.refresh();
     }
+
+    /*
+     * reset method helper
+     * */
     public static void reset() throws Exception {
         match.reset();
     }
+
+    /*
+     * utility log method
+     * */
     private static void klotskiLog(String string) {
         System.out.println(string);
     }

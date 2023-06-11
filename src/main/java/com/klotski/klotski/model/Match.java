@@ -5,6 +5,11 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 import java.util.ArrayList;
 
+/*
+ * Match Class to create match Singleton instance. The Match object always contains all the meaningful
+ * information regarding a game: mane, starterconfiguration, list of moves, solution and other helper attributes
+ * */
+
 //the following annotation is needed to allow the Jackson library to convert the match configuration to a POJO ignoring the missing fields in the Match configuration
 @JsonIgnoreProperties(ignoreUnknown = true)
 
@@ -74,6 +79,7 @@ public class Match {
         this.saved = saved;
     }
 
+    //reset instance and reload initial configuration
     public static void reset() throws Exception {
         currentIndex = 0;
         matchName = "New_Match";
@@ -82,6 +88,7 @@ public class Match {
         MatchController.loadMatch(configuration, "configuration");
     }
 
+    //add a move to the movesList array
     public void addMove(Move move){
         moves.add(move);
         ++this.currentIndex;
@@ -89,6 +96,8 @@ public class Match {
             this.saved = false;
         }
     }
+
+    //remove last move from the movesList array
     public static void removeLastMove(int index){
         moves.remove(index);
         --currentIndex;

@@ -9,7 +9,7 @@ import javafx.scene.control.*;
 public class QuitAlert {
 
     /*
-     * main method that created the Alert definition and defines the layout
+     * main method that created the Quit dialog and defines its layout
      **/
     public static void display(String title, String message){
         Stage window = new Stage();

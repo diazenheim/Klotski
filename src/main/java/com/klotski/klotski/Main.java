@@ -8,7 +8,7 @@ import javafx.stage.Stage;
 public class Main extends Application {
 
     /*
-     * Start method
+     * Start method that initializes the application
      **/
     @Override
     public void start(Stage stage) throws Exception {
