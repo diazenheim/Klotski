@@ -40,18 +40,18 @@ Current scope:     <a href="../../index.html">all classes</a>
   <td class="name">LoadMatchAlert</td>
 <td class="coverageStat">
   <span class="percent">
-    40%
+    80%
   </span>
   <span class="absValue">
-    (2/5)
+    (4/5)
   </span>
 </td>
 <td class="coverageStat">
   <span class="percent">
-    65.7%
+    91%
   </span>
   <span class="absValue">
-    (46/70)
+    (61/67)
   </span>
 </td>
 </tr>
@@ -59,18 +59,18 @@ Current scope:     <a href="../../index.html">all classes</a>
     <td class="name">LoadMatchAlert$HBoxCell</td>
 <td class="coverageStat">
   <span class="percent">
-    33.3%
+    100%
   </span>
   <span class="absValue">
-    (1/3)
+    (3/3)
   </span>
 </td>
 <td class="coverageStat">
   <span class="percent">
-    41.4%
+    82.8%
   </span>
   <span class="absValue">
-    (12/29)
+    (24/29)
   </span>
 </td>
   </tr>
@@ -78,18 +78,18 @@ Current scope:     <a href="../../index.html">all classes</a>
   <td class="name"><strong>Total</strong></td>
 <td class="coverageStat">
   <span class="percent">
-    37.5%
+    87.5%
   </span>
   <span class="absValue">
-    (3/8)
+    (7/8)
   </span>
 </td>
 <td class="coverageStat">
   <span class="percent">
-    58.6%
+    88.5%
   </span>
   <span class="absValue">
-    (58/99)
+    (85/96)
   </span>
 </td>
 </tr>
@@ -143,20 +143,17 @@ Current scope:     <a href="../../index.html">all classes</a>
 <b class="fc">&nbsp;        window.setTitle(title);</b>
 &nbsp;        //assign different values for the variables according to the load type: &#39;configuration&#39; or &#39;saved&#39;
 <b class="fc">&nbsp;        if (loadTypeLocal == &quot;configuration&quot;){</b>
-<b class="fc">&nbsp;            String resourceLocation = System.getProperty(&quot;file.separator&quot;) +</b>
-<b class="fc">&nbsp;                &quot;match&quot; + System.getProperty(&quot;file.separator&quot;) +</b>
-<b class="fc">&nbsp;                loadType + System.getProperty(&quot;file.separator&quot;);</b>
 <b class="fc">&nbsp;            loadLocation = MatchController.configurationLocation;</b>
 <b class="fc">&nbsp;            emptyListpPlaceholder = &quot;No Configuration available!&quot;;</b>
 <b class="fc">&nbsp;            cancelButtonText = &quot;Cancel&quot;;</b>
 <b class="fc">&nbsp;            labelPrefHeight = 60;</b>
 <b class="fc">&nbsp;            loadType = loadTypeLocal;</b>
 <b class="fc">&nbsp;        } else if (loadTypeLocal == &quot;saved&quot;){</b>
-<b class="nc">&nbsp;            loadLocation = MatchController.savedLocation;</b>
-<b class="nc">&nbsp;            emptyListpPlaceholder = &quot;No saved matches!&quot;;</b>
-<b class="nc">&nbsp;            cancelButtonText = &quot;Cancel&quot;;</b>
-<b class="nc">&nbsp;            labelPrefHeight = 30;</b>
-<b class="nc">&nbsp;            loadType = loadTypeLocal;</b>
+<b class="fc">&nbsp;            loadLocation = MatchController.savedLocation;</b>
+<b class="fc">&nbsp;            emptyListpPlaceholder = &quot;No saved matches!&quot;;</b>
+<b class="fc">&nbsp;            cancelButtonText = &quot;Cancel&quot;;</b>
+<b class="fc">&nbsp;            labelPrefHeight = 30;</b>
+<b class="fc">&nbsp;            loadType = loadTypeLocal;</b>
 &nbsp;        } else{
 <b class="nc">&nbsp;            throw new Exception(&quot;No other load type supported, choose between &#39;configuration&#39; or &#39;saved&#39;. Given: &quot; + loadTypeLocal);</b>
 &nbsp;        }
@@ -189,9 +186,9 @@ Current scope:     <a href="../../index.html">all classes</a>
 <b class="fc">&nbsp;        if (loadTypeLocal == &quot;configuration&quot;){</b>
 &nbsp;            //close alert
 <b class="fc">&nbsp;            cancelButton.setOnAction(e -&gt; System.exit(0)); //close AlertBox</b>
-<b class="nc">&nbsp;        } else if (loadTypeLocal == &quot;saved&quot;){</b>
+<b class="fc">&nbsp;        } else if (loadTypeLocal == &quot;saved&quot;){</b>
 &nbsp;            //close alert
-<b class="nc">&nbsp;            cancelButton.setOnAction(e -&gt; window.close()); //close AlertBox</b>
+<b class="fc">&nbsp;            cancelButton.setOnAction(e -&gt; window.close()); //close AlertBox</b>
 &nbsp;        }
 &nbsp;
 <b class="fc">&nbsp;        Scene scene = new Scene(layout); //make scene</b>
@@ -201,16 +198,16 @@ Current scope:     <a href="../../index.html">all classes</a>
 &nbsp;
 &nbsp;
 &nbsp;    //utility method to refresh the list when a match is deleted
-&nbsp;    private static void refreshList() throws Exception {
-<b class="nc">&nbsp;        layout.getChildren().remove(list);</b>
-<b class="nc">&nbsp;        ListView&lt;HBoxCell&gt; list = getListObject();</b>
-<b class="nc">&nbsp;        layout.getChildren().add(list);</b>
+&nbsp;    private static void refreshList() {
+<b class="fc">&nbsp;        layout.getChildren().remove(list);</b>
+<b class="fc">&nbsp;        ListView&lt;HBoxCell&gt; list = getListObject();</b>
+<b class="fc">&nbsp;        layout.getChildren().add(list);</b>
 &nbsp;        //reconfigure layout
-<b class="nc">&nbsp;        list.setLayoutX(40);</b>
-<b class="nc">&nbsp;        list.setLayoutY(50);</b>
-<b class="nc">&nbsp;        cancelButton.setLayoutY( list.getLayoutY() + list.getPrefHeight() + 10);</b>
+<b class="fc">&nbsp;        list.setLayoutX(40);</b>
+<b class="fc">&nbsp;        list.setLayoutY(50);</b>
+<b class="fc">&nbsp;        cancelButton.setLayoutY( list.getLayoutY() + list.getPrefHeight() + 10);</b>
 &nbsp;        //trick found online to refresh the view
-<b class="nc">&nbsp;        window.setHeight(window.getHeight() + 0.001);</b>
+<b class="fc">&nbsp;        window.setHeight(window.getHeight() + 0.001);</b>
 &nbsp;    }
 &nbsp;
 &nbsp;
@@ -236,33 +233,33 @@ Current scope:     <a href="../../index.html">all classes</a>
 <b class="fc">&nbsp;            loadButton.setOnAction(e -&gt; {</b>
 &nbsp;                try {
 &nbsp;                    //load match
-<b class="nc">&nbsp;                    MatchController.loadMatch(labelText, loadType);</b>
-<b class="nc">&nbsp;                    klotskiLog(labelText + &quot; loaded&quot;);</b>
+<b class="fc">&nbsp;                    MatchController.loadMatch(labelText, loadType);</b>
+<b class="fc">&nbsp;                    klotskiLog(labelText + &quot; loaded&quot;);</b>
 <b class="nc">&nbsp;                } catch (Exception ex) {</b>
 <b class="nc">&nbsp;                    throw new RuntimeException(ex);</b>
-<b class="nc">&nbsp;                }</b>
-<b class="nc">&nbsp;                window.close();</b>
+<b class="fc">&nbsp;                }</b>
+<b class="fc">&nbsp;                window.close();</b>
 &nbsp;            });
 &nbsp;            //create Delete Button only for Saved Matches. Do not allow to delete configurations.
 <b class="fc">&nbsp;            if (loadType == &quot;saved&quot;) {</b>
-<b class="nc">&nbsp;                deleteButton.setText(&quot;Delete&quot;);</b>
-<b class="nc">&nbsp;                deleteButton.setOnAction(e -&gt; {</b>
+<b class="fc">&nbsp;                deleteButton.setText(&quot;Delete&quot;);</b>
+<b class="fc">&nbsp;                deleteButton.setOnAction(e -&gt; {</b>
 &nbsp;                    try {
 &nbsp;                        //save match the exit game or close alert
-<b class="nc">&nbsp;                        File matchToDelete = new File(MatchController.savedLocation + labelText);</b>
-<b class="nc">&nbsp;                        if (matchToDelete.delete()) {</b>
-<b class="nc">&nbsp;                            klotskiLog(&quot;Deleted the file: &quot; + matchToDelete.getName());</b>
+<b class="fc">&nbsp;                        File matchToDelete = new File(MatchController.savedLocation + labelText);</b>
+<b class="fc">&nbsp;                        if (matchToDelete.delete()) {</b>
+<b class="fc">&nbsp;                            klotskiLog(&quot;Deleted the file: &quot; + matchToDelete.getName());</b>
 &nbsp;                        } else {
 <b class="nc">&nbsp;                            klotskiLog(&quot;Failed to delete the file.&quot;);</b>
 &nbsp;                        }
-<b class="nc">&nbsp;                        refreshList();</b>
+<b class="fc">&nbsp;                        refreshList();</b>
 <b class="nc">&nbsp;                    } catch (Exception ex) {</b>
 <b class="nc">&nbsp;                        throw new RuntimeException(ex);</b>
-<b class="nc">&nbsp;                    }</b>
+<b class="fc">&nbsp;                    }</b>
 &nbsp;                });
 &nbsp;
 &nbsp;
-<b class="nc">&nbsp;                this.getChildren().addAll(label, loadButton, deleteButton);</b>
+<b class="fc">&nbsp;                this.getChildren().addAll(label, loadButton, deleteButton);</b>
 &nbsp;
 &nbsp;            } else{ //in case of configuration, only the load button is shown
 <b class="fc">&nbsp;                deleteButton = null;</b>
@@ -274,7 +271,7 @@ Current scope:     <a href="../../index.html">all classes</a>
 &nbsp;    }
 &nbsp;
 &nbsp;    //utility method to get list of Objects to create the list of saved or config files
-&nbsp;    private static ListView&lt;HBoxCell&gt; getListObject() throws Exception {
+&nbsp;    private static ListView&lt;HBoxCell&gt; getListObject() {
 &nbsp;        //create list that will contain the HBox that will compose the listView
 <b class="fc">&nbsp;        ArrayList&lt;HBoxCell&gt; hBoxList = new ArrayList&lt;&gt;();</b>
 &nbsp;
@@ -282,11 +279,11 @@ Current scope:     <a href="../../index.html">all classes</a>
 &nbsp;        //create the &#39;saved&#39; folder on user root folder
 <b class="fc">&nbsp;        if (loadType == &quot;saved&quot;){</b>
 &nbsp;            try{
-<b class="nc">&nbsp;                File dir = new File(loadLocation);</b>
-<b class="nc">&nbsp;                if (!dir.exists()) dir.mkdirs();</b>
+<b class="fc">&nbsp;                File dir = new File(loadLocation);</b>
+<b class="fc">&nbsp;                if (!dir.exists()) dir.mkdirs();</b>
 <b class="nc">&nbsp;            }catch(Exception e){</b>
 <b class="nc">&nbsp;                klotskiLog(&quot;Saved folder already exists&quot;);</b>
-<b class="nc">&nbsp;            }</b>
+<b class="fc">&nbsp;            }</b>
 &nbsp;        }
 &nbsp;        //iterate on the files under the configuration or saved location to build the list view
 <b class="fc">&nbsp;        File folder = new File(loadLocation);</b>
@@ -312,7 +309,7 @@ Current scope:     <a href="../../index.html">all classes</a>
 &nbsp;    }
 &nbsp;
 &nbsp;    private static void klotskiLog(String string) {
-<b class="nc">&nbsp;        System.out.println(string);</b>
+<b class="fc">&nbsp;        System.out.println(string);</b>
 &nbsp;    }
 &nbsp;}
 &nbsp;
@@ -339,7 +336,7 @@ Current scope:     <a href="../../index.html">all classes</a>
 
 <div class="footer">
     
-    <div style="float:right;">generated on 2023-06-11 21:30</div>
+    <div style="float:right;">generated on 2023-06-11 22:43</div>
 </div>
 </body>
 </html>

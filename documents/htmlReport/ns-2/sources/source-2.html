@@ -59,10 +59,10 @@ Current scope:     <a href="../../index.html">all classes</a>
 </td>
 <td class="coverageStat">
   <span class="percent">
-    80.7%
+    88.1%
   </span>
   <span class="absValue">
-    (71/88)
+    (74/84)
   </span>
 </td>
 </tr>
@@ -128,7 +128,7 @@ Current scope:     <a href="../../index.html">all classes</a>
 <b class="fc">&nbsp;            klotskiLog(&quot;Match saved: &quot; + matchName + &quot;\n&quot;);</b>
 &nbsp;
 <b class="nc">&nbsp;        } catch (IOException ex) {</b>
-<b class="nc">&nbsp;            klotskiLog(&quot;Error while saving the match &quot; + matchName + &quot; + &quot; + ex.toString());</b>
+<b class="nc">&nbsp;            klotskiLog(&quot;Error while saving the match &quot; + matchName + &quot; + &quot; + ex);</b>
 <b class="fc">&nbsp;        }</b>
 &nbsp;    }
 &nbsp;
@@ -139,9 +139,6 @@ Current scope:     <a href="../../index.html">all classes</a>
 &nbsp;     * but we preferred to use the same bethod for both.
 &nbsp;     **/
 &nbsp;    public static void loadMatch(String matchName, String loadType) throws Exception {
-<b class="fc">&nbsp;        String resourceLocation = System.getProperty(&quot;file.separator&quot;) +</b>
-<b class="fc">&nbsp;                &quot;match&quot; + System.getProperty(&quot;file.separator&quot;) +</b>
-<b class="fc">&nbsp;                loadType + System.getProperty(&quot;file.separator&quot;);</b>
 &nbsp;
 &nbsp;        String location;
 <b class="fc">&nbsp;        if (loadType == &quot;configuration&quot;){</b>
@@ -203,7 +200,7 @@ Current scope:     <a href="../../index.html">all classes</a>
 <b class="fc">&nbsp;            bufferWriter.flush();</b>
 <b class="fc">&nbsp;            bufferWriter.close();</b>
 <b class="nc">&nbsp;        } catch (IOException ex){</b>
-<b class="nc">&nbsp;            throw new IOException(&quot;Error while writing file: &quot; + ex.toString());</b>
+<b class="nc">&nbsp;            throw new IOException(&quot;Error while writing file: &quot; + ex);</b>
 <b class="fc">&nbsp;        }</b>
 &nbsp;
 <b class="fc">&nbsp;        klotskiLog(&quot;The file has been saved: &quot; + filename);</b>
@@ -222,9 +219,8 @@ Current scope:     <a href="../../index.html">all classes</a>
 &nbsp;    }
 &nbsp;
 &nbsp;    //utility method to get the content of a File from a given path
-&nbsp;    private static String getFileContent(String filePath) throws IOException, Exception {
+&nbsp;    private static String getFileContent(String filePath) throws Exception {
 &nbsp;        String loadedFile;
-<b class="fc">&nbsp;        klotskiLog(&quot;filePath: &quot; + filePath);</b>
 &nbsp;        //in case of a configuration, this is loaded from resources, this ha
 <b class="fc">&nbsp;        if (filePath.contains(&quot;configuration&quot;)){</b>
 &nbsp;            try {
@@ -252,14 +248,14 @@ Current scope:     <a href="../../index.html">all classes</a>
 &nbsp;    private static void setMatchConfiguration(ArrayList&lt;Move&gt; moves){
 &nbsp;    //iterates on all the moves
 <b class="fc">&nbsp;        for (int i = 0; i &lt; moves.size(); i++) {</b>
-<b class="nc">&nbsp;            Move move = moves.get(i);</b>
-<b class="nc">&nbsp;            int pieceIndex = move.getPieceIndex();</b>
-<b class="nc">&nbsp;            Button piecebutton = PieceController.getPieceButton(pieceIndex);</b>
+<b class="fc">&nbsp;            Move move = moves.get(i);</b>
+<b class="fc">&nbsp;            int pieceIndex = move.getPieceIndex();</b>
+<b class="fc">&nbsp;            Button piecebutton = PieceController.getPieceButton(pieceIndex);</b>
 &nbsp;
-<b class="nc">&nbsp;            double newX = move.getNewX();</b>
-<b class="nc">&nbsp;            double newY = move.getNewY();</b>
-<b class="nc">&nbsp;            piecebutton.setLayoutX(newX);</b>
-<b class="nc">&nbsp;            piecebutton.setLayoutY(newY);</b>
+<b class="fc">&nbsp;            double newX = move.getNewX();</b>
+<b class="fc">&nbsp;            double newY = move.getNewY();</b>
+<b class="fc">&nbsp;            piecebutton.setLayoutX(newX);</b>
+<b class="fc">&nbsp;            piecebutton.setLayoutY(newY);</b>
 &nbsp;
 &nbsp;        }
 &nbsp;    }
@@ -291,7 +287,7 @@ Current scope:     <a href="../../index.html">all classes</a>
 
 <div class="footer">
     
-    <div style="float:right;">generated on 2023-06-11 21:30</div>
+    <div style="float:right;">generated on 2023-06-11 22:43</div>
 </div>
 </body>
 </html>

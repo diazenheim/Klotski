@@ -43,26 +43,26 @@ Current scope:     <a href="../../index.html">all classes</a>
   <td class="name">QuitAlert</td>
 <td class="coverageStat">
   <span class="percent">
-    0%
+    100%
   </span>
   <span class="absValue">
-    (0/1)
+    (1/1)
   </span>
 </td>
 <td class="coverageStat">
   <span class="percent">
-    0%
+    50%
   </span>
   <span class="absValue">
-    (0/2)
+    (1/2)
   </span>
 </td>
 <td class="coverageStat">
   <span class="percent">
-    0%
+    95.5%
   </span>
   <span class="absValue">
-    (0/22)
+    (21/22)
   </span>
 </td>
 </tr>
@@ -76,7 +76,6 @@ Current scope:     <a href="../../index.html">all classes</a>
 <pre>
 <code class="sourceCode" id="sourceCode">&nbsp;package com.klotski.klotski.view;
 &nbsp;
-&nbsp;import javafx.application.Platform;
 &nbsp;import javafx.scene.control.Button;
 &nbsp;import javafx.stage.*;
 &nbsp;import javafx.scene.*;
@@ -89,40 +88,40 @@ Current scope:     <a href="../../index.html">all classes</a>
 &nbsp;     * main method that created the Alert definition and defines the layout
 &nbsp;     **/
 &nbsp;    public static void display(String title, String message){
-<b class="nc">&nbsp;        Stage window = new Stage();</b>
-<b class="nc">&nbsp;        window.initModality(Modality.APPLICATION_MODAL); //so that user interactions with other windows are blocked</b>
-<b class="nc">&nbsp;        window.setTitle(title);</b>
+<b class="fc">&nbsp;        Stage window = new Stage();</b>
+<b class="fc">&nbsp;        window.initModality(Modality.APPLICATION_MODAL); //so that user interactions with other windows are blocked</b>
+<b class="fc">&nbsp;        window.setTitle(title);</b>
 &nbsp;
-<b class="nc">&nbsp;        Label label = new Label();</b>
-<b class="nc">&nbsp;        label.setText(message); //add message to the quit window</b>
+<b class="fc">&nbsp;        Label label = new Label();</b>
+<b class="fc">&nbsp;        label.setText(message); //add message to the quit window</b>
 &nbsp;
 &nbsp;        //create components to display
-<b class="nc">&nbsp;        Button quitButton = new Button(&quot;Quit&quot;);</b>
-<b class="nc">&nbsp;        Button cancelButton = new Button(&quot;Cancel&quot;);</b>
+<b class="fc">&nbsp;        Button quitButton = new Button(&quot;Quit&quot;);</b>
+<b class="fc">&nbsp;        Button cancelButton = new Button(&quot;Cancel&quot;);</b>
 &nbsp;
-<b class="nc">&nbsp;        AnchorPane layout = new AnchorPane();//we always need a layout</b>
+<b class="fc">&nbsp;        AnchorPane layout = new AnchorPane();//we always need a layout</b>
 &nbsp;
-<b class="nc">&nbsp;        layout.setPrefSize(260, 130);</b>
+<b class="fc">&nbsp;        layout.setPrefSize(260, 130);</b>
 &nbsp;
-<b class="nc">&nbsp;        label.setLayoutX(40);// Center the label horizontally</b>
-<b class="nc">&nbsp;        label.setLayoutY(30);// Position the label at the top</b>
+<b class="fc">&nbsp;        label.setLayoutX(40);// Center the label horizontally</b>
+<b class="fc">&nbsp;        label.setLayoutY(30);// Position the label at the top</b>
 &nbsp;
 &nbsp;        // Position the buttons
-<b class="nc">&nbsp;        quitButton.setLayoutX(180);</b>
-<b class="nc">&nbsp;        quitButton.setLayoutY(80);</b>
-<b class="nc">&nbsp;        cancelButton.setLayoutX(40);</b>
-<b class="nc">&nbsp;        cancelButton.setLayoutY(80);</b>
+<b class="fc">&nbsp;        quitButton.setLayoutX(180);</b>
+<b class="fc">&nbsp;        quitButton.setLayoutY(80);</b>
+<b class="fc">&nbsp;        cancelButton.setLayoutX(40);</b>
+<b class="fc">&nbsp;        cancelButton.setLayoutY(80);</b>
 &nbsp;
 &nbsp;        //add display components to the main layout
-<b class="nc">&nbsp;        layout.getChildren().addAll(label, quitButton, cancelButton); //Add buttons to the window</b>
+<b class="fc">&nbsp;        layout.getChildren().addAll(label, quitButton, cancelButton); //Add buttons to the window</b>
 &nbsp;
 &nbsp;        //defines buttons actions
-<b class="nc">&nbsp;        quitButton.setOnAction(e -&gt;  System.exit(0)); //close game</b>
-<b class="nc">&nbsp;        cancelButton.setOnAction(e -&gt; window.close()); //close AlertBox</b>
+<b class="fc">&nbsp;        quitButton.setOnAction(e -&gt;  System.exit(0)); //close game</b>
+<b class="fc">&nbsp;        cancelButton.setOnAction(e -&gt; window.close()); //close AlertBox</b>
 &nbsp;
-<b class="nc">&nbsp;        Scene scene = new Scene(layout); //make scene</b>
-<b class="nc">&nbsp;        window.setScene(scene); //add scene to the window</b>
-<b class="nc">&nbsp;        window.showAndWait();</b>
+<b class="fc">&nbsp;        Scene scene = new Scene(layout); //make scene</b>
+<b class="fc">&nbsp;        window.setScene(scene); //add scene to the window</b>
+<b class="fc">&nbsp;        window.showAndWait();</b>
 &nbsp;    }
 &nbsp;}
 &nbsp;
@@ -149,7 +148,7 @@ Current scope:     <a href="../../index.html">all classes</a>
 
 <div class="footer">
     
-    <div style="float:right;">generated on 2023-06-11 21:30</div>
+    <div style="float:right;">generated on 2023-06-11 22:43</div>
 </div>
 </body>
 </html>

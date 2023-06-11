@@ -1,8 +1,9 @@
-!target/
+target/**
 !target/Klotski-1.0-SNAPSHOT.jar
 !.mvn/wrapper/maven-wrapper.jar
 !**/src/main/**/target/
 !**/src/test/**/target/
+lib/
 
 ### IntelliJ IDEA ###
 .idea/modules.xml
