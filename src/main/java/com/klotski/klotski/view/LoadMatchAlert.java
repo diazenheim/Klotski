@@ -146,10 +146,7 @@ public class LoadMatchAlert {
                 deleteButton.setOnAction(e -> {
                     try {
                         //save match the exit game or close alert
-                        String location = System.getProperty("user.home") +
-                                System.getProperty("file.separator") +
-                                "saved" + System.getProperty("file.separator");
-                        File matchToDelete = new File(location + labelText);
+                        File matchToDelete = new File(MatchController.savedLocation + labelText);
                         if (matchToDelete.delete()) {
                             klotskiLog("Deleted the file: " + matchToDelete.getName());
                         } else {
@@ -176,20 +173,25 @@ public class LoadMatchAlert {
     //utility method to get list of Objects to create the list of saved or config files
     private static ListView<HBoxCell> getListObject() throws Exception {
         //create list that will contain the HBox that will compose the listView
-        ArrayList<HBoxCell> hBoxList;
+        ArrayList<HBoxCell> hBoxList = new ArrayList<>();
 
 
         //get list of existing files
-        if (loadType == "configuration"){
-            hBoxList = getSavedList();
-        }else{
+        if (loadType == "saved"){
             try{
                 File dir = new File(loadLocation);
                 if (!dir.exists()) dir.mkdirs();
             }catch(Exception e){
                 klotskiLog("Saved folder already exists");
             }
-            hBoxList = getSavedList();
+        }
+        //iterate on files under the proper location (configuration or saved location) to build the list view
+        File folder = new File(loadLocation);
+        File[] listOfFiles = folder.listFiles();
+        for (File file : listOfFiles) {
+            if (file.isFile()) {
+                hBoxList.add(new HBoxCell(file.getName()));
+            }
         }
         ListView<HBoxCell> list = new ListView<>();
 
@@ -203,20 +205,6 @@ public class LoadMatchAlert {
         }
 
         return list;
-    }
-
-    //utility method to get list of saved files
-    private static ArrayList<HBoxCell> getSavedList(){
-
-        ArrayList<HBoxCell> arrayListToReturn= new ArrayList<>();
-        File folder = new File(loadLocation);
-        File[] listOfFiles = folder.listFiles();
-        for (File file : listOfFiles) {
-            if (file.isFile()) {
-                arrayListToReturn.add(new HBoxCell(file.getName()));
-            }
-        }
-        return arrayListToReturn;
     }
 
     private static void klotskiLog(String string) {
